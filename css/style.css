@@ -176,6 +176,20 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: none;
     border-color: #8dc63f; }
 
+.form-name {
+  width: 100%;
+  display: block; }
+  @media screen and (min-width: 768px) {
+    .form-name {
+      width: 49%;
+      display: inline-block; } }
+  .form-name:first-of-type {
+    margin-right: 0;
+    margin-bottom: 1%; }
+    @media screen and (min-width: 768px) {
+      .form-name:first-of-type {
+        margin-right: 1%; } }
+
 body {
   background: #efefef url(../images/white_wave.png) repeat; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
@@ -1184,3 +1198,10 @@ body {
     color: #85919d; }
     .modal .modal-body a:hover {
       color: #444; }
+  .modal .modal-body .btn {
+    display: block;
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      .modal .modal-body .btn {
+        display: inline-block;
+        width: auto; } }

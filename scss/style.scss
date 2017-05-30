@@ -307,6 +307,25 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.form-name {
+	width: 100%;
+	display: block;
+	
+	@media screen and (min-width: $screen-sm) {
+		width: 49%;
+		display: inline-block;
+	}
+
+	&:first-of-type {
+		margin-right: 0;
+		margin-bottom: 1%;
+		@media screen and (min-width: $screen-sm) {
+			margin-right: 1%;
+		}
+	}
+}
+
+
 body {
 	background: $brand-bg-color url(../images/white_wave.png) repeat;;
 	
@@ -1490,6 +1509,16 @@ body {
 			
 			&:hover {
 				color: $brand-darker;
+			}
+		}
+		
+		.btn {
+			display: block;
+			width: 100%;
+			
+			@media screen and (min-width: $screen-sm) {
+				display: inline-block;
+				width: auto;
 			}
 		}
 	}
