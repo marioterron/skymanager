@@ -1230,25 +1230,24 @@ body {
       display: inline-block;
       width: auto; } }
 
-.modal {
-  position: absolute; }
-  .modal .modal-header {
-    border: 0; }
-  .modal .modal-body {
-    padding-bottom: 30px; }
-    .modal .modal-body .lead {
-      font-size: 24px;
-      font-weight: 400;
-      text-transform: none;
-      text-align: center;
-      margin-bottom: 40px; }
-    .modal .modal-body a {
-      color: #85919d;
-      font-weight: 600; }
-      .modal .modal-body a:hover {
-        color: #444; }
-    .modal .modal-body .btn {
-      width: 100%; }
-      @media screen and (min-width: 768px) {
-        .modal .modal-body .btn {
-          width: auto; } }
+.modal .modal-header {
+  border: 0; }
+
+.modal .modal-body {
+  padding-bottom: 30px; }
+  .modal .modal-body .lead {
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: none;
+    text-align: center;
+    margin-bottom: 40px; }
+  .modal .modal-body a {
+    color: #85919d;
+    font-weight: 600; }
+    .modal .modal-body a:hover {
+      color: #444; }
+  .modal .modal-body .btn {
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      .modal .modal-body .btn {
+        width: auto; } }

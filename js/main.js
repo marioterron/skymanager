@@ -103,16 +103,18 @@
 		$('body').prepend('<div id="offcanvas" />');
 		$('#offcanvas').prepend('<ul id="side-links">');
 		$('body').prepend('<a href="#" class="js-nav-toggle nav-toggle"><i></i></a>');
-
+		
+	
 		$('.left-menu li, .right-menu li').each(function() {
-
+	
 			var $this = $(this);
-
+	
 			$('#offcanvas ul').append($this.clone());
-
+	
 		});
 	};
-
+	
+	
 	// Burger Menu
 	var burgerMenu = function() {
 
@@ -203,17 +205,28 @@
 
 
 	// Modal
-	$('.to-login-modal').on('click', function(e) {
-		e.preventDefault();
-		$('#register-modal').modal('hide');
-		$('#login-modal').modal('show');
-	});
-	
-	$('.to-register-modal').on('click', function(e) {
-		e.preventDefault();
-		$('#login-modal').modal('hide');
-		$('#register-modal').modal('show');
-	});
+	var linksToModal = function() {
+		$('.to-login-modal').on('click', function(e) {
+			e.preventDefault();
+
+			$('body').removeClass('offcanvas-visible');
+			$('.js-nav-toggle').removeClass('active');
+			
+			$('#register-modal').modal('hide');
+			$('#login-modal').modal('show');
+		});
+
+		$('.to-register-modal').on('click', function(e) {
+			e.preventDefault();
+
+			$('body').removeClass('offcanvas-visible');
+			$('.js-nav-toggle').removeClass('active');
+			
+			$('#login-modal').modal('hide');
+			$('#register-modal').modal('show');
+		});
+	};
+
 
 	// Document on load.
 	$(function() {
@@ -230,6 +243,7 @@
 
 		// Animate
 		contentWayPoint();
+		linksToModal();
 
 	});
 
