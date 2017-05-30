@@ -290,7 +290,7 @@ body {
   width: 100%; }
   @media screen and (max-width: 480px) {
     #hero {
-      height: 450px; } }
+      height: 85vh; } }
   #hero .overlay {
     position: absolute;
     top: 0;
@@ -324,7 +324,8 @@ body {
         @media screen and (max-width: 992px) {
           #hero .intro > div .center-position {
             width: 100%;
-            text-align: center; } }
+            text-align: center;
+            margin-top: 100px; } }
       #hero .intro > div .right-position {
         width: 65%;
         float: right;
@@ -1074,7 +1075,7 @@ body {
   position: fixed;
   top: 40px;
   right: 20px;
-  z-index: 9999;
+  z-index: 100;
   display: block;
   margin: 0 auto;
   display: none;
@@ -1202,6 +1203,12 @@ body {
     display: block;
     width: 100%; }
     @media screen and (min-width: 768px) {
+      .modal .modal-body .btn:only-of-type {
+        width: 100%; } }
+    @media screen and (min-width: 768px) {
+      .modal .modal-body .btn {
+        width: 90%; } }
+    @media screen and (min-width: 992px) {
       .modal .modal-body .btn {
         display: inline-block;
         width: auto; } }
