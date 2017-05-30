@@ -1696,6 +1696,7 @@ body {
 		// Not login? Not register?
 		a {
 			color: $brand-tertiary;
+			font-weight: 600;
 
 			&:hover {
 				color: $brand-darker;
@@ -1706,20 +1707,6 @@ body {
 			width: 100%;
 			@media screen and (min-width: $screen-sm) {
 				width: auto;
-			}
-
-			&:only-of-type {
-				width: 100%;
-				@media screen and (min-width: $screen-xs) {
-					width: auto;
-				}
-			}
-		}
-
-		.to-login-modal {
-			display: block;
-			@media screen and (min-width: $screen-md) {
-				display: inline-block;
 			}
 		}
 	}

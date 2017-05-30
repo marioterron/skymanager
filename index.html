@@ -60,21 +60,21 @@
 							<h3 class="lead">Iniciar sesión</h3>
 							<form role="form" class="form-horizontal">
 								<div class="form-group">
-									<label for="email" class="col-sm-2 control-label">Email</label>
-									<div class="col-sm-10">
-										<input type="email" class="form-control" id="email" placeholder="Email" />
+									<label for="user" class="col-sm-3 control-label">Usuario</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control" id="user"/>
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="password" class="col-sm-2 control-label">Contraseña</label>
-									<div class="col-sm-10">
-										<input type="password" class="form-control" id="password" placeholder="Contraseña" />
+									<label for="password" class="col-sm-3 control-label">Contraseña</label>
+									<div class="col-sm-9">
+										<input type="password" class="form-control" id="password"/>
 									</div>
 								</div>
 								<div class="row">
-									<div class="col-sm-10 col-sm-offset-2">
+									<div class="col-sm-10 col-sm-offset-3">
 										<button type="submit" class="btn btn-primary btn-sm">Enviar</button>
-										<a class="to-register-modal" href="#">¿No eres usuario? ¡Regístrate!</a>
+										<p>¿No eres usuario? <a class="to-register-modal" href="#">¡Regístrate!</a></p>
 									</div>
 								</div>
 							</form>
@@ -100,33 +100,20 @@
 								<div class="form-group">
 									<label for="user" class="col-sm-3 control-label">Usuario</label>
 									<div class="col-sm-9">
-										<input type="text" class="form-control" id="user" placeholder="Usuario" />
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="name" class="col-sm-3 control-label">Nombre</label>
-									<div class="col-sm-9">
-										<input type="text" class="col-xs-12 form-name form-control" id="name" placeholder="Nombre" />
-										<input type="text" class="col-xs-12 form-name form-control" id="name" placeholder="Apellidos" />
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="email" class="col-sm-3 control-label">Email</label>
-									<div class="col-sm-9">
-										<input type="email" class="form-control" id="email" placeholder="Email" />
+										<input type="text" class="form-control" id="user"/>
 									</div>
 								</div>
 								<div class="form-group">
 									<label for="password" class="col-sm-3 control-label">Contraseña</label>
 									<div class="col-sm-9">
-										<input type="password" class="form-control" id="password" placeholder="Contraseña" />
+										<input type="password" class="form-control" id="password"/>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-sm-10 col-sm-offset-3">
 										<button type="button" class="btn btn-primary btn-sm">Enviar</button>
 										<button type="button" class="btn btn-default btn-sm">Cancelar</button>
-										<a class="to-login-modal" href="#">¿Tienes ya una cuenta? Inicia sesión.</a>
+										<p>¿Tienes ya una cuenta? <a class="to-login-modal" href="#">Inicia sesión</a>.</p>
 									</div>
 								</div>
 							</form>
@@ -144,8 +131,8 @@
 				<nav role="navigation">
 					<h1 id="logo"><a href="index.html"><span>Sky</span>Manager</a></h1>
 					<ul class="pull-right right-menu">
-						<li><a class="to-login-modal" href="#">Login</a></li>
-						<li class="cta-btn"><a class="to-register-modal" href="#">Registro</a></li>
+						<li><a class="js-gotop to-login-modal" href="#">Login</a></li>
+						<li class="cta-btn"><a class="js-gotop to-register-modal" href="#">Registro</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -160,8 +147,8 @@
 						<div class="center-position">
 							<h2 class="animate-box">Dirige tu equipo y compite contra tus amigos</h2>
 							<p class="animate-box">
-								<a href="#" class="to-login-modal btn btn-primary">
-									<i class="icon-play2"></i> Comienza a jugar</a>
+								<a href="#" class="js-gotop to-login-modal btn btn-primary">
+									 Comienza a jugar</a>
 								<a href="#" class="scroll-btn btn btn-outline">Saber más</a>
 							</p>
 						</div>
@@ -183,7 +170,7 @@
 						<h2 class="lead animate-box">Mánager de fútbol online</h2>
 						<p class="sub-lead animate-box">Sky Manager es un simulador de fútbol en el que administras un equipo con jugadores reales en una liga virtual, compitiendo contra tus amigos por conseguir el mejor equipo y ganar la liga.</p>
 						<div class="animate-box">
-							<a href="index.html" class="js-gotop scroll-btn btn btn-primary"><i class="icon-plus"></i> Crea tu propia liga</a>
+							<a href="index.html" class="js-gotop to-register-modal scroll-btn btn btn-primary"><i class="icon-plus"></i> Crea tu propia liga</a>
 							<a href="#" class="scroll-btn btn btn-outline">¡Enseñame más!</a>
 						</div>
 					</div>
@@ -231,7 +218,7 @@
 					<div class="col-md-6 col-md-offset-3 text-center">
 						<h2 class="lead animate-box">¡Únete ya!</h2>
 						<p class="sub-lead animate-box">No dejes que te lo cuenten y únete tu y tus amigos y disfruta del mejor simulador de fútbol online hecho en Skylab Coders Academy.</p>
-						<a href="index.html" class="js-gotop to-login-modal animate-box scroll-btn btn btn-primary"><i class="icon-play2"></i> Comienza a jugar</a>
+						<a href="index.html" class="js-gotop to-login-modal animate-box scroll-btn btn btn-primary"> Comienza a jugar</a>
 					</div>
 				</div>
 			</div>
