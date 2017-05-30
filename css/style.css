@@ -1225,7 +1225,7 @@ body {
 .btn {
   display: block;
   width: 100%; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 480px) {
     .btn {
       display: inline-block;
       width: auto; } }
@@ -1246,11 +1246,16 @@ body {
       color: #85919d; }
       .modal .modal-body a:hover {
         color: #444; }
-    .modal .modal-body .btn:only-of-type {
+    .modal .modal-body .btn {
       width: 100%; }
       @media screen and (min-width: 768px) {
-        .modal .modal-body .btn:only-of-type {
+        .modal .modal-body .btn {
           width: auto; } }
+      .modal .modal-body .btn:only-of-type {
+        width: 100%; }
+        @media screen and (min-width: 480px) {
+          .modal .modal-body .btn:only-of-type {
+            width: auto; } }
     .modal .modal-body .to-login-modal {
       display: block; }
       @media screen and (min-width: 992px) {

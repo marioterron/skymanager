@@ -1,5 +1,4 @@
-$font-primary: 'Roboto', Arial, sans-serif;
-// Overrides
+$font-primary: 'Roboto', Arial, sans-serif; // Overrides
 $grid-gutter-width: 40px !default;
 $border-radius-base: 4px !default;
 $padding-base-vertical: 14px !default;
@@ -17,8 +16,7 @@ $brand-selection-color: #f9f6f0;
 $brand-overlay-color: #3b3d40;
 $brand-bg-color: #efefef;
 $input-border-focus: $brand-primary !default;
-$form-group-margin-bottom: 30px !default;
-// Mixin
+$form-group-margin-bottom: 30px !default; // Mixin
 @mixin mixin-translate($translatex) {
 	-moz-transform: translateX($translatex);
 	-webkit-transform: translateX($translatex);
@@ -93,6 +91,7 @@ $form-group-margin-bottom: 30px !default;
 *
 * ======================================================= */
 // Template Base
+
 body {
 	font-family: $font-primary;
 	// font-weight: 300;
@@ -153,6 +152,7 @@ h6 {
 	background: $brand-selection-color;
 }
 // Buttons
+
 .btn {
 	margin-right: 4px;
 	margin-bottom: 4px;
@@ -326,6 +326,7 @@ h6 {
 	}
 }
 // Form Input Field
+
 .form-control {
 	box-shadow: none;
 	background: transparent;
@@ -1335,6 +1336,7 @@ body {
 	}
 }
 // Person
+
 .person {
 	text-align: center;
 	@media screen and (max-width: $screen-md) {
@@ -1368,6 +1370,7 @@ body {
 
 #why {}
 // Offcanvas Menu
+
 #offcanvas,
 #page,
 .nav-toggle {
@@ -1428,6 +1431,7 @@ body {
 	}
 }
 // Burger Menu
+
 .nav-toggle {
 	cursor: pointer;
 	text-decoration: none;
@@ -1548,6 +1552,7 @@ body {
 	}
 }
 // Magnific Popup
+
 .mfp-with-zoom .mfp-container,
 .mfp-with-zoom.mfp-bg {
 	opacity: 0;
@@ -1572,6 +1577,7 @@ body {
 	opacity: 0;
 }
 // Helper Class
+
 .col-xxs-12 {
 	@media screen and (max-width: 480px) {
 		float: none;
@@ -1658,19 +1664,18 @@ body {
 		opacity: 0;
 	}
 }
-
 // Buttons
+
 .btn {
 	display: block;
 	width: 100%;
-
-	@media screen and (min-width: $screen-sm) {
+	@media screen and (min-width: $screen-xs) {
 		display: inline-block;
 		width: auto;
 	}
 }
-
 // Modal 
+
 .modal {
 	position: absolute;
 
@@ -1688,7 +1693,6 @@ body {
 			text-align: center;
 			margin-bottom: 40px;
 		}
-
 		// Not login? Not register?
 		a {
 			color: $brand-tertiary;
@@ -1697,20 +1701,25 @@ body {
 				color: $brand-darker;
 			}
 		}
-
 		// Modal buttons
-		.btn:only-of-type {
+		.btn {
 			width: 100%;
 			@media screen and (min-width: $screen-sm) {
 				width: auto;
 			}
+
+			&:only-of-type {
+				width: 100%;
+				@media screen and (min-width: $screen-xs) {
+					width: auto;
+				}
+			}
 		}
-		
+
 		.to-login-modal {
 			display: block;
-
 			@media screen and (min-width: $screen-md) {
-				display: inline-block
+				display: inline-block;
 			}
 		}
 	}
