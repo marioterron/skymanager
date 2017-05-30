@@ -8,7 +8,7 @@
 /* =======================================================
 *
 * 	Template Style 
-*	Edit this section
+*
 *
 * ======================================================= */
 body {
@@ -858,7 +858,7 @@ body {
     color: #fff;
     position: relative; }
     #footer a:hover {
-      bottom: 3px; }
+      text-decoration: underline; }
   #footer .icon-heart {
     color: #d43f3a; }
   @media screen and (max-width: 992px) {
@@ -1161,3 +1161,26 @@ body {
 
 .js .animate-box {
   opacity: 0; }
+
+.nav-tabs {
+  margin-bottom: 15px; }
+
+.sign-with {
+  margin-top: 25px;
+  padding: 20px; }
+
+.modal .modal-header {
+  border: 0; }
+
+.modal .modal-body {
+  padding-bottom: 30px; }
+  .modal .modal-body .lead {
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: none;
+    text-align: center;
+    margin-bottom: 40px; }
+  .modal .modal-body a {
+    color: #85919d; }
+    .modal .modal-body a:hover {
+      color: #444; }

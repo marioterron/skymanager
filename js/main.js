@@ -198,7 +198,6 @@
 	};
 	
 	
-
 	// Document on load.
 	$(function(){
 		gotToNextSection();

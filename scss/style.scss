@@ -111,7 +111,7 @@ $form-group-margin-bottom:       30px !default;
 /* =======================================================
 *
 * 	Template Style 
-*	Edit this section
+*
 *
 * ======================================================= */
 
@@ -1095,7 +1095,7 @@ body {
 		color: $brand-white;
 		position: relative;
 		&:hover {
-			bottom: 3px;
+			text-decoration: underline;
 		}
 	}
 	.icon-heart {
@@ -1459,3 +1459,39 @@ body {
 		opacity: 0;
 	}
 }
+
+// Modal 
+
+.nav-tabs {
+    margin-bottom: 15px;
+}
+.sign-with {
+    margin-top: 25px;
+    padding: 20px;
+}
+
+.modal  {
+	.modal-header {
+		border: 0;
+	}
+	.modal-body {
+		padding-bottom: 30px;
+		
+		.lead {
+			font-size: 24px;
+			font-weight: 400;
+			text-transform: none;
+			text-align: center;
+			margin-bottom: 40px;
+		}
+		
+		a {
+			color: $brand-tertiary;
+			
+			&:hover {
+				color: $brand-darker;
+			}
+		}
+	}
+}
+
