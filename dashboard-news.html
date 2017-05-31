@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Sky Manager - Game Dashboard</title>
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,600,400italic,700">
+
+	<!-- Bootstrap Core CSS -->
+	<link rel="stylesheet" href="css/bootstrap.css" >
+
+	<!-- Custom Fonts -->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	
+	<!-- Custom CSS -->
+	<link href="css/dashboard.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+
+		<!-- Navigation -->
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+				<a class="navbar-brand" href="#">Panel de control</a>
+			</div>
+			<!-- Top Menu Items -->
+			<ul class="nav navbar-right top-nav">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon icon-user"></i> Mario Terron <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="#"><i class="icon icon-user"></i> Profile</a>
+						</li>
+						<li>
+							<a href="#"><i class="icon icon-envelope"></i> Inbox</a>
+						</li>
+						<li>
+							<a href="#"><i class="icon icon-gear"></i> Settings</a>
+						</li>
+						<li class="divider"></li>
+						<li>
+							<a href="#"><i class="icon icon-power-off"></i> Log Out</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="nav navbar-nav side-nav">
+					<li class="active">
+						<a href="#"><i class="icon icon-newspaper-o"></i> Inicio</a>
+					</li>
+					<li>
+						<a href="score.html"><i class="icon icon-trophy"></i> Clasificacion</a>
+					</li>
+					<li>
+						<a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="icon icon-users"></i> Equipo <i class="icon icon-caret-down"></i></a>
+						<ul id="demo" class="collapse">
+							<li>
+								<a href="#">Alineación</a>
+							</li>
+							<li>
+								<a href="#">Plantilla</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;" data-toggle="collapse" data-target="#demo2"><i class="icon icon-exchange"></i> Mercado <i class="icon icon-caret-down"></i></a>
+						<ul id="demo2" class="collapse">
+							<li>
+								<a href="#">Mercado</a>
+							</li>
+							<li>
+								<a href="#">Mis ventas</a>
+							</li>
+							<li>
+								<a href="#">Historial</a>
+							</li>
+							<li>
+								<a href="#">Jugadores</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</nav>
+
+		<div id="page-wrapper">
+
+			<div class="container-fluid">
+
+				<!-- Page Heading -->
+				<div class="row">
+					<div class="panel-container col-md-10 col-md-offset-1">
+						<div class="panel panel-default">
+							<!-- Default panel contents -->
+							<div class="panel-body">
+								<div class="panel-header">
+									<h3>Noticías</h3>
+									<i class="icon icon-newspaper-o" aria-hidden="true"></i>
+								</div>
+								<div class="news">
+									<div class="news-header">
+										<h5>Recompensa:</h5>
+									</div>
+									<div class="news-body">
+										<p>En la jornada 38, has ganado 1.950.000 €</p>
+									</div>
+								</div>
+								<div class="news">
+									<div class="news-header">
+										<h5>NOTA INFORMATIVA:</h5>
+									</div>
+									<div class="news-body">
+										<p>Tras la finalización del partido aplazado entre Celta de Vigo y Real Madrid de la jornada 21, te hemos sumado los puntos de los jugadores que alineaste y añadido a tu presupuesto el dinero que has ganado.</p>
+									</div>
+								</div>
+								<div class="news">
+									<div class="news-header">
+										<h5>Recompensa:</h5>
+									</div>
+									<div class="news-body">
+										<p>En la jornada 37, has ganado 4.000.000 €</p>
+									</div>
+								</div>
+								<div class="news">
+									<div class="news-header">
+										<h5>Operacion de mercado:</h5>
+									</div>
+									<div class="news-body">
+										<p>Sergio a vendido a Messi a Carles por 100.000.000 €</p>
+									</div>
+								</div>
+								<div class="news">
+									<div class="news-header">
+										<h5>Recompensa:</h5>
+									</div>
+									<div class="news-body">
+										<p>En la jornada 36, has ganado 3.250.000 €</p>
+									</div>
+								</div>
+								<div class="news">
+									<div class="news-header">
+										<h5>Oferta privada recibida:</h5>
+									</div>
+									<div class="news-body">
+										<p>José Angel te ha hecho una oferta privada por Antoine Griezzman</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+					<!-- /.row -->
+
+				</div>
+				<!-- /.container-fluid -->
+
+			</div>
+			<!-- /#page-wrapper -->
+
+		</div>
+		<!-- /#wrapper -->
+
+		<!-- jQuery -->
+		<script src="js/jquery.min.js"></script>
+
+		<!-- Bootstrap Core JavaScript -->
+		<script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

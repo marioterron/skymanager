@@ -43,16 +43,16 @@
 	var toggleBtnColor = function() {
 
 
-		if ($('#hero').length > 0) {
-			$('#hero').waypoint(function(direction) {
+		if ($('.toggle-delimiter').length > 0) {
+			$('.toggle-delimiter').waypoint(function(direction) {
 				if (direction === 'down') {
 					$('.nav-toggle').addClass('dark');
 				}
 			}, {
-				offset: -$('#hero').height()
+				offset: -$('.toggle-delimiter').height()
 			});
 
-			$('#hero').waypoint(function(direction) {
+			$('.toggle-delimiter').waypoint(function(direction) {
 				if (direction === 'up') {
 					$('.nav-toggle').removeClass('dark');
 				}
