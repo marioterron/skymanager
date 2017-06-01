@@ -7,7 +7,7 @@
 body {
     margin-top: 100px;
     background-color: #222;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 h1,
@@ -249,6 +249,9 @@ ul.alert-dropdown {
 
 .table {
   color: #6a6c6f;
+  thead th a {
+    color: #6a6c6f;
+  }
 }
 
 .navbar-brand {
@@ -281,9 +284,9 @@ ul.alert-dropdown {
 	.panel-header {
 	  display: flex;
 	  justify-content: space-between;
-    margin-bottom: 60px;
 
     .icon {
+      color: #484c50;
 		  font-size: 6rem;
 		}
     
@@ -359,6 +362,16 @@ ul.alert-dropdown {
 
 
 // Squad section
+.table.squad {
+  td {
+    line-height: 27.5px;
+  }
+  
+  td.narrow {
+    line-height: normal;
+  }
+}
+
 .pos {
     display: inline-block;
     font-weight: 700;
@@ -475,3 +488,92 @@ ul.alert-dropdown {
 }
 
 // Other
+
+.lineup-section {
+  padding: 0 20px !important; 
+  .container-fluid .row {
+    display: flex;
+    flex-wrap: wrap;
+    
+    @media screen and (min-width: 1175px) {
+      flex-wrap: nowrap;
+    }
+  }
+  
+  .panel-container {
+    margin-top: 20px;
+  }
+  
+  .panel {
+    p {
+      margin-bottom: 20px;
+    }
+    
+    .panel-body {
+      // min-height: 470px;
+    }
+    
+    .panel-footer {
+      button {
+        width: 100%;
+      }
+    }
+  }
+  
+  .ground {
+      width: 70%;
+      height: 575px;
+      margin: 50px auto;
+      position: relative;
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-image: url(../images/football-ground.svg);
+  }
+
+  .btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+    
+    button {
+      margin: 0 10px 10px 0;
+    }
+  } 
+}
+
+.card {
+    height: 96px;
+    width: 70px;
+    overflow: hidden;
+    padding: 0;
+    border: none;
+    border-radius: .28571429rem;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+}
+
+.card-block {
+    font-size: 10px;
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+    margin: 0;
+    border: none;
+    border-top: 1px solid rgba(34, 36, 38, .1);
+    box-shadow: none;
+    background-color: white;
+}
+
+.card-img-top {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.line-goalkeeper, .line-defenders, .line-midfielders, .line-forwards {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 25px;
+}
+

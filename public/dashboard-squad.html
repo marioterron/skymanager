@@ -11,7 +11,7 @@
 
 	<title>Sky Manager - Game Dashboard</title>
 
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,600,400italic,700">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900">
 
 	<!-- Bootstrap Core CSS -->
 	<link rel="stylesheet" href="css/bootstrap.css">
@@ -22,6 +22,7 @@
 
 
 	<!-- Custom CSS -->
+	<link href="css/style.css" rel="stylesheet">
 	<link href="css/dashboard.css" rel="stylesheet">
 
 </head>
@@ -40,7 +41,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-				<a class="navbar-brand" href="index.html">SKY<span>MANAGER</span></a>
+				<a class="navbar-brand" href="dashboard-news.html">SKY<span>MANAGER</span></a>
 			</div>
 			<!-- Top Menu Items -->
 			<ul class="nav navbar-right top-nav">
@@ -48,17 +49,17 @@
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon icon-user"></i> Mario Terron <b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li>
-							<a href="#"><i class="icon icon-user"></i> Profile</a>
+							<a href="#"><i class="icon icon-user"></i> Perfil</a>
 						</li>
 						<li>
-							<a href="#"><i class="icon icon-envelope"></i> Inbox</a>
+							<a href="#"><i class="icon icon-envelope"></i> Mensajes</a>
 						</li>
 						<li>
-							<a href="#"><i class="icon icon-gear"></i> Settings</a>
+							<a href="#"><i class="icon icon-gear"></i> Configuración</a>
 						</li>
 						<li class="divider"></li>
 						<li>
-							<a href="#"><i class="icon icon-power-off"></i> Log Out</a>
+							<a href="index.html" style="color: #d9534f;"><i class="icon icon-power-off"></i> Cerrar sesión</a>
 						</li>
 					</ul>
 				</li>
@@ -76,10 +77,10 @@
 						<a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="icon icon-users"></i> Equipo <i class="icon icon-caret-down"></i></a>
 						<ul id="demo" class="collapse">
 							<li>
-								<a href="#">Alineación</a>
+								<a href="dashboard-lineup.html">Alineación</a>
 							</li>
 							<li>
-								<a href="dashboard-squad.html">Plantilla</a>
+								<a href="#">Plantilla</a>
 							</li>
 						</ul>
 					</li>
@@ -111,77 +112,99 @@
 							<div class="panel-body">
 								<div class="panel-header">
 									<h3 class="title">Plantilla</h3>
-									<i class="icon icon-users" aria-hidden="true"></i>
+									<i class="icon icon-users"></i>
 								</div>
 								<!-- Table -->
-								<table class="table table-hover">
+								<table class="table table-hover squad">
 									<thead>
 										<tr>
-											<th title="Posición">
-												Pos. 
-												<span class="sort sort-down" aria-hidden="true">
-													<i class="fa fa-sort"></i>
-												</span>
+											<th>
+												<a href="#">
+													<span data-toggle="tooltip" title="Posición">Pos.</span>
+													<span class="sort sort-down">
+														<i class="fa fa-sort"></i>
+													</span>
+												</a>
 											</th>
-											<th title="Equipo">
-												Eq. 
-												<span class="sort sort-down" aria-hidden="true">
-													<i class="fa fa-sort"></i>
-												</span>
-											</th>											
-											<th title="Jugador">
-												Jugador 
-												<span class="sort sort-down" aria-hidden="true">
-													<i class="fa fa-sort"></i>
-												</span>
+											<th>
+												<a href="#">
+													<span data-toggle="tooltip" title="Equipo">Eq.</span>
+													<span class="sort sort-down">
+														<i class="fa fa-sort"></i>
+													</span>
+												</a>
 											</th>
-											<th title="Total puntos">
-												Pts. 
-												<span class="sort sort-down" aria-hidden="true">
-													<i class="fa fa-sort"></i>
-												</span>
+											<th>
+												<a href="#">
+													<span data-toggle="tooltip" title="Jugador">Jugador</span>
+													<span class="sort sort-down">
+														<i class="fa fa-sort"></i>
+													</span>
+												</a>
 											</th>
-											<th title="Valor mercado">
-												VM. 
-												<span class="sort sort-down" aria-hidden="true">
-													<i class="fa fa-sort"></i>
-												</span>
+											<th>
+												<a href="#">
+													<span data-toggle="tooltip" title="Total puntos">Pts.</span>
+													<span class="sort sort-down">
+														<i class="fa fa-sort"></i>
+													</span>
+												</a>
 											</th>
-											<th title="Estado">
-												Est. 
-												<span class="sort sort-down" aria-hidden="true">
-													<i class="fa fa-sort"></i>
-												</span>
+											<th>
+												<a href="#">
+													<span data-toggle="tooltip" title="Valor en el mercado">VM.</span>
+													<span class="sort sort-down">
+														<i class="fa fa-sort"></i>
+													</span>
+												</a>
 											</th>
-											<th title="Partidos jugados">
-												PJ. 
-												<span class="sort sort-down" aria-hidden="true">
-													<i class="fa fa-sort"></i>
-												</span>
+											<th>
+												<a href="#">
+													<span data-toggle="tooltip" title="Estado">Est.</span>
+													<span class="sort sort-down">
+														<i class="fa fa-sort"></i>
+													</span>
+												</a>
 											</th>
-											<th title="Nota media">
-												Med. 
-												<span class="sort sort-down" aria-hidden="true">
-													<i class="fa fa-sort"></i>
-												</span>
+											<th>
+												<a href="#">
+													<span data-toggle="tooltip" title="Partidos jugados">PJ.</span>
+													<span class="sort sort-down">
+														<i class="fa fa-sort"></i>
+													</span>
+												</a>
 											</th>
-											<th title="Puntos como local">
-												<i class="icon icon-home"></i>
-												<span class="sort sort-down" aria-hidden="true">
-													<i class="fa fa-sort"></i>
-												</span>
+											<th>
+												<a href="#">
+													<span data-toggle="tooltip" title="Media de puntos por partido">Med.</span>
+													<span class="sort sort-down">
+														<i class="fa fa-sort"></i>
+													</span>
+												</a>
 											</th>
-											<th title="Puntos como visitante">
-												<i class="icon icon-plane"></i>
-												<span class="sort sort-down" aria-hidden="true">
-													<i class="fa fa-sort"></i>
-												</span>
+											<th >
+												<a href="">
+													<span data-toggle="tooltip" title="Puntos como local"><i class="icon icon-home"></i></span>
+													<span class="sort sort-down">
+														<i class="fa fa-sort"></i>
+													</span>
+												</a>
 											</th>
-											<th title="Estado de forma">
-												Forma 
-												<span class="sort sort-down" aria-hidden="true">
-													<i class="fa fa-sort"></i>
-												</span>
+											<th>
+												<a href="">
+													<span data-toggle="tooltip" title="Puntos como visitante"><i class="icon icon-plane"></i></span>
+													<span class="sort sort-down">
+														<i class="fa fa-sort"></i>
+													</span>
+												</a>
+											</th>
+											<th>
+												<a href="#">
+													<span data-toggle="tooltip" title="Puntos conseguidos las ultimas 5 jornadas">Forma</span>
+													<span class="sort sort-down">
+														<i class="fa fa-sort"></i>
+													</span>
+												</a>
 											</th>
 										</tr>
 									</thead>
@@ -199,7 +222,7 @@
 											<td>132</td>
 											<td>431.000 €</td>
 											<td>
-												<span class="player-status player-status-injured" title="Lesionado">
+												<span class="player-status player-status-injured" data-toggle="tooltip" title="Lesionado">
 													<i class="icon icon-plus"></i>
 												</span>
 											</td>
@@ -208,25 +231,26 @@
 											<td>70</td>
 											<td>62</td>
 											<td>
-												<div class="fitness" title="Puntos conseguidos las ultimas 5 jornadas">
-													<span class="points injured" title="Lesionado">+</span><span class="points injured" title="Lesionado">+</span><span class="points injured" title="Lesionado">+</span><span class="points injured" title="Lesionado">+</span><span class="points injured" title="Lesionado">+</span>
+												<div class="fitness">
+													<span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured"
+													 data-toggle="tooltip" title="Lesionado">+</span>
 												</div>
 											</td>
 										</tr>
 										<tr>
 											<td>
 												<span title="Defensa" class="pos pos-defender">DF</span>
-											</td>											
+											</td>
 											<td class="narrow">
 												<a title="Real Madrid" class="team" href="#">
 													<img src="https://upload.wikimedia.org/wikipedia/it/archive/4/4d/20101205134544!Real_madrid_logo.png">
 												</a>
-											</td>											
+											</td>
 											<td>Danilo</td>
 											<td>59</td>
 											<td>1.431.000 €</td>
-											<td>												
-												<span class="player-status player-status" title="Alineable">
+											<td>
+												<span class="player-status player-status" data-toggle="tooltip" title="Alineable">
 													<i class="icon icon-check"></i>
 												</span>
 											</td>
@@ -235,15 +259,15 @@
 											<td>33</td>
 											<td>26</td>
 											<td>
-												<div class="fitness" title="Puntos conseguidos las ultimas 5 jornadas">
-													<span class="points high-points">6</span><span class="points dont-played" title="No jugado">-</span><span class="points high-points">6</span><span class="points high-points">6</span><span class="points low-points">2</span>
+												<div class="fitness">
+													<span class="points high-points">6</span><span class="points dont-played" data-toggle="tooltip" title="No jugado">-</span><span class="points high-points">6</span><span class="points high-points">6</span><span class="points low-points">2</span>
 												</div>
 											</td>
 										</tr>
 										<tr>
 											<td>
 												<span title="Mediocentro" class="pos pos-midfielder">MC</span>
-											</td>											
+											</td>
 											<td class="narrow">
 												<a title="Alavés" class="team" href="#">
 													<img src="https://cdn.comuniame.com/i/t/alaves-91.png">
@@ -252,8 +276,8 @@
 											<td>Ibai Gómez</td>
 											<td>118</td>
 											<td>1.890.000 €</td>
-											<td>												
-												<span class="player-status player-status-sanctioned" title="Sancionado">
+											<td>
+												<span class="player-status player-status-sanctioned" data-toggle="tooltip" title="Sancionado">
 													<i class="icon icon-close"></i>
 												</span>
 											</td>
@@ -263,14 +287,14 @@
 											<td>60</td>
 											<td>
 												<div class="fitness" title="Puntos conseguidos las ultimas 5 jornadas">
-													<span class="points high-points">6</span><span class="points dont-played" title="No convocado">x</span><span class="points low-points">2</span><span class="points dont-played" title="No jugado">-</span><span class="points so-high-points">20</span>
+													<span class="points high-points">6</span><span class="points dont-played" data-toggle="tooltip" title="No convocado">x</span><span class="points low-points">2</span><span class="points dont-played" data-toggle="tooltip" title="No jugado">-</span><span class="points so-high-points">20</span>
 												</div>
 											</td>
 										</tr>
 										<tr>
 											<td>
 												<span title="Delantero" class="pos pos-forward">DL</span>
-											</td>											
+											</td>
 											<td class="narrow">
 												<a title="Real Madrid" class="team" href="#">
 													<img src="https://upload.wikimedia.org/wikipedia/it/archive/4/4d/20101205134544!Real_madrid_logo.png">
@@ -279,8 +303,8 @@
 											<td>Bale</td>
 											<td>59</td>
 											<td>1.431.000 €</td>
-											<td>												
-												<span class="player-status player-status" title="Lesionado">
+											<td>
+												<span class="player-status player-status" data-toggle="tooltip" title="Alineable">
 													<i class="icon icon-check"></i>
 												</span>
 											</td>
@@ -289,8 +313,9 @@
 											<td>33</td>
 											<td>26</td>
 											<td>
-												<div class="fitness" title="Puntos conseguidos las ultimas 5 jornadas">
-													<span class="points injured" title="Lesionado">+</span><span class="points injured" title="Lesionado">+</span><span class="points injured" title="Lesionado">+</span><span class="points injured" title="Lesionado">+</span><span class="points injured" title="Lesionado">+</span>
+												<div class="fitness">
+													<span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured"
+													 data-toggle="tooltip" title="Lesionado">+</span>
 												</div>
 											</td>
 										</tr>
@@ -318,6 +343,12 @@
 
 	<!-- Bootstrap Core JavaScript -->
 	<script src="js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+		$(function() {
+			$('[data-toggle="tooltip"]').tooltip()
+		})
+	</script>
 
 </body>
 
