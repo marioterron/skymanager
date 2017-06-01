@@ -6,7 +6,8 @@
 body {
   margin-top: 100px;
   background-color: #222;
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px; }
 
 h1,
 h2,
@@ -57,11 +58,11 @@ h6 {
   line-height: 20px;
   color: #e9e9e9; }
 
-.top-nav > li > a:hover,
-.top-nav > li > a:focus,
 .top-nav > .open > a,
+.top-nav > .open > a:focus,
 .top-nav > .open > a:hover,
-.top-nav > .open > a:focus {
+.top-nav > li > a:focus,
+.top-nav > li > a:hover {
   color: #fff;
   background-color: #000; }
 
@@ -113,11 +114,13 @@ ul.alert-dropdown {
     background-color: #222;
     bottom: 0;
     overflow-x: hidden;
-    padding-bottom: 40px; }
+    padding-bottom: 40px;
+    font-weight: 600;
+    font-size: 16px; }
   .side-nav > li > a {
     width: 225px; }
-  .side-nav li a:hover,
-  .side-nav li a:focus {
+  .side-nav li a:focus,
+  .side-nav li a:hover {
     outline: none;
     background-color: #000 !important; } }
 
@@ -195,8 +198,17 @@ ul.alert-dropdown {
 * ======================================================= */
 .table {
   color: #6a6c6f; }
+  .table thead {
+    font-size: 12px; }
   .table thead th a {
     color: #6a6c6f; }
+
+.navbar-right {
+  font-size: 16px;
+  font-weight: 600; }
+  .navbar-right li {
+    font-size: 14px;
+    font-weight: 600; }
 
 .navbar-brand {
   font-size: 24px;
@@ -216,7 +228,8 @@ ul.alert-dropdown {
   min-height: calc(100vh - 50px); }
 
 .panel {
-  margin-top: 30px; }
+  margin-top: 30px;
+  overflow-x: scroll; }
   .panel .panel-header {
     display: flex;
     justify-content: space-between; }
@@ -240,7 +253,8 @@ ul.alert-dropdown {
   .news p {
     padding-left: 49px; }
   .news h4 {
-    display: inline-block; }
+    display: inline-block;
+    margin-bottom: 0; }
 
 .news-icon {
   display: inline-block;
@@ -271,13 +285,18 @@ ul.alert-dropdown {
   width: 35px;
   height: 35px; }
 
-.table.squad td {
+.squad-section .table td {
   line-height: 27.5px; }
+  .squad-section .table td.narrow {
+    line-height: normal; }
 
-.table.squad td.narrow {
-  line-height: normal; }
+.squad-section .btn {
+  margin: 0;
+  padding: 2px 5px;
+  min-width: 70px;
+  font-size: 12px; }
 
-.pos {
+.squad-section .pos {
   display: inline-block;
   font-weight: 700;
   font-size: 11px;
@@ -288,21 +307,21 @@ ul.alert-dropdown {
   line-height: 28px;
   color: #fff;
   background: #777; }
-  .pos-goalkeeper {
+  .squad-section .pos-goalkeeper {
     background: #ffd800;
     color: #000; }
-  .pos-defender {
+  .squad-section .pos-defender {
     background: #03a9f4; }
-  .pos-midfielder {
+  .squad-section .pos-midfielder {
     background: #10af00; }
-  .pos-forward {
+  .squad-section .pos-forward {
     background: red; }
 
-.narrow img {
+.squad-section .narrow img {
   max-width: 30px;
   max-height: 40px; }
 
-.player-status {
+.squad-section .player-status {
   display: inline-block;
   font-weight: 700;
   font-size: 11px;
@@ -313,13 +332,13 @@ ul.alert-dropdown {
   line-height: 28px;
   color: #fff;
   background-color: #5cb85c; }
-  .player-status-injured, .player-status-sanctioned {
+  .squad-section .player-status-injured, .squad-section .player-status-sanctioned {
     background-color: #d9534f; }
 
-.fitness {
+.squad-section .fitness {
   display: block;
   white-space: nowrap; }
-  .fitness .points {
+  .squad-section .fitness .points {
     display: inline-block;
     font-size: 12px;
     width: 20px;
@@ -334,27 +353,27 @@ ul.alert-dropdown {
     vertical-align: middle;
     color: #fff;
     background-color: #ccc; }
-    .fitness .points:first-child {
+    .squad-section .fitness .points:first-child {
       border-top-left-radius: 5px;
       border-bottom-left-radius: 5px; }
-    .fitness .points:last-child {
+    .squad-section .fitness .points:last-child {
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
       border-right: none; }
-  .fitness .injured {
+  .squad-section .fitness .injured {
     background-color: #d9534f; }
-  .fitness .sanctioned {
+  .squad-section .fitness .sanctioned {
     background-color: #d9534f; }
-  .fitness .not-played {
+  .squad-section .fitness .not-played {
     background: #bbb;
     color: #000; }
-  .fitness .negative-points {
+  .squad-section .fitness .negative-points {
     background-color: red; }
-  .fitness .low-points {
+  .squad-section .fitness .low-points {
     background: #ff9800; }
-  .fitness .high-points {
+  .squad-section .fitness .high-points {
     background: #10af00; }
-  .fitness .so-high-points {
+  .squad-section .fitness .so-high-points {
     background: #03a9f4; }
 
 .lineup-section {
@@ -379,7 +398,7 @@ ul.alert-dropdown {
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
-    background-image: url(../images/football-ground.svg); }
+    background-image: url("../images/football-ground.svg"); }
   .lineup-section .btn-container {
     display: flex;
     flex-wrap: wrap;
@@ -387,33 +406,32 @@ ul.alert-dropdown {
     margin-bottom: 40px; }
     .lineup-section .btn-container button {
       margin: 0 10px 10px 0; }
-
-.card {
-  height: 96px;
-  width: 70px;
-  overflow: hidden;
-  padding: 0;
-  border: none;
-  border-radius: .28571429rem;
-  box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5; }
-
-.card-block {
-  font-size: 10px;
-  font-weight: 400;
-  text-align: center;
-  position: relative;
-  margin: 0;
-  border: none;
-  border-top: 1px solid rgba(34, 36, 38, 0.1);
-  box-shadow: none;
-  background-color: white; }
-
-.card-img-top {
-  display: block;
-  width: 100%;
-  height: auto; }
-
-.line-goalkeeper, .line-defenders, .line-midfielders, .line-forwards {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 25px; }
+  .lineup-section .card {
+    height: 96px;
+    width: 70px;
+    overflow: hidden;
+    padding: 0;
+    border: none;
+    border-radius: 0.28571429rem;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5; }
+  .lineup-section .card-block {
+    font-size: 10px;
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+    margin: 0;
+    border: none;
+    border-top: 1px solid rgba(34, 36, 38, 0.1);
+    box-shadow: none;
+    background-color: white; }
+  .lineup-section .card-img-top {
+    display: block;
+    width: 100%;
+    height: auto; }
+  .lineup-section .line-defenders,
+  .lineup-section .line-forwards,
+  .lineup-section .line-goalkeeper,
+  .lineup-section .line-midfielders {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px; }
