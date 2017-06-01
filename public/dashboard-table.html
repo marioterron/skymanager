@@ -10,7 +10,7 @@
 	<meta name="author" content="">
 
 	<title>Sky Manager - Game Dashboard</title>
-	
+
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,600,400italic,700">
 
 	<!-- Bootstrap Core CSS -->
@@ -38,7 +38,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-				<a class="navbar-brand" href="index.html">Panel de control</a>
+				<a class="navbar-brand" href="index.html">SKY<span>MANAGER</span></a>
 			</div>
 			<!-- Top Menu Items -->
 			<ul class="nav navbar-right top-nav">
@@ -64,10 +64,10 @@
 			<!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav side-nav">
-					<li class="active">
+					<li>
 						<a href="dashboard-news.html"><i class="icon icon-newspaper-o"></i> Inicio</a>
 					</li>
-					<li>
+					<li class="active">
 						<a href="#"><i class="icon icon-trophy"></i> Clasificacion</a>
 					</li>
 					<li>
@@ -77,7 +77,7 @@
 								<a href="#">Alineación</a>
 							</li>
 							<li>
-								<a href="#">Plantilla</a>
+								<a href="dashboard-squad.html">Plantilla</a>
 							</li>
 						</ul>
 					</li>
@@ -89,12 +89,6 @@
 							</li>
 							<li>
 								<a href="#">Mis ventas</a>
-							</li>
-							<li>
-								<a href="#">Historial</a>
-							</li>
-							<li>
-								<a href="#">Jugadores</a>
 							</li>
 						</ul>
 					</li>
@@ -114,58 +108,69 @@
 							<!-- Default panel contents -->
 							<div class="panel-body">
 								<div class="panel-header">
-									<h3>Clasificación</h3>
+									<h3 class="title">Clasificación</h3>
 									<i class="icon icon-trophy" aria-hidden="true"></i>
 								</div>
-								<p>Escoge un usuario para ver información detallada sobre su equipo y puntos.</p>
+								<!-- Table -->
+								<table class="table table-hover points">
+									<thead>
+										<tr>
+											<th>Posición</th>
+											<th>Usuario</th>
+											<th>Puntos</th>
+											<th>Valor del equipo</th>
+											<th>Jugadores</th>
+											<th>Ultima conexión</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1º</td>
+											<td>
+												<span class="avatar" style="background-image:url(images/me.jpg);"></span>
+												<span class="username">Mario</span>
+											</td>
+											<td>98</td>
+											<td>27.676.000 €</td>
+											<td>21</td>
+											<td>hace 1 hora</td>
+										</tr>
+										<tr>
+											<td>2º</td>
+											<td>
+												<span class="avatar"></span>
+												<span class="username">José Angel</span>
+											</td>
+											<td>96</td>
+											<td>23.550.000 €</td>
+											<td>19</td>
+											<td>hace 2 días</td>
+										</tr>
+										<tr>
+											<td>3º</td>
+											<td>
+												<span class="avatar"></span>
+												<span class="username">Carles</span>
+											</td>
+											<td>91</td>
+											<td>25.750.000 €</td>
+											<td>20</td>
+											<td>hace 20 minutos</td>
+										</tr>
+										<tr>
+											<td>4º</td>
+											<td>
+												<span class="avatar"></span>
+												<span class="username">Sergio</span>
+											</td>
+											<td>56</td>
+											<td>15.750.000 €</td>
+											<td>17</td>
+											<td>hace 1 minuto</td>
+										</tr>
+									</tbody>
+								</table>
 							</div>
-							<!-- Table -->
-							<table class="table table-hover">
-								<thead>
-									<tr>
-										<th></th>
-										<th></th>
-										<th>Puntos</th>
-										<th>Valor del equipo</th>
-										<th>Jugadores</th>
-										<th>Ultima conexión</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>1º</td>
-										<td>Mario</td>
-										<td>98</td>
-										<td>27.676.000 €</td>
-										<td>21</td>
-										<td>hace 1 hora</td>
-									</tr>
-									<tr>
-										<td>2º</td>
-										<td>José Angel</td>
-										<td>96</td>
-										<td>23.550.000 €</td>
-										<td>19</td>
-										<td>hace 2 días</td>
-									</tr>
-									<tr>
-										<td>3º</td>
-										<td>Carles</td>
-										<td>91</td>
-										<td>25.750.000 €</td>
-										<td>20</td>
-										<td>hace 20 minutos</td>
-									</tr>
-									<tr>
-										<td>4º</td>
-										<td>Sergio</td>
-										<td>56</td>
-										<td>15.750.000 €</td>
-										<td>17</td>
-										<td>hace 1 minuto</td>
-									</tr>
-								</tbody>
-							</table>
 						</div>
 					</div>
 
