@@ -407,6 +407,7 @@ ul.alert-dropdown {
     .lineup-section .btn-container button {
       margin: 0 10px 10px 0; }
   .lineup-section .card {
+    position: relative;
     height: 96px;
     width: 70px;
     overflow: hidden;
@@ -435,3 +436,19 @@ ul.alert-dropdown {
     display: flex;
     justify-content: space-around;
     margin-top: 25px; }
+  .lineup-section .player-status {
+    position: absolute;
+    bottom: 15px;
+    right: -7.5px;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 11px;
+    border-radius: 50%;
+    text-align: center;
+    min-width: 26px;
+    height: 26px;
+    line-height: 28px;
+    color: #fff;
+    background-color: #5cb85c; }
+    .lineup-section .player-status-injured, .lineup-section .player-status-sanctioned {
+      background-color: #d9534f; }
