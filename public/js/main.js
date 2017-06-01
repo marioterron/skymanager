@@ -5,7 +5,7 @@
 
 
 
-	// iPad and iPod detection	
+	// iPad and iPod detection
 	var isiPad = function() {
 		return (navigator.platform.indexOf("iPad") !== -1);
 	};
@@ -103,18 +103,18 @@
 		$('body').prepend('<div id="offcanvas" />');
 		$('#offcanvas').prepend('<ul id="side-links">');
 		$('body').prepend('<a href="#" class="js-nav-toggle nav-toggle"><i></i></a>');
-		
-	
+
+
 		$('.left-menu li, .right-menu li').each(function() {
-	
+
 			var $this = $(this);
-	
+
 			$('#offcanvas ul').append($this.clone());
-	
+
 		});
 	};
-	
-	
+
+
 	// Burger Menu
 	var burgerMenu = function() {
 
@@ -211,7 +211,7 @@
 
 			$('body').removeClass('offcanvas-visible');
 			$('.js-nav-toggle').removeClass('active');
-			
+
 			$('#register-modal').modal('hide');
 			$('#login-modal').modal('show');
 		});
@@ -221,9 +221,14 @@
 
 			$('body').removeClass('offcanvas-visible');
 			$('.js-nav-toggle').removeClass('active');
-			
+
 			$('#login-modal').modal('hide');
 			$('#register-modal').modal('show');
+		});
+
+		$('.to-player-modal').on('click', function(e) {
+			e.preventDefault();
+			$('#player-modal').modal('show');
 		});
 	};
 

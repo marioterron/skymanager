@@ -29,6 +29,23 @@
 
 <body>
 
+	<div class="modal fade" id="player-modal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-10 col-md-offset-1">
+							<h3 class="lead">Le fucking modal</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div id="wrapper">
 
 		<!-- Navigation -->
@@ -109,16 +126,18 @@
 					<div class="ground">
 						<div class="line-goalkeeper">
 							<div class="card">
-								<img class="card-img-top" src="http://files.laliga.es/jugadores/201608/96x96_25115821keylor-navas.jpg">
-								<div class="card-block">
-									<p>Keylor Navas</p>
-								</div>
-								<span class="player-status" >
-									<i class="icon icon-check"></i>
-								</span>
-								<span class="player-status" >
-									<i class="icon icon-check"></i>
-								</span>
+								<a href="#" class="to-player-modal">
+									<img class="card-img-top" src="http://files.laliga.es/jugadores/201608/96x96_25115821keylor-navas.jpg">
+									<div class="card-block">
+										<p>Keylor Navas</p>
+									</div>
+									<span class="player-status" >
+										<i class="icon icon-check"></i>
+									</span>
+									<span class="player-status" >
+										<i class="icon icon-check"></i>
+									</span>
+								</a>
 							</div>
 						</div>
 						<div class="line-defenders">
@@ -258,9 +277,17 @@
 
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
-
-	<!-- Bootstrap Core JavaScript -->
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
 	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+
+	<!-- Main JS (Do not remove) -->
+	<script src="js/main.js"></script>
 
 </body>
 
