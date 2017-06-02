@@ -295,7 +295,7 @@ ul.alert-dropdown {
   .squad-section .table td.narrow {
     line-height: normal; }
 
-.squad-section .btn {
+.btn-sell {
   margin: 0;
   padding: 2px 5px;
   min-width: 70px;
@@ -515,3 +515,14 @@ ul.alert-dropdown {
     vertical-align: middle; }
     .card-player-profile p {
       margin-bottom: 0; }
+
+.description {
+  margin-bottom: 0; }
+  .description:last-of-type {
+    margin-bottom: 1.5em; }
+
+.table .in-sale {
+  display: flex;
+  flex-direction: column; }
+  .table .in-sale .btn:last-of-type {
+    margin-top: 5px; }

@@ -9,7 +9,7 @@
 	<meta name="description" content="SKYMANAGER — Dirige tu equipo y compite contra tus amigos por conseguir la mejor plantilla y ganar la liga." />
 	<meta name="author" content="Mario Terron" />
 
-	<title>Sky Manager &mdash; Game Dashboard</title>
+	<title>SKY MANAGER &mdash; Game Dashboard</title>
 
 	<!-- Goolge Fonts -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900">
@@ -71,7 +71,7 @@
 						<a href="dashboard-news.html"><i class="icon icon-newspaper-o"></i> Inicio</a>
 					</li>
 					<li class="active">
-						<a href="#"><i class="icon icon-trophy"></i> Clasificacion</a>
+						<a href="dashboard-table.html"><i class="icon icon-trophy"></i> Clasificacion</a>
 					</li>
 					<li>
 						<a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="icon icon-users"></i> Equipo <i class="icon icon-caret-down"></i></a>
@@ -88,7 +88,7 @@
 						<a href="javascript:;" data-toggle="collapse" data-target="#demo2"><i class="icon icon-exchange"></i> Mercado <i class="icon icon-caret-down"></i></a>
 						<ul id="demo2" class="collapse">
 							<li>
-								<a href="dashboard-market.html"><i class="icon icon-shopping-cart"></i> Mercado</a>
+								<a href="#"><i class="icon icon-shopping-cart"></i> Mercado</a>
 							</li>
 							<li>
 								<a href="dashboard-sales.html"><i class="icon icon-money"></i> Mis ventas</a>
@@ -111,19 +111,19 @@
 							<!-- Default panel contents -->
 							<div class="panel-body">
 								<div class="panel-header">
-									<h3 class="title">Clasificación</h3>
-									<i class="icon icon-trophy" aria-hidden="true"></i>
+									<h3 class="title">Mercado</h3>
+									<i class="icon icon-shopping-cart" aria-hidden="true"></i>
 								</div>
 								<!-- Table -->
+								<p class="description">Desde aquí puedes pujar por jugadores disponibles para su fichaje, tanto libres como puestos a la venta por otros jugadores de esta liga.</p>
+								<p class="description">Las pujas realizadas son secretas, y solo pueden ser vistas por el dueño del jugador. Para jugadores libres, gana siempre la puja más alta.</p>
 								<div class="table-wrapper">
-									<table class="table table-hover points">
+									<table class="table table-hover squad">
 										<thead>
 											<tr>
-												<th></th>
-												<th></th>
 												<th>
 													<a href="#">
-														<span>Puntos</span>
+														<span data-toggle="tooltip" title="Posición">Pos.</span>
 														<span class="sort sort-down">
 															<i class="fa fa-sort"></i>
 														</span>
@@ -131,7 +131,7 @@
 												</th>
 												<th>
 													<a href="#">
-														<span>Valor del equipo</span>
+														<span data-toggle="tooltip" title="Equipo">Eq.</span>
 														<span class="sort sort-down">
 															<i class="fa fa-sort"></i>
 														</span>
@@ -139,7 +139,7 @@
 												</th>
 												<th>
 													<a href="#">
-														<span>Jugadores</span>
+														<span data-toggle="tooltip" title="Jugador">Jugador</span>
 														<span class="sort sort-down">
 															<i class="fa fa-sort"></i>
 														</span>
@@ -147,7 +147,55 @@
 												</th>
 												<th>
 													<a href="#">
-														<span>Ultima conexión</span>
+														<span data-toggle="tooltip" title="Total puntos">Pts.</span>
+														<span class="sort sort-down">
+															<i class="fa fa-sort"></i>
+														</span>
+													</a>
+												</th>
+												<th>
+													<a href="#">
+														<span data-toggle="tooltip" title="Valor de mercado">VM.</span>
+														<span class="sort sort-down">
+															<i class="fa fa-sort"></i>
+														</span>
+													</a>
+												</th>
+												<th>
+													<a href="#">
+														<span data-toggle="tooltip" title="Estado">Est.</span>
+														<span class="sort sort-down">
+															<i class="fa fa-sort"></i>
+														</span>
+													</a>
+												</th>
+												<th>
+													<a href="#">
+														<span data-toggle="tooltip" title="Propietario del jugador">Prop.</span>
+														<span class="sort sort-down">
+															<i class="fa fa-sort"></i>
+														</span>
+													</a>
+												</th>
+												<th>
+													<a href="#">
+														<span data-toggle="tooltip" title="Precio de venta">Precio</span>
+														<span class="sort sort-down">
+															<i class="fa fa-sort"></i>
+														</span>
+													</a>
+												</th>
+												<th>
+													<a href="">
+														<span data-toggle="tooltip" title="Tiempo que lleva en el mercado">Desde</span>
+														<span class="sort sort-down">
+															<i class="fa fa-sort"></i>
+														</span>
+													</a>
+												</th>
+												<th>
+													<a href="#">
+														<span data-toggle="tooltip" title="Pujar por el jugador">Mercado</span>
 														<span class="sort sort-down">
 															<i class="fa fa-sort"></i>
 														</span>
@@ -157,48 +205,76 @@
 										</thead>
 										<tbody>
 											<tr>
-												<td>1º</td>
 												<td>
-													<span class="avatar" style="background-image:url(images/me.jpg);"></span>
-													<span class="username">Mario</span>
+													<span class="pos pos-forward" data-toggle="tooltip" title="Delantero">DL</span>
 												</td>
-												<td>98</td>
-												<td>27.676.000 €</td>
-												<td>21</td>
-												<td>hace 1 hora</td>
+												<td class="narrow">
+													<a class="team" href="#" data-toggle="tooltip" title="FC Barcelona">
+														<img src="https://cdn.comuniame.com/i/t/barcelona-3.png">
+													</a>
+												</td>
+												<td>Messi</td>
+												<td>347</td>
+												<td>23.583.000 €</td>
+												<td>
+													<span class="player-status player-status" data-toggle="tooltip" title="Alineable">
+														<i class="icon icon-check"></i>
+													</span>
+												</td>
+												<td>Carles</td>
+												<td>150.000.000 €</td>
+												<td>Hace 6 horas</td>
+												<td>
+													<button class="btn btn-primary btn-sell" type="button">Pujar</button>
+												</td>
 											</tr>
 											<tr>
-												<td>2º</td>
 												<td>
-													<span class="avatar"></span>
-													<span class="username">José Angel</span>
+													<span class="pos pos-forward" data-toggle="tooltip" title="Delantero">DL</span>
 												</td>
-												<td>96</td>
-												<td>23.550.000 €</td>
-												<td>19</td>
-												<td>hace 2 días</td>
+												<td class="narrow">
+													<a class="team" href="#" data-toggle="tooltip" title="Atletico de Madrid">
+														<img src="https://cdn.comuniame.com/i/t/atletico-2.png">
+													</a>
+												</td>
+												<td>Griezmann</td>
+												<td>216</td>
+												<td>13.404.000 €</td>
+												<td>
+													<span class="player-status player-status" data-toggle="tooltip" title="Alineable">
+														<i class="icon icon-check"></i>
+													</span>
+												</td>
+												<td>Mario</td>
+												<td>120.000.000 €</td>
+												<td>Hace 6 horas</td>
+												<td>
+													<button class="btn btn-primary btn-sell" type="button">Pujar</button>
+												</td>
 											</tr>
 											<tr>
-												<td>3º</td>
 												<td>
-													<span class="avatar"></span>
-													<span class="username">Carles</span>
+													<span class="pos pos-forward" data-toggle="tooltip" title="Delantero">DL</span>
 												</td>
-												<td>91</td>
-												<td>25.750.000 €</td>
-												<td>20</td>
-												<td>hace 20 minutos</td>
-											</tr>
-											<tr>
-												<td>4º</td>
+												<td class="narrow">
+													<a class="team" href="#" data-toggle="tooltip" title="Celta de Vigo">
+														<img src="https://cdn.comuniame.com/i/t/celta-5.png">
+													</a>
+												</td>
+												<td>Iago Aspas</td>
+												<td>233</td>
+												<td>14.335.000 €</td>
 												<td>
-													<span class="avatar"></span>
-													<span class="username">Sergio</span>
+													<span class="player-status player-status" data-toggle="tooltip" title="Alineable">
+														<i class="icon icon-check"></i>
+													</span>
 												</td>
-												<td>56</td>
-												<td>15.750.000 €</td>
-												<td>17</td>
-												<td>hace 1 minuto</td>
+												<td>Libre</td>
+												<td>15.000.000 €</td>
+												<td>Hace 6 horas</td>
+												<td>
+													<button class="btn btn-outline btn-sell" type="button">15.000.000 €</button>
+												</td>
 											</tr>
 										</tbody>
 									</table>
@@ -220,6 +296,12 @@
 
 	<!-- Bootstrap Core JavaScript -->
 	<script src="js/libs/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$('[data-toggle="tooltip"]').tooltip()
+		})
+	</script>
+
 </body>
 
 </html>

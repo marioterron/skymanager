@@ -381,13 +381,13 @@ ul.alert-dropdown {
 			}
 		}
 	}
+}
 
-	.btn {
-		margin: 0;
-		padding: 2px 5px;
-		min-width: 70px;
-		font-size: 12px;
-	}
+.btn-sell {
+	margin: 0;
+	padding: 2px 5px;
+	min-width: 70px;
+	font-size: 12px;
 }
 
 .pos {
@@ -617,7 +617,6 @@ ul.alert-dropdown {
 }
 
 // Player modal
-
 .modal {
 	.lead {
 		font-size: 30px;
@@ -692,6 +691,25 @@ ul.alert-dropdown {
 
 		p {
 			margin-bottom: 0;
+		}
+	}
+}
+
+.description {
+	margin-bottom: 0;
+
+	&:last-of-type {
+		margin-bottom: 1.5em;
+	}
+}
+
+.table {
+	.in-sale {
+		display: flex;
+		flex-direction: column;
+
+		.btn:last-of-type {
+			margin-top: 5px;
 		}
 	}
 }
