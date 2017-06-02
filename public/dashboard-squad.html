@@ -6,24 +6,24 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="">
-	<meta name="author" content="">
+	<meta name="description" content="SKYMANAGER — Dirige tu equipo y compite contra tus amigos por conseguir la mejor plantilla y ganar la liga." />
+	<meta name="author" content="Mario Terron" />
 
-	<title>Sky Manager - Game Dashboard</title>
+	<title>Sky Manager &mdash; Game Dashboard</title>
 
+	<!-- Goolge Fonts -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900">
 
 	<!-- Bootstrap Core CSS -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/libs/bootstrap.css">
 
-	<!-- Custom Fonts -->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<link rel="stylesheet" href="css/font-awesome.css">
-
+	<!-- Icon Fonts -->
+	<link rel="stylesheet" href="css/libs/icomoon.css">
+	<link rel="stylesheet" href="css/libs/font-awesome.css">
 
 	<!-- Custom CSS -->
-	<link href="css/style.css" rel="stylesheet">
-	<link href="css/dashboard.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/dashboard.css">
 
 </head>
 
@@ -115,232 +115,234 @@
 									<i class="icon icon-users"></i>
 								</div>
 								<!-- Table -->
-								<table class="table table-hover squad">
-									<thead>
-										<tr>
-											<th>
-												<a href="#">
-													<span data-toggle="tooltip" title="Posición">Pos.</span>
-													<span class="sort sort-down">
-														<i class="fa fa-sort"></i>
+								<div class="table-wrapper">
+									<table class="table table-hover squad">
+										<thead>
+											<tr>
+												<th>
+													<a href="#">
+														<span data-toggle="tooltip" title="Posición">Pos.</span>
+														<span class="sort sort-down">
+															<i class="fa fa-sort"></i>
+														</span>
+													</a>
+												</th>
+												<th>
+													<a href="#">
+														<span data-toggle="tooltip" title="Equipo">Eq.</span>
+														<span class="sort sort-down">
+															<i class="fa fa-sort"></i>
+														</span>
+													</a>
+												</th>
+												<th>
+													<a href="#">
+														<span data-toggle="tooltip" title="Jugador">Jugador</span>
+														<span class="sort sort-down">
+															<i class="fa fa-sort"></i>
+														</span>
+													</a>
+												</th>
+												<th>
+													<a href="#">
+														<span data-toggle="tooltip" title="Total puntos">Pts.</span>
+														<span class="sort sort-down">
+															<i class="fa fa-sort"></i>
+														</span>
+													</a>
+												</th>
+												<th>
+													<a href="#">
+														<span data-toggle="tooltip" title="Valor en el mercado">VM.</span>
+														<span class="sort sort-down">
+															<i class="fa fa-sort"></i>
+														</span>
+													</a>
+												</th>
+												<th>
+													<a href="#">
+														<span data-toggle="tooltip" title="Estado">Est.</span>
+														<span class="sort sort-down">
+															<i class="fa fa-sort"></i>
+														</span>
+													</a>
+												</th>
+												<th>
+													<a href="#">
+														<span data-toggle="tooltip" title="Partidos jugados">PJ.</span>
+														<span class="sort sort-down">
+															<i class="fa fa-sort"></i>
+														</span>
+													</a>
+												</th>
+												<th>
+													<a href="#">
+														<span data-toggle="tooltip" title="Media de puntos por partido">Med.</span>
+														<span class="sort sort-down">
+															<i class="fa fa-sort"></i>
+														</span>
+													</a>
+												</th>
+												<th >
+													<a href="">
+														<span data-toggle="tooltip" title="Puntos como local"><i class="icon icon-home"></i></span>
+														<span class="sort sort-down">
+															<i class="fa fa-sort"></i>
+														</span>
+													</a>
+												</th>
+												<th>
+													<a href="">
+														<span data-toggle="tooltip" title="Puntos como visitante"><i class="icon icon-plane"></i></span>
+														<span class="sort sort-down">
+															<i class="fa fa-sort"></i>
+														</span>
+													</a>
+												</th>
+												<th>
+													<a href="#">
+														<span data-toggle="tooltip" title="Puntos conseguidos las ultimas 5 jornadas">Forma</span>
+														<span class="sort sort-down">
+															<i class="fa fa-sort"></i>
+														</span>
+													</a>
+												</th>
+												<th>
+													<a href="#">
+														<span data-toggle="tooltip" title="Poner en venta">Mercado</span>
+														<span class="sort sort-down">
+															<i class="fa fa-sort"></i>
+														</span>
+													</a>
+												</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<span title="Portero" class="pos pos-goalkeeper">PT</span>
+												</td>
+												<td class="narrow">
+													<a title="Villareal" class="team" href="#">
+														<img src="https://cdn.comuniame.com/i/t/villarreal-19.png">
+													</a>
+												</td>
+												<td>Sergio Asenjo</td>
+												<td>132</td>
+												<td>431.000 €</td>
+												<td>
+													<span class="player-status player-status-injured" data-toggle="tooltip" title="Lesionado">
+														<i class="icon icon-plus"></i>
 													</span>
-												</a>
-											</th>
-											<th>
-												<a href="#">
-													<span data-toggle="tooltip" title="Equipo">Eq.</span>
-													<span class="sort sort-down">
-														<i class="fa fa-sort"></i>
+												</td>
+												<td>24</td>
+												<td>5,5</td>
+												<td>70</td>
+												<td>62</td>
+												<td>
+													<div class="fitness">
+														<span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured"
+														 data-toggle="tooltip" title="Lesionado">+</span>
+													</div>
+												</td>
+												<td>
+													<button class="btn btn-primary" type="button">Vender</button>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span title="Defensa" class="pos pos-defender">DF</span>
+												</td>
+												<td class="narrow">
+													<a title="Real Madrid" class="team" href="#">
+														<img src="https://upload.wikimedia.org/wikipedia/it/archive/4/4d/20101205134544!Real_madrid_logo.png">
+													</a>
+												</td>
+												<td>Danilo</td>
+												<td>59</td>
+												<td>1.431.000 €</td>
+												<td>
+													<span class="player-status player-status" data-toggle="tooltip" title="Alineable">
+														<i class="icon icon-check"></i>
 													</span>
-												</a>
-											</th>
-											<th>
-												<a href="#">
-													<span data-toggle="tooltip" title="Jugador">Jugador</span>
-													<span class="sort sort-down">
-														<i class="fa fa-sort"></i>
+												</td>
+												<td>17</td>
+												<td>3,5</td>
+												<td>33</td>
+												<td>26</td>
+												<td>
+													<div class="fitness">
+														<span class="points high-points">6</span><span class="points dont-played" data-toggle="tooltip" title="No jugado">-</span><span class="points high-points">6</span><span class="points high-points">6</span><span class="points low-points">2</span>
+													</div>
+												</td>
+												<td>
+													<button class="btn btn-primary" type="button">Vender</button>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span title="Mediocentro" class="pos pos-midfielder">MC</span>
+												</td>
+												<td class="narrow">
+													<a title="Alavés" class="team" href="#">
+														<img src="https://cdn.comuniame.com/i/t/alaves-91.png">
+													</a>
+												</td>
+												<td>Ibai Gómez</td>
+												<td>118</td>
+												<td>1.890.000 €</td>
+												<td>
+													<span class="player-status player-status-sanctioned" data-toggle="tooltip" title="Sancionado">
+														<i class="icon icon-close"></i>
 													</span>
-												</a>
-											</th>
-											<th>
-												<a href="#">
-													<span data-toggle="tooltip" title="Total puntos">Pts.</span>
-													<span class="sort sort-down">
-														<i class="fa fa-sort"></i>
+												</td>
+												<td>29</td>
+												<td>4,1</td>
+												<td>58</td>
+												<td>60</td>
+												<td>
+													<div class="fitness" title="Puntos conseguidos las ultimas 5 jornadas">
+														<span class="points high-points">6</span><span class="points dont-played" data-toggle="tooltip" title="No convocado">x</span><span class="points low-points">2</span><span class="points dont-played" data-toggle="tooltip" title="No jugado">-</span><span class="points so-high-points">20</span>
+													</div>
+												</td>
+												<td>
+													<button class="btn btn-primary" type="button">Vender</button>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<span title="Delantero" class="pos pos-forward">DL</span>
+												</td>
+												<td class="narrow">
+													<a title="Real Madrid" class="team" href="#">
+														<img src="https://upload.wikimedia.org/wikipedia/it/archive/4/4d/20101205134544!Real_madrid_logo.png">
+													</a>
+												</td>
+												<td>Bale</td>
+												<td>59</td>
+												<td>1.431.000 €</td>
+												<td>
+													<span class="player-status player-status" data-toggle="tooltip" title="Alineable">
+														<i class="icon icon-check"></i>
 													</span>
-												</a>
-											</th>
-											<th>
-												<a href="#">
-													<span data-toggle="tooltip" title="Valor en el mercado">VM.</span>
-													<span class="sort sort-down">
-														<i class="fa fa-sort"></i>
-													</span>
-												</a>
-											</th>
-											<th>
-												<a href="#">
-													<span data-toggle="tooltip" title="Estado">Est.</span>
-													<span class="sort sort-down">
-														<i class="fa fa-sort"></i>
-													</span>
-												</a>
-											</th>
-											<th>
-												<a href="#">
-													<span data-toggle="tooltip" title="Partidos jugados">PJ.</span>
-													<span class="sort sort-down">
-														<i class="fa fa-sort"></i>
-													</span>
-												</a>
-											</th>
-											<th>
-												<a href="#">
-													<span data-toggle="tooltip" title="Media de puntos por partido">Med.</span>
-													<span class="sort sort-down">
-														<i class="fa fa-sort"></i>
-													</span>
-												</a>
-											</th>
-											<th >
-												<a href="">
-													<span data-toggle="tooltip" title="Puntos como local"><i class="icon icon-home"></i></span>
-													<span class="sort sort-down">
-														<i class="fa fa-sort"></i>
-													</span>
-												</a>
-											</th>
-											<th>
-												<a href="">
-													<span data-toggle="tooltip" title="Puntos como visitante"><i class="icon icon-plane"></i></span>
-													<span class="sort sort-down">
-														<i class="fa fa-sort"></i>
-													</span>
-												</a>
-											</th>
-											<th>
-												<a href="#">
-													<span data-toggle="tooltip" title="Puntos conseguidos las ultimas 5 jornadas">Forma</span>
-													<span class="sort sort-down">
-														<i class="fa fa-sort"></i>
-													</span>
-												</a>
-											</th>
-											<th>
-												<a href="#">
-													<span data-toggle="tooltip" title="Poner en venta">Mercado</span>
-													<span class="sort sort-down">
-														<i class="fa fa-sort"></i>
-													</span>
-												</a>
-											</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>
-												<span title="Portero" class="pos pos-goalkeeper">PT</span>
-											</td>
-											<td class="narrow">
-												<a title="Villareal" class="team" href="#">
-													<img src="https://cdn.comuniame.com/i/t/villarreal-19.png">
-												</a>
-											</td>
-											<td>Sergio Asenjo</td>
-											<td>132</td>
-											<td>431.000 €</td>
-											<td>
-												<span class="player-status player-status-injured" data-toggle="tooltip" title="Lesionado">
-													<i class="icon icon-plus"></i>
-												</span>
-											</td>
-											<td>24</td>
-											<td>5,5</td>
-											<td>70</td>
-											<td>62</td>
-											<td>
-												<div class="fitness">
-													<span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured"
-													 data-toggle="tooltip" title="Lesionado">+</span>
-												</div>
-											</td>
-											<td>
-												<button class="btn btn-primary" type="button">Vender</button>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span title="Defensa" class="pos pos-defender">DF</span>
-											</td>
-											<td class="narrow">
-												<a title="Real Madrid" class="team" href="#">
-													<img src="https://upload.wikimedia.org/wikipedia/it/archive/4/4d/20101205134544!Real_madrid_logo.png">
-												</a>
-											</td>
-											<td>Danilo</td>
-											<td>59</td>
-											<td>1.431.000 €</td>
-											<td>
-												<span class="player-status player-status" data-toggle="tooltip" title="Alineable">
-													<i class="icon icon-check"></i>
-												</span>
-											</td>
-											<td>17</td>
-											<td>3,5</td>
-											<td>33</td>
-											<td>26</td>
-											<td>
-												<div class="fitness">
-													<span class="points high-points">6</span><span class="points dont-played" data-toggle="tooltip" title="No jugado">-</span><span class="points high-points">6</span><span class="points high-points">6</span><span class="points low-points">2</span>
-												</div>
-											</td>
-											<td>
-												<button class="btn btn-primary" type="button">Vender</button>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span title="Mediocentro" class="pos pos-midfielder">MC</span>
-											</td>
-											<td class="narrow">
-												<a title="Alavés" class="team" href="#">
-													<img src="https://cdn.comuniame.com/i/t/alaves-91.png">
-												</a>
-											</td>
-											<td>Ibai Gómez</td>
-											<td>118</td>
-											<td>1.890.000 €</td>
-											<td>
-												<span class="player-status player-status-sanctioned" data-toggle="tooltip" title="Sancionado">
-													<i class="icon icon-close"></i>
-												</span>
-											</td>
-											<td>29</td>
-											<td>4,1</td>
-											<td>58</td>
-											<td>60</td>
-											<td>
-												<div class="fitness" title="Puntos conseguidos las ultimas 5 jornadas">
-													<span class="points high-points">6</span><span class="points dont-played" data-toggle="tooltip" title="No convocado">x</span><span class="points low-points">2</span><span class="points dont-played" data-toggle="tooltip" title="No jugado">-</span><span class="points so-high-points">20</span>
-												</div>
-											</td>
-											<td>
-												<button class="btn btn-primary" type="button">Vender</button>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span title="Delantero" class="pos pos-forward">DL</span>
-											</td>
-											<td class="narrow">
-												<a title="Real Madrid" class="team" href="#">
-													<img src="https://upload.wikimedia.org/wikipedia/it/archive/4/4d/20101205134544!Real_madrid_logo.png">
-												</a>
-											</td>
-											<td>Bale</td>
-											<td>59</td>
-											<td>1.431.000 €</td>
-											<td>
-												<span class="player-status player-status" data-toggle="tooltip" title="Alineable">
-													<i class="icon icon-check"></i>
-												</span>
-											</td>
-											<td>17</td>
-											<td>3,5</td>
-											<td>33</td>
-											<td>26</td>
-											<td>
-												<div class="fitness">
-													<span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured"
-													 data-toggle="tooltip" title="Lesionado">+</span>
-												</div>
-											</td>
-											<td>
-												<button class="btn btn-outline" type="button">En venta</button>
-											</td>
-										</tr>
-									</tbody>
-								</table>
+												</td>
+												<td>17</td>
+												<td>3,5</td>
+												<td>33</td>
+												<td>26</td>
+												<td>
+													<div class="fitness">
+														<span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured"
+														 data-toggle="tooltip" title="Lesionado">+</span>
+													</div>
+												</td>
+												<td>
+													<button class="btn btn-outline" type="button">En venta</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -359,10 +361,10 @@
 	<!-- /#wrapper -->
 
 	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
+	<script src="js/libs/jquery.min.js"></script>
 
 	<!-- Bootstrap Core JavaScript -->
-	<script src="js/bootstrap.min.js"></script>
+	<script src="js/libs/bootstrap.min.js"></script>
 
 	<script type="text/javascript">
 		$(function() {

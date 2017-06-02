@@ -1,6 +1,6 @@
 /* =======================================================
 *
-* 	Template Styles 
+* 	Template Styles
 *
 * ======================================================= */
 body {
@@ -193,11 +193,16 @@ ul.alert-dropdown {
 
 /* =======================================================
 *
-* 	Custom Styles 
+* 	Custom Styles
 *
 * ======================================================= */
+.table-wrapper {
+  overflow: scroll; }
+
 .table {
-  color: #6a6c6f; }
+  color: #6a6c6f;
+  width: 100%;
+  min-width: 760px; }
   .table thead {
     font-size: 12px; }
   .table thead th a {
@@ -229,7 +234,7 @@ ul.alert-dropdown {
 
 .panel {
   margin-top: 30px;
-  overflow-x: scroll; }
+  overflow: hidden; }
   .panel .panel-header {
     display: flex;
     justify-content: space-between; }
@@ -296,7 +301,7 @@ ul.alert-dropdown {
   min-width: 70px;
   font-size: 12px; }
 
-.squad-section .pos {
+.pos {
   display: inline-block;
   font-weight: 700;
   font-size: 11px;
@@ -307,21 +312,21 @@ ul.alert-dropdown {
   line-height: 28px;
   color: #fff;
   background: #777; }
-  .squad-section .pos-goalkeeper {
+  .pos-goalkeeper {
     background: #ffd800;
     color: #000; }
-  .squad-section .pos-defender {
+  .pos-defender {
     background: #03a9f4; }
-  .squad-section .pos-midfielder {
+  .pos-midfielder {
     background: #10af00; }
-  .squad-section .pos-forward {
+  .pos-forward {
     background: red; }
 
-.squad-section .narrow img {
+.narrow img {
   max-width: 30px;
   max-height: 40px; }
 
-.squad-section .player-status {
+.player-status {
   display: inline-block;
   font-weight: 700;
   font-size: 11px;
@@ -332,13 +337,13 @@ ul.alert-dropdown {
   line-height: 28px;
   color: #fff;
   background-color: #5cb85c; }
-  .squad-section .player-status-injured, .squad-section .player-status-sanctioned {
+  .player-status-injured, .player-status-sanctioned {
     background-color: #d9534f; }
 
-.squad-section .fitness {
+.fitness {
   display: block;
   white-space: nowrap; }
-  .squad-section .fitness .points {
+  .fitness .points {
     display: inline-block;
     font-size: 12px;
     width: 20px;
@@ -353,27 +358,26 @@ ul.alert-dropdown {
     vertical-align: middle;
     color: #fff;
     background-color: #ccc; }
-    .squad-section .fitness .points:first-child {
+    .fitness .points:first-child {
       border-top-left-radius: 5px;
       border-bottom-left-radius: 5px; }
-    .squad-section .fitness .points:last-child {
+    .fitness .points:last-child {
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
       border-right: none; }
-  .squad-section .fitness .injured {
+  .fitness .injured {
     background-color: #d9534f; }
-  .squad-section .fitness .sanctioned {
+  .fitness .sanctioned {
     background-color: #d9534f; }
-  .squad-section .fitness .not-played {
-    background: #bbb;
-    color: #000; }
-  .squad-section .fitness .negative-points {
+  .fitness .not-played {
+    background: #bbb; }
+  .fitness .negative-points {
     background-color: red; }
-  .squad-section .fitness .low-points {
+  .fitness .low-points {
     background: #ff9800; }
-  .squad-section .fitness .high-points {
+  .fitness .high-points {
     background: #10af00; }
-  .squad-section .fitness .so-high-points {
+  .fitness .so-high-points {
     background: #03a9f4; }
 
 .lineup-section {
@@ -425,7 +429,7 @@ ul.alert-dropdown {
     border-top: 1px solid rgba(34, 36, 38, 0.1);
     box-shadow: none;
     background-color: white; }
-  .lineup-section .card-img-top {
+  .lineup-section .card-img {
     display: block;
     width: 100%;
     height: auto; }
@@ -436,7 +440,7 @@ ul.alert-dropdown {
     display: flex;
     justify-content: space-around;
     margin-top: 25px; }
-  .lineup-section .player-status {
+  .lineup-section .status {
     position: absolute;
     bottom: 15px;
     right: -7.5px;
@@ -449,6 +453,65 @@ ul.alert-dropdown {
     height: 26px;
     line-height: 28px;
     color: #fff;
-    background-color: #5cb85c; }
-    .lineup-section .player-status-injured, .lineup-section .player-status-sanctioned {
+    background-color: #5cb85c;
+    border: 1px solid rgba(0, 0, 0, 0.25); }
+    .lineup-section .status-injured, .lineup-section .status-sanctioned {
       background-color: #d9534f; }
+
+.modal .lead {
+  font-size: 30px; }
+
+.select-player {
+  list-style: none;
+  padding: 0; }
+
+.card-player {
+  height: 100px;
+  position: relative;
+  margin-bottom: 40px;
+  border-radius: 4px;
+  padding: 0 20px;
+  cursor: pointer; }
+  .card-player:hover {
+    background-color: #eee; }
+  .card-player-info {
+    display: flex;
+    flex-direction: column;
+    top: 20px;
+    position: relative; }
+  .card-player-img {
+    width: 65px;
+    height: 65px;
+    margin: 0 20px;
+    border-radius: 50%;
+    border: 3px solid #eceff1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #eceff1;
+    background-position: center bottom;
+    display: inline-block;
+    position: relative;
+    top: 20px; }
+    .card-player-img.injured, .card-player-img.sanctioned {
+      border: 3px solid #d9534f; }
+    .card-player-img .points {
+      position: absolute;
+      right: -10px;
+      bottom: -10px;
+      font-weight: 700;
+      border-radius: 100%;
+      font-size: 13px;
+      text-align: center;
+      min-width: 21px;
+      color: #fff;
+      border: 1px solid #fff;
+      background: #2f3c4d;
+      padding: 0 3px;
+      margin: 0; }
+  .card-player-profile {
+    position: absolute;
+    top: 20px;
+    display: inline-block;
+    vertical-align: middle; }
+    .card-player-profile p {
+      margin-bottom: 0; }

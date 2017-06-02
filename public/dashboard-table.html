@@ -6,24 +6,24 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="">
-	<meta name="author" content="">
+	<meta name="description" content="SKYMANAGER — Dirige tu equipo y compite contra tus amigos por conseguir la mejor plantilla y ganar la liga." />
+	<meta name="author" content="Mario Terron" />
 
-	<title>Sky Manager - Game Dashboard</title>
+	<title>Sky Manager &mdash; Game Dashboard</title>
 
+	<!-- Goolge Fonts -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900">
 
 	<!-- Bootstrap Core CSS -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/libs/bootstrap.css">
 
-	<!-- Custom Fonts -->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<link rel="stylesheet" href="css/font-awesome.css">
-
+	<!-- Icon Fonts -->
+	<link rel="stylesheet" href="css/libs/icomoon.css">
+	<link rel="stylesheet" href="css/libs/font-awesome.css">
 
 	<!-- Custom CSS -->
-	<link href="css/style.css" rel="stylesheet">
-	<link href="css/dashboard.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/dashboard.css">
 
 </head>
 
@@ -115,115 +115,111 @@
 									<i class="icon icon-trophy" aria-hidden="true"></i>
 								</div>
 								<!-- Table -->
-								<table class="table table-hover points">
-									<thead>
-										<tr>
-											<th></th>
-											<th></th>
-											<th>
-												<a href="#">
-													<span>Puntos</span>
-													<span class="sort sort-down">
-														<i class="fa fa-sort"></i>
-													</span>
-												</a>
-											</th>
-											<th>
-												<a href="#">
-													<span>Valor del equipo</span>
-													<span class="sort sort-down">
-														<i class="fa fa-sort"></i>
-													</span>
-												</a>
-											</th>
-											<th>
-												<a href="#">
-													<span>Jugadores</span>
-													<span class="sort sort-down">
-														<i class="fa fa-sort"></i>
-													</span>
-												</a>
-											</th>
-											<th>
-												<a href="#">
-													<span>Ultima conexión</span>
-													<span class="sort sort-down">
-														<i class="fa fa-sort"></i>
-													</span>
-												</a>
-											</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>1º</td>
-											<td>
-												<span class="avatar" style="background-image:url(images/me.jpg);"></span>
-												<span class="username">Mario</span>
-											</td>
-											<td>98</td>
-											<td>27.676.000 €</td>
-											<td>21</td>
-											<td>hace 1 hora</td>
-										</tr>
-										<tr>
-											<td>2º</td>
-											<td>
-												<span class="avatar"></span>
-												<span class="username">José Angel</span>
-											</td>
-											<td>96</td>
-											<td>23.550.000 €</td>
-											<td>19</td>
-											<td>hace 2 días</td>
-										</tr>
-										<tr>
-											<td>3º</td>
-											<td>
-												<span class="avatar"></span>
-												<span class="username">Carles</span>
-											</td>
-											<td>91</td>
-											<td>25.750.000 €</td>
-											<td>20</td>
-											<td>hace 20 minutos</td>
-										</tr>
-										<tr>
-											<td>4º</td>
-											<td>
-												<span class="avatar"></span>
-												<span class="username">Sergio</span>
-											</td>
-											<td>56</td>
-											<td>15.750.000 €</td>
-											<td>17</td>
-											<td>hace 1 minuto</td>
-										</tr>
-									</tbody>
-								</table>
+								<div class="table-wrapper">
+									<table class="table table-hover points">
+										<thead>
+											<tr>
+												<th></th>
+												<th></th>
+												<th>
+													<a href="#">
+														<span>Puntos</span>
+														<span class="sort sort-down">
+															<i class="fa fa-sort"></i>
+														</span>
+													</a>
+												</th>
+												<th>
+													<a href="#">
+														<span>Valor del equipo</span>
+														<span class="sort sort-down">
+															<i class="fa fa-sort"></i>
+														</span>
+													</a>
+												</th>
+												<th>
+													<a href="#">
+														<span>Jugadores</span>
+														<span class="sort sort-down">
+															<i class="fa fa-sort"></i>
+														</span>
+													</a>
+												</th>
+												<th>
+													<a href="#">
+														<span>Ultima conexión</span>
+														<span class="sort sort-down">
+															<i class="fa fa-sort"></i>
+														</span>
+													</a>
+												</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1º</td>
+												<td>
+													<span class="avatar" style="background-image:url(images/me.jpg);"></span>
+													<span class="username">Mario</span>
+												</td>
+												<td>98</td>
+												<td>27.676.000 €</td>
+												<td>21</td>
+												<td>hace 1 hora</td>
+											</tr>
+											<tr>
+												<td>2º</td>
+												<td>
+													<span class="avatar"></span>
+													<span class="username">José Angel</span>
+												</td>
+												<td>96</td>
+												<td>23.550.000 €</td>
+												<td>19</td>
+												<td>hace 2 días</td>
+											</tr>
+											<tr>
+												<td>3º</td>
+												<td>
+													<span class="avatar"></span>
+													<span class="username">Carles</span>
+												</td>
+												<td>91</td>
+												<td>25.750.000 €</td>
+												<td>20</td>
+												<td>hace 20 minutos</td>
+											</tr>
+											<tr>
+												<td>4º</td>
+												<td>
+													<span class="avatar"></span>
+													<span class="username">Sergio</span>
+												</td>
+												<td>56</td>
+												<td>15.750.000 €</td>
+												<td>17</td>
+												<td>hace 1 minuto</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
 						</div>
 					</div>
-
-
 				</div>
 				<!-- /.row -->
-
 			</div>
 			<!-- /.container-fluid -->
-
 		</div>
 		<!-- /#page-wrapper -->
-
 	</div>
 	<!-- /#wrapper -->
 
 	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
+	<script src="js/libs/jquery.min.js"></script>
 
 	<!-- Bootstrap Core JavaScript -->
-	<script src="js/bootstrap.min.js"></script>
-
+	<script src="js/libs/bootstrap.min.js"></script>
 </body>
 
 </html>

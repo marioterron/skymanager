@@ -6,39 +6,82 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="">
-	<meta name="author" content="">
+	<meta name="description" content="SKYMANAGER — Dirige tu equipo y compite contra tus amigos por conseguir la mejor plantilla y ganar la liga." />
+	<meta name="author" content="Mario Terron" />
 
-	<title>Sky Manager - Game Dashboard</title>
+	<title>Sky Manager &mdash; Game Dashboard</title>
 
+	<!-- Goolge Fonts -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900">
 
 	<!-- Bootstrap Core CSS -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/libs/bootstrap.css">
 
-	<!-- Custom Fonts -->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<link rel="stylesheet" href="css/font-awesome.css">
-
+	<!-- Icon Fonts -->
+	<link rel="stylesheet" href="css/libs/icomoon.css">
+	<link rel="stylesheet" href="css/libs/font-awesome.css">
 
 	<!-- Custom CSS -->
-	<link href="css/style.css" rel="stylesheet">
-	<link href="css/dashboard.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/dashboard.css">
 
 </head>
 
 <body>
 
 	<div class="modal fade" id="player-modal" tabindex="-1" role="dialog" aria-hidden="true">
-		<div class="modal-dialog modal-lg">
+		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
+
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<p class="lead text-center">Alinear portero</p>
 				</div>
 				<div class="modal-body">
 					<div class="row">
-						<div class="col-md-10 col-md-offset-1">
-							<h3 class="lead">Le fucking modal</h3>
+						<div class="col-md-12">
+							<ul class="select-player">
+								<li class="card-player">
+									<div class="card-player-info pull-left">
+										<span class="narrow">
+											<a title="Villareal" class="team" href="#">
+												<img src="https://cdn.comuniame.com/i/t/real-madrid-15.png">
+											</a>
+										</span>
+										<span title="Portero" class="pos pos-goalkeeper">PT</span>
+									</div>
+									<div class="card-player-img" style="background-image: url(http://files.laliga.es/jugadores/201608/96x96_25115821keylor-navas.jpg)">
+										<span class="points">116</span>
+									</div>
+									<div class="card-player-profile">
+										<p>Keylor Navas</p>
+										<span class="fitness">
+											<span class="points not-played" data-toggle="tooltip" title="No jugado">-</span><span class="points low-points">2</span><span class="points not-played" data-toggle="tooltip" title="No convocado">x</span><span class="points so-high-points">10</span><span class="points so-high-points"
+											 >10</span>
+										</span>
+									</div>
+								</li>
+								<li class="card-player">
+									<div class="card-player-info pull-left">
+										<span class="narrow">
+											<a title="Villareal" class="team" href="#">
+												<img src="https://cdn.comuniame.com/i/t/villarreal-19.png">
+											</a>
+										</span>
+										<span title="Portero" class="pos pos-goalkeeper">PT</span>
+									</div>
+									<div class="card-player-img injured" style="background-image: url(http://files.laliga.es/jugadores/201608/96x96_10163304asenjo.jpg)">
+										<span class="points">132</span>
+									</div>
+									<div class="card-player-profile">
+										<p>Sergio Asenjo</p>
+										<span class="fitness">
+											<span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured"
+											 data-toggle="tooltip" title="Lesionado">+</span>
+										</span>
+									</div>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -127,14 +170,14 @@
 						<div class="line-goalkeeper">
 							<div class="card">
 								<a href="#" class="to-player-modal">
-									<img class="card-img-top" src="http://files.laliga.es/jugadores/201608/96x96_25115821keylor-navas.jpg">
+									<img class="card-img" src="http://files.laliga.es/jugadores/201608/96x96_25115821keylor-navas.jpg">
 									<div class="card-block">
 										<p>Keylor Navas</p>
 									</div>
-									<span class="player-status" >
+									<span class="status" >
 										<i class="icon icon-check"></i>
 									</span>
-									<span class="player-status" >
+									<span class="status" >
 										<i class="icon icon-check"></i>
 									</span>
 								</a>
@@ -142,96 +185,96 @@
 						</div>
 						<div class="line-defenders">
 							<div class="card">
-								<img class="card-img-top" src="http://files.laliga.es/jugadores/201608/96x96_25114256marcelo.jpg">
+								<img class="card-img" src="http://files.laliga.es/jugadores/201608/96x96_25114256marcelo.jpg">
 								<div class="card-block">
 									<p>Marcelo</p>
 								</div>
-								<span class="player-status player-status-injured" >
+								<span class="status status-injured" >
 									<i class="icon icon-plus"></i>
 								</span>
 							</div>
 							<div class="card">
-								<img class="card-img-top" src="http://files.laliga.es/jugadores/201608/96x96_25114150sergio-ramos.jpg">
+								<img class="card-img" src="http://files.laliga.es/jugadores/201608/96x96_25114150sergio-ramos.jpg">
 								<div class="card-block">
 									<p>Sergio Ramos</p>
 								</div>
-								<span class="player-status" >
+								<span class="status" >
 									<i class="icon icon-check"></i>
 								</span>
 							</div>
 							<div class="card">
-								<img class="card-img-top" src="http://files.laliga.es/jugadores/201608/96x96_25114151varane.jpg">
+								<img class="card-img" src="http://files.laliga.es/jugadores/201608/96x96_25114151varane.jpg">
 								<div class="card-block">
 									<p>Varane</p>
 								</div>
-								<span class="player-status" >
+								<span class="status" >
 									<i class="icon icon-check"></i>
 								</span>
 							</div>
 							<div class="card">
-								<img class="card-img-top" src="http://files.laliga.es/jugadores/201608/96x96_25114255carvajal.jpg">
+								<img class="card-img" src="http://files.laliga.es/jugadores/201608/96x96_25114255carvajal.jpg">
 								<div class="card-block">
 									<p>Carvajal</p>
 								</div>
-								<span class="player-status" >
+								<span class="status" >
 									<i class="icon icon-check"></i>
 								</span>
 							</div>
 						</div>
 						<div class="line-midfielders">
 							<div class="card">
-								<img class="card-img-top" src="http://files.laliga.es/jugadores/201608/96x96_25114519isco.jpg">
+								<img class="card-img" src="http://files.laliga.es/jugadores/201608/96x96_25114519isco.jpg">
 								<div class="card-block">
 									<p>Isco</p>
 								</div>
-								<span class="player-status" >
+								<span class="status" >
 									<i class="icon icon-check"></i>
 								</span>
 							</div>
 							<div class="card">
-								<img class="card-img-top" src="http://files.laliga.es/jugadores/201608/96x96_25120501kroos.jpg">
+								<img class="card-img" src="http://files.laliga.es/jugadores/201608/96x96_25120501kroos.jpg">
 								<div class="card-block">
 									<p>Toni Kroos</p>
 								</div>
-								<span class="player-status" >
+								<span class="status" >
 									<i class="icon icon-check"></i>
 								</span>
 							</div>
 							<div class="card">
-								<img class="card-img-top" src="http://files.laliga.es/jugadores/201608/96x96_25114359modric.jpg">
+								<img class="card-img" src="http://files.laliga.es/jugadores/201608/96x96_25114359modric.jpg">
 								<div class="card-block">
 									<p>Luka Modric</p>
 								</div>
-								<span class="player-status" >
+								<span class="status" >
 									<i class="icon icon-check"></i>
 								</span>
 							</div>
 							<div class="card">
-								<img class="card-img-top" src="http://files.laliga.es/jugadores/201608/96x96_25120158asensio.jpg">
+								<img class="card-img" src="http://files.laliga.es/jugadores/201608/96x96_25120158asensio.jpg">
 								<div class="card-block">
 									<p>Marco Asensio</p>
 								</div>
-								<span class="player-status" >
+								<span class="status" >
 									<i class="icon icon-check"></i>
 								</span>
 							</div>
 						</div>
 						<div class="line-forwards">
 							<div class="card">
-								<img class="card-img-top" src="http://files.laliga.es/jugadores/201608/96x96_25114519cristiano-ronaldo.jpg">
+								<img class="card-img" src="http://files.laliga.es/jugadores/201608/96x96_25114519cristiano-ronaldo.jpg">
 								<div class="card-block">
 									<p>Cristiano Ronaldo</p>
 								</div>
-								<span class="player-status" >
+								<span class="status" >
 									<i class="icon icon-check"></i>
 								</span>
 							</div>
 							<div class="card">
-								<img class="card-img-top" src="http://files.laliga.es/jugadores/201608/96x96_25115902benzema.jpg">
+								<img class="card-img" src="http://files.laliga.es/jugadores/201608/96x96_25115902benzema.jpg">
 								<div class="card-block">
 									<p>Benzema</p>
 								</div>
-								<span class="player-status" >
+								<span class="status" >
 									<i class="icon icon-check"></i>
 								</span>
 							</div>
@@ -276,18 +319,13 @@
 	<!-- /#wrapper -->
 
 	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Flexslider -->
-	<script src="js/jquery.flexslider-min.js"></script>
+	<script src="js/libs/jquery.min.js"></script>
 
-	<!-- Main JS (Do not remove) -->
-	<script src="js/main.js"></script>
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/libs/bootstrap.min.js"></script>
+
+	<script src="js/dashboard.js"></script>
+
 
 </body>
 
