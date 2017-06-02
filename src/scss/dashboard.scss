@@ -643,6 +643,7 @@ ul.alert-dropdown {
 		display: flex;
 		flex-direction: column;
 		top: 20px;
+		height: 65px;
 		position: relative;
 	}
 
@@ -686,6 +687,7 @@ ul.alert-dropdown {
 	&-profile {
 		position: absolute;
 		top: 20px;
+		height: 65px;
 		display: inline-block;
 		vertical-align: middle;
 
@@ -693,8 +695,19 @@ ul.alert-dropdown {
 			margin-bottom: 0;
 		}
 	}
+
+	.bet-price {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		top: 15px;
+		right: 30px;
+		height: 65px;
+		text-align: center;
+	}
 }
 
+// Market
 .description {
 	margin-bottom: 0;
 

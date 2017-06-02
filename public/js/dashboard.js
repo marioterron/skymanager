@@ -14,6 +14,13 @@
 		$('.card-player').on('click', function() {
 			$('#player-modal').modal('hide');
 		});
+
+
+		$('.to-bid-modal').on('click', function(e) {
+			e.preventDefault();
+			$('#bid-modal').modal('show');
+		});
+
 	};
 
 

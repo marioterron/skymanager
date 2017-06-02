@@ -478,6 +478,7 @@ ul.alert-dropdown {
     display: flex;
     flex-direction: column;
     top: 20px;
+    height: 65px;
     position: relative; }
   .card-player-img {
     width: 65px;
@@ -511,10 +512,19 @@ ul.alert-dropdown {
   .card-player-profile {
     position: absolute;
     top: 20px;
+    height: 65px;
     display: inline-block;
     vertical-align: middle; }
     .card-player-profile p {
       margin-bottom: 0; }
+  .card-player .bet-price {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    height: 65px;
+    text-align: center; }
 
 .description {
   margin-bottom: 0; }

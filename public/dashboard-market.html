@@ -29,6 +29,50 @@
 
 <body>
 
+	<div class="modal fade" id="bid-modal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<p class="lead text-center">Pujar por messi</p>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+							<ul class="select-player">
+								<li class="card-player">
+									<div class="card-player-info pull-left">
+										<span class="narrow">
+											<a title="Villareal" class="team" href="#">
+												<img src="https://cdn.comuniame.com/i/t/real-madrid-15.png">
+											</a>
+										</span>
+										<span title="Portero" class="pos pos-goalkeeper">PT</span>
+									</div>
+									<div class="card-player-img" style="background-image: url(http://files.laliga.es/jugadores/201608/96x96_25115821keylor-navas.jpg)">
+										<span class="points">116</span>
+									</div>
+									<div class="card-player-profile">
+										<p>Keylor Navas</p>
+										<span class="fitness">
+											<span class="points not-played" data-toggle="tooltip" title="No jugado">-</span><span class="points low-points">2</span><span class="points not-played" data-toggle="tooltip" title="No convocado">x</span><span class="points so-high-points">10</span><span class="points so-high-points"
+											 >10</span>
+										</span>
+									</div>
+									<form class="bet-price" action="#" method="post">
+										<label for="">Oferta</label>
+										<input type="text">
+									</form>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div id="wrapper">
 
 		<!-- Navigation -->
@@ -50,12 +94,6 @@
 					<ul class="dropdown-menu">
 						<li>
 							<a href="#"><i class="icon icon-user"></i> Perfil</a>
-						</li>
-						<li>
-							<a href="#"><i class="icon icon-envelope"></i> Mensajes</a>
-						</li>
-						<li>
-							<a href="#"><i class="icon icon-gear"></i> Configuración</a>
 						</li>
 						<li class="divider"></li>
 						<li>
@@ -225,7 +263,7 @@
 												<td>150.000.000 €</td>
 												<td>Hace 6 horas</td>
 												<td>
-													<button class="btn btn-primary btn-sell" type="button">Pujar</button>
+													<button class="btn btn-primary btn-sell to-bid-modal" type="button">Pujar</button>
 												</td>
 											</tr>
 											<tr>
@@ -249,7 +287,7 @@
 												<td>120.000.000 €</td>
 												<td>Hace 6 horas</td>
 												<td>
-													<button class="btn btn-primary btn-sell" type="button">Pujar</button>
+													<button class="btn btn-primary btn-sell to-bid-modal" type="button">Pujar</button>
 												</td>
 											</tr>
 											<tr>
@@ -301,6 +339,8 @@
 			$('[data-toggle="tooltip"]').tooltip()
 		})
 	</script>
+
+	<script src="js/dashboard.js"></script>
 
 </body>
 
