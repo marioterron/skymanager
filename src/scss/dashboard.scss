@@ -421,6 +421,7 @@ ul.alert-dropdown {
 }
 
 .narrow img {
+	margin-bottom: 5px;
 	max-width: 30px;
 	max-height: 40px;
 }
@@ -621,6 +622,9 @@ ul.alert-dropdown {
 	.lead {
 		font-size: 30px;
 	}
+	.btn-container {
+		text-align: right;
+	}
 }
 .select-player {
 	list-style: none;
@@ -704,6 +708,11 @@ ul.alert-dropdown {
 		right: 30px;
 		height: 65px;
 		text-align: center;
+
+		input {
+		    border-radius: 4px;
+				text-align: center;
+		}
 	}
 }
 
@@ -723,6 +732,15 @@ ul.alert-dropdown {
 
 		.btn:last-of-type {
 			margin-top: 5px;
+		}
+	}
+}
+
+.modal-bet {
+	.card-player {
+		cursor: auto;
+		&:hover {
+			background-color: white;
 		}
 	}
 }

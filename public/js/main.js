@@ -3,8 +3,6 @@
 
 	'use strict';
 
-
-
 	// iPad and iPod detection
 	var isiPad = function() {
 		return (navigator.platform.indexOf("iPad") !== -1);
@@ -36,23 +34,23 @@
 			$('.js-fullheight').css('height', $(window).height() - 49);
 			$(window).resize(function() {
 				$('.js-fullheight').css('height', $(window).height() - 49);
-			});
+			})
 		}
 	};
 
 	var toggleBtnColor = function() {
 
 
-		if ($('.toggle-delimiter').length > 0) {
-			$('.toggle-delimiter').waypoint(function(direction) {
+		if ($('#hero').length > 0) {
+			$('#hero').waypoint(function(direction) {
 				if (direction === 'down') {
 					$('.nav-toggle').addClass('dark');
 				}
 			}, {
-				offset: -$('.toggle-delimiter').height()
+				offset: -$('#hero').height()
 			});
 
-			$('.toggle-delimiter').waypoint(function(direction) {
+			$('#hero').waypoint(function(direction) {
 				if (direction === 'up') {
 					$('.nav-toggle').removeClass('dark');
 				}
@@ -62,9 +60,6 @@
 				}
 			});
 		}
-
-
-
 	};
 
 
@@ -91,10 +86,10 @@
 
 					$('body').removeClass('offcanvas-visible');
 					$('.js-nav-toggle').removeClass('active');
+
 				}
 			}
 		});
-
 	};
 
 
@@ -104,7 +99,6 @@
 		$('#offcanvas').prepend('<ul id="side-links">');
 		$('body').prepend('<a href="#" class="js-nav-toggle nav-toggle"><i></i></a>');
 
-
 		$('.left-menu li, .right-menu li').each(function() {
 
 			var $this = $(this);
@@ -113,7 +107,6 @@
 
 		});
 	};
-
 
 	// Burger Menu
 	var burgerMenu = function() {
@@ -140,7 +133,6 @@
 				$('.js-nav-toggle').removeClass('active');
 			}
 		});
-
 	};
 
 
@@ -153,7 +145,7 @@
 			smoothHeight: true,
 			useCSS: false /* Chrome fix*/
 		});
-	};
+	}
 
 
 	var goToTop = function() {
@@ -249,8 +241,5 @@
 		// Animate
 		contentWayPoint();
 		linksToModal();
-
 	});
-
-
 }());

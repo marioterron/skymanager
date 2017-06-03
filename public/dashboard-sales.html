@@ -29,6 +29,51 @@
 
 <body>
 
+	<div class="modal modal-bet fade" id="update-bid-modal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<p class="lead text-center">Vender a Bale</p>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+							<ul class="select-player">
+								<li class="card-player">
+									<div class="card-player-info pull-left">
+										<span class="narrow">
+											<a title="Real Madrid" class="team" href="#">
+												<img src="https://upload.wikimedia.org/wikipedia/it/archive/4/4d/20101205134544!Real_madrid_logo.png">
+											</a>
+										</span>
+										<span title="Delantero" class="pos pos-forwards">DL</span>
+									</div>
+									<div class="card-player-img" style="background-image: url(http://files.laliga.es/jugadores/201608/96x96_25114359gareth-bale.jpg)">
+										<span class="points">93</span>
+									</div>
+									<div class="card-player-profile">
+										<p>Bale</p>
+										<p>8.000.000 €</p>
+									</div>
+									<form class="bet-price" action="#" method="post">
+										<label for="">Oferta</label>
+										<input type="number" placeholder="8.000.000 €">
+									</form>
+								</li>
+							</ul>
+							<div class="btn-container">
+								<button class="btn btn-danger close-bet" type="button">Retirar</button>
+								<button class="btn btn-primary update-bet" type="button">Modificar</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div id="wrapper">
 
 		<!-- Navigation -->
@@ -210,7 +255,7 @@
 												<td>Hace 24 horas</td>
 												<td class="in-sale">
 													<button class="btn btn-primary btn-sell" type="button">1 oferta</button>
-													<button class="btn btn-outline btn-sell" type="button">En venta</button>
+													<button class="btn btn-outline btn-sell to-update-bid-modaly" type="button">En venta</button>
 												</td>
 											</tr>
 											<tr>
@@ -233,7 +278,7 @@
 												<td>5.000.000 €</td>
 												<td>Hace 24 horas</td>
 												<td class="in-sale">
-													<button class="btn btn-outline btn-sell" type="button">En venta</button>
+													<button class="btn btn-outline btn-sell  to-update-bid-modal" type="button">En venta</button>
 												</td>
 											</tr>
 										</tbody>
@@ -261,6 +306,9 @@
 			$('[data-toggle="tooltip"]').tooltip()
 		})
 	</script>
+
+	<script src="js/dashboard.js"></script>
+
 
 </body>
 

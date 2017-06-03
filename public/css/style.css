@@ -7,7 +7,7 @@
 
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *
 *
 * ======================================================= */
@@ -85,8 +85,8 @@ h6 {
   color: #fff;
   border: 2px solid #8dc63f; }
   .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-    background: #99cc53 !important;
-    border-color: #99cc53 !important; }
+    background: #a4d266 !important;
+    border-color: #a4d266 !important; }
   .btn-primary.btn-outline {
     background: transparent;
     color: #8dc63f;

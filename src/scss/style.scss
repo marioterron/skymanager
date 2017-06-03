@@ -16,7 +16,6 @@ $brand-body-color: #818892;
 $brand-selection-color: #f9f6f0;
 $brand-overlay-color: #3b3d40;
 $brand-bg-color: #efefef;
-
 $input-border-focus: $brand-primary !default;
 $form-group-margin-bottom: 30px !default; // Mixin
 @mixin mixin-translate($translatex) {
@@ -83,12 +82,12 @@ $form-group-margin-bottom: 30px !default; // Mixin
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-// Import 
+// Import
 @import 'vendors/bootstrap/mixins';
 @import 'vendors/bootstrap/variables';
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *
 *
 * ======================================================= */
@@ -188,8 +187,8 @@ h6 {
 	&:active,
 	&:focus,
 	&:hover {
-		background: lighten($brand-primary, 5%)!important;
-		border-color: lighten($brand-primary, 5%)!important;
+		background: lighten($brand-primary, 10%)!important;
+		border-color: lighten($brand-primary, 10%)!important;
 	}
 
 	&.btn-outline {
@@ -420,15 +419,12 @@ body {
 		a {
 			font-size: 30px;
 			font-weight: 300;
-			// modified
 			text-transform: uppercase;
-			// modified
 			letter-spacing: 1px;
 			color: rgba(255,255,255,1);
 
 			span {
 				font-weight: 800;
-				// modified
 				color: $brand-primary;
 			}
 		}
@@ -654,7 +650,6 @@ body {
 
 .lead {
 	text-transform: uppercase;
-	// modified
 	font-size: 50px;
 	font-weight: 300;
 	color: $brand-secondary;
@@ -1676,11 +1671,10 @@ body {
 		width: auto;
 	}
 }
-// Modal 
+// Modal
 
 .modal {
 	// position: absolute;
-
 	.modal-header {
 		border: 0;
 	}
