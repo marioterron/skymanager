@@ -917,6 +917,8 @@ body {
       text-decoration: underline; }
   #footer .icon-heart {
     color: #d43f3a; }
+  #footer .icon-code {
+    font-weight: 700; }
   @media screen and (max-width: 992px) {
     #footer .footer-widget {
       margin-bottom: 30px;

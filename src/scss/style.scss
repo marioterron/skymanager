@@ -1249,6 +1249,10 @@ body {
 		color: darken($brand-danger, 5%);
 	}
 
+	.icon-code {
+		font-weight: 700;
+	}
+
 	.footer-widget {
 		@media screen and (max-width: $screen-md) {
 			margin-bottom: 30px;
