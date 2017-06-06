@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="skymanagerApp">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="SKYMANAGER — Dirige tu equipo y compite contra tus amigos por conseguir la mejor plantilla y ganar la liga." />
+	<meta name="author" content="Mario Terron" />
+
+	<title>Sky Manager &mdash; Game Dashboard</title>
+
+	<!-- Goolge Fonts -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900">
+
+	<!-- Icon Fonts-->
+	<link rel="stylesheet" href="../assets/bower_components/icomoon-bower/style.css">
+	<link rel="stylesheet" href="../assets/bower_components/font-awesome/css/font-awesome.min.css">
+
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="../assets/bower_components/bootstrap/dist/css/bootstrap.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="../assets/css/style.css">
+	<link rel="stylesheet" href="../assets/css/game.css">
+
+	<!-- Modernizr JS -->
+	<script src="../assets/bower_components/modernizr/modernizr.js"></script>
+</head>
+
+<body>
+
+	<ng-view></ng-view>
+
+	<!-- jQuery -->
+	<script src="../assets/bower_components/jquery/dist/jquery.min.js"></script>
+
+	<!-- Bootstrap -->
+	<script src="../assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+	<!-- Script for modals -->
+	<script type="text/javascript">
+		$(function() {
+			$('[data-toggle="tooltip"]').tooltip()
+		})
+	</script>
+
+	<!-- Angular JS -->
+	<script type="text/javascript" src="../assets/js/app.js" ></script>
+
+	<!-- Custom JS -->
+	<script src="../assets/js/game.js"></script>
+
+</body>
+
+</html>

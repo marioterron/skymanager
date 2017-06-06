@@ -1,0 +1,370 @@
+<!-- Update Bid  -->
+<div class="modal modal-bet fade" id="update-bid-modal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<p class="lead text-center">Vender a Bale</p>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-md-12">
+						<ul class="select-player">
+							<li class="card-player">
+								<div class="card-player-info pull-left">
+									<span class="narrow">
+										<a title="Real Madrid" class="team" href="#">
+											<img src="https://upload.wikimedia.org/wikipedia/it/archive/4/4d/20101205134544!Real_madrid_logo.png">
+										</a>
+									</span>
+									<span title="Delantero" class="pos pos-forwards">DL</span>
+								</div>
+								<div class="card-player-img" style="background-image: url(http://files.laliga.es/jugadores/201608/96x96_25114359gareth-bale.jpg)">
+									<span class="points">93</span>
+								</div>
+								<div class="card-player-profile">
+									<p>Bale</p>
+									<p>8.000.000 €</p>
+								</div>
+								<form class="bet-price" action="#" method="post">
+									<label for="">Oferta</label>
+									<input type="number" placeholder="8.000.000 €">
+								</form>
+							</li>
+						</ul>
+						<div class="btn-container">
+							<button class="btn btn-danger close-bet" type="button">Retirar</button>
+							<button class="btn btn-primary update-bet" type="button">Modificar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Check bids & accept/decline  -->
+<div class="modal modal-bet fade" id="check-bid-modal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-lg modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<p class="lead text-center">Ofertas por Bale</p>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="table-wrapper">
+							<table class="table table-hover squad">
+								<thead>
+									<tr>
+										<th></th>
+										<th>
+											<a href="#">
+												<span data-toggle="tooltip" title="Jugador">Jugador</span>
+												<span class="sort sort-down">
+													<i class="fa fa-sort"></i>
+												</span>
+											</a>
+										</th>
+										<th>
+											<a href="#">
+												<span data-toggle="tooltip" title="Oferta de">De</span>
+												<span class="sort sort-down">
+													<i class="fa fa-sort"></i>
+												</span>
+											</a>
+										</th>
+										<th>
+											<a href="#">
+												<span data-toggle="tooltip" title="Valor de mercado">VM.</span>
+												<span class="sort sort-down">
+													<i class="fa fa-sort"></i>
+												</span>
+											</a>
+										</th>
+										<th>
+											<a href="#">
+												<span data-toggle="tooltip" title="Oferta">Oferta</span>
+												<span class="sort sort-down">
+													<i class="fa fa-sort"></i>
+												</span>
+											</a>
+										</th>
+										<th>
+											<a href="#">
+												<span data-toggle="tooltip" title="Fecha de la oferta">Fecha</span>
+												<span class="sort sort-down">
+													<i class="fa fa-sort"></i>
+												</span>
+											</a>
+										</th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="narrow">
+											<a class="team" href="#" data-toggle="tooltip" title="Real Madrid">
+												<img src="https://upload.wikimedia.org/wikipedia/it/archive/4/4d/20101205134544!Real_madrid_logo.png">
+											</a>
+										</td>
+										<td>Bale</td>
+										<td>Carles</td>
+										<td>8.000.000 €</td>
+										<td>8.500.000 €</td>
+										<td>Hace 1 día</td>
+										<td class="in-sale">
+											<button class="btn btn-primary btn-sell" type="button">Aceptar</button>
+											<button class="btn btn-danger btn-sell" type="button">Rechazar</button>
+										</td>
+									</tr>
+									<tr>
+										<td class="narrow">
+											<a class="team" href="#" data-toggle="tooltip" title="Real Madrid">
+												<img src="https://upload.wikimedia.org/wikipedia/it/archive/4/4d/20101205134544!Real_madrid_logo.png">
+											</a>
+										</td>
+										<td>Bale</td>
+										<td>Sergio</td>
+										<td>8.000.000 €</td>
+										<td>9.500.000 €</td>
+										<td>Hace 1 día</td>
+										<td class="in-sale">
+											<button class="btn btn-primary btn-sell" type="button">Aceptar</button>
+											<button class="btn btn-danger btn-sell" type="button">Rechazar</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="wrapper">
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#!/">SKY<span>MANAGER</span></a>
+		</div>
+		<!-- Top Menu Items -->
+		<ul class="nav navbar-right top-nav">
+			<li class="dropdown">
+				<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><i class="icon icon-user"></i> Mario Terron <b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="#"><i class="icon icon-user"></i> Perfil</a>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a href="/index.html"><i class="icon icon-power-off"></i> Cerrar sesión</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav side-nav">
+				<li>
+					<a href="#!/"><i class="icon icon-newspaper-o"></i> Inicio</a>
+				</li>
+				<li>
+					<a href="#!/table"><i class="icon icon-trophy"></i> Clasificacion</a>
+				</li>
+				<li>
+					<a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="icon icon-users"></i> Equipo <i class="icon icon-caret-down"></i></a>
+					<ul id="demo" class="collapse">
+						<li>
+							<a href="#!/lineup"><i class="icon icon-user-plus"></i> Alineación</a>
+						</li>
+						<li>
+							<a href="#!/squad"><i class="icon icon-users"></i> Plantilla</a>
+						</li>
+					</ul>
+				</li>
+				<li class="active">
+					<a href="javascript:;" data-toggle="collapse" data-target="#demo2"><i class="icon icon-exchange"></i> Mercado <i class="icon icon-caret-down"></i></a>
+					<ul id="demo2" class="collapse">
+						<li>
+							<a href="#!/market"><i class="icon icon-shopping-cart"></i> Mercado</a>
+						</li>
+						<li>
+							<a href="#!/sales"><i class="icon icon-money"></i> Mis ventas</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
+	</nav>
+
+	<div id="page-wrapper">
+
+		<div class="container-fluid">
+
+			<!-- Page Heading -->
+			<div class="row">
+				<div class="panel-container col-md-10 col-md-offset-1">
+					<div class="panel panel-default">
+						<!-- Default panel contents -->
+						<div class="panel-body">
+							<div class="panel-header">
+								<h3 class="title">Ventas</h3>
+								<i class="icon icon-money" aria-hidden="true"></i>
+							</div>
+							<!-- Table -->
+							<p class="description">Jugadores de tu plantilla que has puesto a la venta.</p>
+							<div class="table-wrapper">
+								<table class="table table-hover squad">
+									<thead>
+										<tr>
+											<th>
+												<a href="#">
+													<span data-toggle="tooltip" title="Posición">Pos.</span>
+													<span class="sort sort-down">
+														<i class="fa fa-sort"></i>
+													</span>
+												</a>
+											</th>
+											<th>
+												<a href="#">
+													<span data-toggle="tooltip" title="Equipo">Eq.</span>
+													<span class="sort sort-down">
+														<i class="fa fa-sort"></i>
+													</span>
+												</a>
+											</th>
+											<th>
+												<a href="#">
+													<span data-toggle="tooltip" title="Jugador">Jugador</span>
+													<span class="sort sort-down">
+														<i class="fa fa-sort"></i>
+													</span>
+												</a>
+											</th>
+											<th>
+												<a href="#">
+													<span data-toggle="tooltip" title="Total puntos">Pts.</span>
+													<span class="sort sort-down">
+														<i class="fa fa-sort"></i>
+													</span>
+												</a>
+											</th>
+											<th>
+												<a href="#">
+													<span data-toggle="tooltip" title="Valor de mercado">VM.</span>
+													<span class="sort sort-down">
+														<i class="fa fa-sort"></i>
+													</span>
+												</a>
+											</th>
+											<th>
+												<a href="#">
+													<span data-toggle="tooltip" title="Estado">Est.</span>
+													<span class="sort sort-down">
+														<i class="fa fa-sort"></i>
+													</span>
+												</a>
+											</th>
+											<th>
+												<a href="#">
+													<span data-toggle="tooltip" title="Precio de venta">Precio</span>
+													<span class="sort sort-down">
+														<i class="fa fa-sort"></i>
+													</span>
+												</a>
+											</th>
+											<th>
+												<a href="">
+													<span data-toggle="tooltip" title="Tiempo que lleva en el mercado">Desde</span>
+													<span class="sort sort-down">
+														<i class="fa fa-sort"></i>
+													</span>
+												</a>
+											</th>
+											<th>
+												<a href="#">
+													<span data-toggle="tooltip" title="Pujar por el jugador">Mercado</span>
+													<span class="sort sort-down">
+														<i class="fa fa-sort"></i>
+													</span>
+												</a>
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<span class="pos pos-forward" data-toggle="tooltip" title="Delantero">DL</span>
+											</td>
+											<td class="narrow">
+												<a class="team" href="#" data-toggle="tooltip" title="Real Madrid">
+													<img src="https://upload.wikimedia.org/wikipedia/it/archive/4/4d/20101205134544!Real_madrid_logo.png">
+												</a>
+											</td>
+											<td>Bale</td>
+											<td>93</td>
+											<td>7.950.000 €</td>
+											<td>
+												<span class="player-status player-status-injured" data-toggle="tooltip" title="Lesionado">
+													<i class="icon icon-plus"></i>
+												</span>
+											</td>
+											<td>8.000.000 €</td>
+											<td>Hace 24 horas</td>
+											<td class="in-sale">
+												<button class="btn btn-primary btn-sell to-check-bid-modal" type="button">1 oferta</button>
+												<button class="btn btn-outline btn-sell to-update-bid-modal" type="button">En venta</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span class="pos pos-forward" data-toggle="tooltip" title="Delantero">DL</span>
+											</td>
+											<td class="narrow">
+												<a class="team" href="#" data-toggle="tooltip" title="Real Madrid">
+													<img src="https://upload.wikimedia.org/wikipedia/it/archive/4/4d/20101205134544!Real_madrid_logo.png">
+												</a>
+											</td>
+											<td>Danilo</td>
+											<td>76</td>
+											<td>4.950.000 €</td>
+											<td>
+												<span class="player-status" data-toggle="tooltip" title="Alineable">
+													<i class="icon icon-check"></i>
+												</span>
+											</td>
+											<td>5.000.000 €</td>
+											<td>Hace 24 horas</td>
+											<td class="in-sale">
+												<button class="btn btn-outline btn-sell  to-update-bid-modal" type="button">En venta</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /.row -->
+		</div>
+		<!-- /.container-fluid -->
+	</div>
+	<!-- /#page-wrapper -->
+</div>
+<!-- /#wrapper -->
