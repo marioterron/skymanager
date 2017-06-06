@@ -1,4 +1,4 @@
 config.codekit3
 node_modules
-client/bower_components
+client/assets/bower_components
 .env
