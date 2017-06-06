@@ -214,8 +214,10 @@ ul.alert-dropdown {
   .navbar-right li {
     font-size: 14px;
     font-weight: 600; }
-    .navbar-right li:last-child a {
+    .navbar-right li .close-session {
       color: #d9534f; }
+      .navbar-right li .close-session:hover {
+        color: #c9302c; }
 
 .navbar-brand {
   font-size: 24px;

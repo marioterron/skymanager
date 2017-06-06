@@ -3,7 +3,6 @@
 * 	Template Styles
 *
 * ======================================================= */
-
 body {
 	margin-top: 100px;
 	background-color: #222;
@@ -232,7 +231,6 @@ ul.alert-dropdown {
 .panel-yellow > a:hover {
 	color: #df8a13;
 }
-
 /* =======================================================
 *
 * 	Custom Styles
@@ -254,7 +252,6 @@ ul.alert-dropdown {
 	thead th a {
 		color: #6a6c6f;
 	}
-
 }
 
 .navbar-right {
@@ -265,8 +262,12 @@ ul.alert-dropdown {
 		font-size: 14px;
 		font-weight: 600;
 
-		&:last-child a {
+		.close-session {
 			color: #d9534f;
+
+			&:hover {
+				color: darken(#d9534f, 10%);
+			}
 		}
 	}
 }
@@ -318,6 +319,7 @@ ul.alert-dropdown {
 		padding: 30px;
 	}
 }
+
 // News section
 .news {
 	margin: 30px 0;
@@ -355,6 +357,7 @@ ul.alert-dropdown {
 		line-height: 35px;
 	}
 }
+
 // Table section
 .table.points {
 	td {
@@ -374,6 +377,7 @@ ul.alert-dropdown {
 	width: 35px;
 	height: 35px;
 }
+
 // Squad section
 .squad-section {
 	.table {
@@ -587,6 +591,7 @@ ul.alert-dropdown {
 		width: 100%;
 		height: auto;
 	}
+
 	// Player positions in ground
 	.line-defenders,
 	.line-forwards,
@@ -626,10 +631,12 @@ ul.alert-dropdown {
 	.lead {
 		font-size: 30px;
 	}
+
 	.btn-container {
 		text-align: right;
 	}
 }
+
 .select-player {
 	list-style: none;
 	padding: 0;
@@ -656,22 +663,22 @@ ul.alert-dropdown {
 	}
 
 	&-img {
-    width: 65px;
-    height: 65px;
-    margin: 0 20px;
-    border-radius: 50%;
-    border: 3px solid #eceff1;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: #eceff1;
-    background-position: center bottom;
+		width: 65px;
+		height: 65px;
+		margin: 0 20px;
+		border-radius: 50%;
+		border: 3px solid #eceff1;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-color: #eceff1;
+		background-position: center bottom;
 		display: inline-block;
 		position: relative;
 		top: 20px;
 
 		&.injured,
 		&.sanctioned {
-			 border: 3px solid #d9534f;
+			border: 3px solid #d9534f;
 		}
 
 		.points {
@@ -689,7 +696,6 @@ ul.alert-dropdown {
 			padding: 0 3px;
 			margin: 0;
 		}
-
 	}
 
 	&-profile {
@@ -714,8 +720,8 @@ ul.alert-dropdown {
 		text-align: center;
 
 		input {
-		    border-radius: 4px;
-				text-align: center;
+			border-radius: 4px;
+			text-align: center;
 		}
 	}
 }
@@ -743,6 +749,7 @@ ul.alert-dropdown {
 .modal-bet {
 	.card-player {
 		cursor: auto;
+
 		&:hover {
 			background-color: white;
 		}
