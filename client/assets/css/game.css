@@ -549,7 +549,7 @@ ul.alert-dropdown {
   .table .in-sale .btn:last-of-type {
     margin-top: 5px; }
 
-.modal-bet .card-player {
+.modal-auction .card-player {
   cursor: auto; }
-  .modal-bet .card-player:hover {
+  .modal-auction .card-player:hover {
     background-color: white; }

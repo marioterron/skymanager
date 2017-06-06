@@ -1,154 +1,7 @@
-<!-- Update Bid  -->
-<div class="modal modal-bet fade" id="update-bid-modal" tabindex="-1" role="dialog" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-				<p class="lead text-center">Vender a Bale</p>
-			</div>
-			<div class="modal-body">
-				<div class="row">
-					<div class="col-md-12">
-						<ul class="select-player">
-							<li class="card-player">
-								<div class="card-player-info pull-left">
-									<span class="narrow">
-										<a title="Real Madrid" class="team" href="#">
-											<img src="https://upload.wikimedia.org/wikipedia/it/archive/4/4d/20101205134544!Real_madrid_logo.png">
-										</a>
-									</span>
-									<span title="Delantero" class="pos pos-forwards">DL</span>
-								</div>
-								<div class="card-player-img" style="background-image: url(http://files.laliga.es/jugadores/201608/96x96_25114359gareth-bale.jpg)">
-									<span class="points">93</span>
-								</div>
-								<div class="card-player-profile">
-									<p>Bale</p>
-									<p>8.000.000 €</p>
-								</div>
-								<form class="bet-price" action="#" method="post">
-									<label for="">Oferta</label>
-									<input type="number" placeholder="8.000.000 €">
-								</form>
-							</li>
-						</ul>
-						<div class="btn-container">
-							<button class="btn btn-danger close-bet" type="button">Retirar</button>
-							<button class="btn btn-primary update-bet" type="button">Modificar</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<!-- Check bids & accept/decline  -->
-<div class="modal modal-bet fade" id="check-bid-modal" tabindex="-1" role="dialog" aria-hidden="true">
-	<div class="modal-lg modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-				<p class="lead text-center">Ofertas por Bale</p>
-			</div>
-			<div class="modal-body">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="table-wrapper">
-							<table class="table table-hover squad">
-								<thead>
-									<tr>
-										<th></th>
-										<th>
-											<a href="#">
-												<span data-toggle="tooltip" title="Jugador">Jugador</span>
-												<span class="sort sort-down">
-													<i class="fa fa-sort"></i>
-												</span>
-											</a>
-										</th>
-										<th>
-											<a href="#">
-												<span data-toggle="tooltip" title="Oferta de">De</span>
-												<span class="sort sort-down">
-													<i class="fa fa-sort"></i>
-												</span>
-											</a>
-										</th>
-										<th>
-											<a href="#">
-												<span data-toggle="tooltip" title="Valor de mercado">VM.</span>
-												<span class="sort sort-down">
-													<i class="fa fa-sort"></i>
-												</span>
-											</a>
-										</th>
-										<th>
-											<a href="#">
-												<span data-toggle="tooltip" title="Oferta">Oferta</span>
-												<span class="sort sort-down">
-													<i class="fa fa-sort"></i>
-												</span>
-											</a>
-										</th>
-										<th>
-											<a href="#">
-												<span data-toggle="tooltip" title="Fecha de la oferta">Fecha</span>
-												<span class="sort sort-down">
-													<i class="fa fa-sort"></i>
-												</span>
-											</a>
-										</th>
-										<th></th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td class="narrow">
-											<a class="team" href="#" data-toggle="tooltip" title="Real Madrid">
-												<img src="https://upload.wikimedia.org/wikipedia/it/archive/4/4d/20101205134544!Real_madrid_logo.png">
-											</a>
-										</td>
-										<td>Bale</td>
-										<td>Carles</td>
-										<td>8.000.000 €</td>
-										<td>8.500.000 €</td>
-										<td>Hace 1 día</td>
-										<td class="in-sale">
-											<button class="btn btn-primary btn-sell" type="button">Aceptar</button>
-											<button class="btn btn-danger btn-sell" type="button">Rechazar</button>
-										</td>
-									</tr>
-									<tr>
-										<td class="narrow">
-											<a class="team" href="#" data-toggle="tooltip" title="Real Madrid">
-												<img src="https://upload.wikimedia.org/wikipedia/it/archive/4/4d/20101205134544!Real_madrid_logo.png">
-											</a>
-										</td>
-										<td>Bale</td>
-										<td>Sergio</td>
-										<td>8.000.000 €</td>
-										<td>9.500.000 €</td>
-										<td>Hace 1 día</td>
-										<td class="in-sale">
-											<button class="btn btn-primary btn-sell" type="button">Aceptar</button>
-											<button class="btn btn-danger btn-sell" type="button">Rechazar</button>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+<ng-include src="'../assets/templates/includes/update-auction-modal.html'"></ng-include>
+<ng-include src="'../assets/templates/includes/view-auctions-modal.html'"></ng-include>
 
 <div id="wrapper">
-
 	<!-- Navigation -->
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<!-- Brand and toggle get grouped for better mobile display -->
@@ -327,8 +180,8 @@
 											<td>8.000.000 €</td>
 											<td>Hace 24 horas</td>
 											<td class="in-sale">
-												<button class="btn btn-primary btn-sell to-check-bid-modal" type="button">1 oferta</button>
-												<button class="btn btn-outline btn-sell to-update-bid-modal" type="button">En venta</button>
+												<button class="btn btn-primary btn-sell" type="button" data-toggle="modal" data-target="#view-auctions-modal">1 oferta</button>
+												<button class="btn btn-outline btn-sell" type="button" data-toggle="modal" data-target="#update-auction-modal">En venta</button>
 											</td>
 										</tr>
 										<tr>
@@ -351,7 +204,7 @@
 											<td>5.000.000 €</td>
 											<td>Hace 24 horas</td>
 											<td class="in-sale">
-												<button class="btn btn-outline btn-sell  to-update-bid-modal" type="button">En venta</button>
+												<button class="btn btn-outline btn-sell" type="button">En venta</button>
 											</td>
 										</tr>
 									</tbody>
