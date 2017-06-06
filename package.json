@@ -1,29 +1,30 @@
 {
-	"name": "skymanager-test",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"prestart": "npm install",
-		"start": "node app",
-		"dev": "nodemon app"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/MarioTerron/skymanager-test.git"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/MarioTerron/skymanager-test/issues"
-	},
-	"homepage": "https://github.com/MarioTerron/skymanager-test#readme",
-	"dependencies": {
-		"dotenv": "^4.0.0",
-		"express": "^4.15.3"
-	},
-	"devDependencies": {
-		"nodemon": "^1.11.0"
-	}
+  "name": "skymanager-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm install",
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarioTerron/skymanager-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarioTerron/skymanager-test/issues"
+  },
+  "homepage": "https://github.com/MarioTerron/skymanager-test#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
 }

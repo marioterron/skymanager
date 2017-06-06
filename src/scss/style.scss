@@ -17,7 +17,9 @@ $brand-selection-color: #f9f6f0;
 $brand-overlay-color: #3b3d40;
 $brand-bg-color: #efefef;
 $input-border-focus: $brand-primary !default;
-$form-group-margin-bottom: 30px !default; // Mixin
+$form-group-margin-bottom: 30px !default;
+
+// Mixin
 @mixin mixin-translate($translatex) {
 	-moz-transform: translateX($translatex);
 	-webkit-transform: translateX($translatex);
@@ -82,9 +84,12 @@ $form-group-margin-bottom: 30px !default; // Mixin
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+
 // Import
 @import 'vendors/bootstrap/mixins';
 @import 'vendors/bootstrap/variables';
+
+
 /* =======================================================
 *
 * 	Template Style
@@ -160,6 +165,7 @@ h6 {
 	font-family: $font-primary;
 	font-size: 16px;
 	font-weight: 400;
+	padding: 10px 12px;
 	@include border-radius(4px);
 	@include transition(.5s);
 

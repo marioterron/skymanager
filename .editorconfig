@@ -16,10 +16,6 @@ indent_size = 4
 [*.{css,scss}]
 indent_size = 2
 
-# PUG files
-[*.pug]
-indent_size = 2
-
 # JS files
 [*.js]
 indent_size = 2
