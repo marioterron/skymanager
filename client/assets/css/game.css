@@ -423,7 +423,8 @@ ul.alert-dropdown {
     padding: 0;
     border: none;
     border-radius: 0.28571429rem;
-    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5; }
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+    cursor: pointer; }
   .lineup-section .card-block {
     font-size: 10px;
     font-weight: 400;

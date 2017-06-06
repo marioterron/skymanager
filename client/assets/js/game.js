@@ -40,6 +40,12 @@
 			e.preventDefault();
 			$('#check-bid-modal').modal('show');
 		});
+
+		// Event for check bids for a player
+		$('.to-update-profile-modal').on('click', function(e) {
+			e.preventDefault();
+			$('#update-profile-modal').modal('show');
+		});
 	};
 
 	var toggleProfile = function() {
@@ -48,7 +54,6 @@
 			$('.top-nav > li').addClass('open');
 		});
 	}
-
 
 	// Document on load.
 	$(function() {
