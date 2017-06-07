@@ -7,7 +7,7 @@ body {
 	margin-top: 100px;
 	background-color: #222;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 12px;
+	font-size: 14px;
 }
 
 h1,
@@ -249,6 +249,10 @@ ul.alert-dropdown {
 		font-size: 12px;
 	}
 
+	tbody {
+		font-size: 12px;
+	}
+
 	thead th a {
 		color: #6a6c6f;
 	}
@@ -394,8 +398,14 @@ ul.alert-dropdown {
 .btn-sell {
 	margin: 0;
 	padding: 2px 5px;
-	min-width: 70px;
+	min-width: 90.75px;
 	font-size: 12px;
+}
+
+.in-sale {
+	.btn-sell {
+		min-width: inherit;
+	}
 }
 
 .pos {
@@ -750,5 +760,16 @@ ul.alert-dropdown {
 		&:hover {
 			background-color: white;
 		}
+	}
+}
+
+#my-profile-modal {
+	label {
+		text-align: left;
+		font-size: 14px;
+	}
+
+	input, textarea {
+		font-size: 14px;
 	}
 }

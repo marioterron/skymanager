@@ -7,7 +7,7 @@ body {
   margin-top: 100px;
   background-color: #222;
   font-family: 'Open Sans', sans-serif;
-  font-size: 12px; }
+  font-size: 14px; }
 
 h1,
 h2,
@@ -205,6 +205,8 @@ ul.alert-dropdown {
   min-width: 760px; }
   .table thead {
     font-size: 12px; }
+  .table tbody {
+    font-size: 12px; }
   .table thead th a {
     color: #6a6c6f; }
 
@@ -302,8 +304,11 @@ ul.alert-dropdown {
 .btn-sell {
   margin: 0;
   padding: 2px 5px;
-  min-width: 70px;
+  min-width: 90.75px;
   font-size: 12px; }
+
+.in-sale .btn-sell {
+  min-width: inherit; }
 
 .pos {
   display: inline-block;
@@ -551,3 +556,10 @@ ul.alert-dropdown {
   cursor: auto; }
   .modal-auction .card-player:hover {
     background-color: white; }
+
+#my-profile-modal label {
+  text-align: left;
+  font-size: 14px; }
+
+#my-profile-modal input, #my-profile-modal textarea {
+  font-size: 14px; }

@@ -1,5 +1,7 @@
-<div id="wrapper">
+<ng-include src="'../assets/templates/includes/my-profile-modal.html'"></ng-include>
 
+
+<div id="wrapper">
 	<!-- Navigation -->
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<!-- Brand and toggle get grouped for better mobile display -->
@@ -18,7 +20,7 @@
 				<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><i class="icon icon-user"></i> Mario Terron <b class="caret"></b></a>
 				<ul class="dropdown-menu">
 					<li>
-						<a class="to-update-profile-modal" href="#"><i class="icon icon-user"></i> Perfil</a>
+						<a data-toggle="modal" data-target="#my-profile-modal"><i class="icon icon-user"></i> Perfil</a>
 					</li>
 					<li class="divider"></li>
 					<li>
