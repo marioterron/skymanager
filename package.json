@@ -1,40 +1,41 @@
 {
-	"name": "skymanager-test",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"prestart": "npm install",
-		"postinstall": "node ./node_modules/bower/bin/bower install",
-		"build:js": "browserify src/js/app.js > client/assets/js/app.js",
-		"build:js:watch": "watchify -t babelify src/js/app.js -d -o client/assets/js/app.js -v",
-		"dev": "nodemon index",
-		"dev:debug": "DEBUG=*,-nodemon*,-send* npm run dev",
-		"start": "node index"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/MarioTerron/skymanager.git"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/MarioTerron/skymanager/issues"
-	},
-	"homepage": "https://github.com/MarioTerron/skymanager#readme",
-	"dependencies": {
-		"body-parser": "^1.17.2",
-		"bower": "^1.8.0",
-		"dotenv": "^4.0.0",
-		"express": "^4.15.3"
-	},
-	"devDependencies": {
-		"angular": "^1.6.4",
-		"angular-route": "^1.6.4",
-		"babelify": "^7.3.0",
-		"browserify": "^14.4.0",
-		"nodemon": "^1.11.0",
-		"watchify": "^3.9.0"
-	}
+  "name": "skymanager-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm install",
+    "postinstall": "node ./node_modules/bower/bin/bower install",
+    "build:js": "browserify src/js/app.js > client/assets/js/app.js",
+    "build:js:watch": "watchify -t babelify src/js/app.js -d -o client/assets/js/app.js -v",
+    "dev": "nodemon index",
+    "dev:debug": "DEBUG=*,-nodemon*,-send* npm run dev",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarioTerron/skymanager.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarioTerron/skymanager/issues"
+  },
+  "homepage": "https://github.com/MarioTerron/skymanager#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "bower": "^1.8.0",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.3",
+    "mongoose": "^4.10.5"
+  },
+  "devDependencies": {
+    "angular": "^1.6.4",
+    "angular-route": "^1.6.4",
+    "babelify": "^7.3.0",
+    "browserify": "^14.4.0",
+    "nodemon": "^1.11.0",
+    "watchify": "^3.9.0"
+  }
 }

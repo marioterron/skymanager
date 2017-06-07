@@ -181,124 +181,34 @@
 										</tr>
 									</thead>
 									<tbody>
-										<tr>
+										<tr ng-repeat="player in players">
 											<td>
-												<span title="Portero" class="pos pos-goalkeeper">PT</span>
+												<span title="{{player.position.title}}" ng-class="player.position.class">{{player.position.value}}</span>
 											</td>
 											<td class="narrow">
-												<a title="Villareal" class="team" href="#">
-													<img src="https://cdn.comuniame.com/i/t/villarreal-19.png">
+												<a title="{{player.team.name}}" class="team" href="#">
+													<img ng-src="{{player.team.logo}}">
 												</a>
 											</td>
-											<td>Sergio Asenjo</td>
-											<td>132</td>
-											<td>431.000 €</td>
+											<td>{{player.player.name}}</td>
+											<td>{{player.totalPoints}}</td>
+											<td>{{player.marketValue}} €</td>
 											<td>
-												<span class="player-status player-status-injured" data-toggle="tooltip" title="Lesionado">
-													<i class="icon icon-plus"></i>
+												<span ng-class="player.status.bgClass" data-toggle="tooltip" title="{{player.status.title}}">
+													<i ng-class="player.status.contentClass"></i>
 												</span>
 											</td>
-											<td>24</td>
-											<td>5,5</td>
-											<td>70</td>
-											<td>62</td>
+											<td>{{player.MatchesPlayed}}</td>
+											<td>{{player.avgPoints}}</td>
+											<td>{{player.pointsAsLocal}}</td>
+											<td>{{player.pointsAsVisitor}}</td>
 											<td>
 												<div class="fitness">
-													<span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured" data-toggle="tooltip" title="Lesionado">+</span>
+													<span ng-class="player.fitness[0].class">{{player.fitness[0].value}}</span><span ng-class="player.fitness[1].class">{{player.fitness[1].value}}</span><span ng-class="player.fitness[2].class">{{player.fitness[2].value}}</span><span ng-class="player.fitness[3].class">{{player.fitness[3].value}}</span><span ng-class="player.fitness[4].class">{{player.fitness[4].value}}</span>
 												</div>
 											</td>
 											<td>
-												<button class="btn btn-danger btn-sell" type="button">Vender</button>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span title="Defensa" class="pos pos-defender">DF</span>
-											</td>
-											<td class="narrow">
-												<a title="Real Madrid" class="team" href="#">
-													<img src="https://upload.wikimedia.org/wikipedia/it/archive/4/4d/20101205134544!Real_madrid_logo.png">
-												</a>
-											</td>
-											<td>Danilo</td>
-											<td>59</td>
-											<td>1.431.000 €</td>
-											<td>
-												<span class="player-status player-status" data-toggle="tooltip" title="Alineable">
-													<i class="icon icon-check"></i>
-												</span>
-											</td>
-											<td>17</td>
-											<td>3,5</td>
-											<td>33</td>
-											<td>26</td>
-											<td>
-												<div class="fitness">
-													<span class="points high-points">6</span><span class="points dont-played" data-toggle="tooltip" title="No jugado">-</span><span class="points high-points">6</span><span class="points high-points">6</span><span class="points low-points">2</span>
-												</div>
-											</td>
-											<td>
-												<button class="btn btn-danger btn-sell" type="button">Vender</button>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span title="Mediocentro" class="pos pos-midfielder">MC</span>
-											</td>
-											<td class="narrow">
-												<a title="Alavés" class="team" href="#">
-													<img src="https://cdn.comuniame.com/i/t/alaves-91.png">
-												</a>
-											</td>
-											<td>Ibai Gómez</td>
-											<td>118</td>
-											<td>1.890.000 €</td>
-											<td>
-												<span class="player-status player-status-sanctioned" data-toggle="tooltip" title="Sancionado">
-													<i class="icon icon-close"></i>
-												</span>
-											</td>
-											<td>29</td>
-											<td>4,1</td>
-											<td>58</td>
-											<td>60</td>
-											<td>
-												<div class="fitness" title="Puntos conseguidos las ultimas 5 jornadas">
-													<span class="points high-points">6</span><span class="points dont-played" data-toggle="tooltip" title="No convocado">x</span><span class="points low-points">2</span><span class="points dont-played" data-toggle="tooltip" title="No jugado">-</span><span class="points so-high-points">20</span>
-												</div>
-											</td>
-											<td>
-												<button class="btn btn-danger btn-sell" type="button">Vender</button>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<span title="Delantero" class="pos pos-forward">DL</span>
-											</td>
-											<td class="narrow">
-												<a title="Real Madrid" class="team" href="#">
-													<img src="https://upload.wikimedia.org/wikipedia/it/archive/4/4d/20101205134544!Real_madrid_logo.png">
-												</a>
-											</td>
-											<td>Bale</td>
-											<td>59</td>
-											<td>1.431.000 €</td>
-											<td>
-												<span class="player-status player-status" data-toggle="tooltip" title="Alineable">
-													<i class="icon icon-check"></i>
-												</span>
-											</td>
-											<td>17</td>
-											<td>3,5</td>
-											<td>33</td>
-											<td>26</td>
-											<td>
-												<div class="fitness">
-													<span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured" data-toggle="tooltip" title="Lesionado">+</span><span class="points injured" data-toggle="tooltip" title="Lesionado">+</span>
-												</div>
-											</td>
-											<td>
-												<button class="btn btn-outline btn-sell" type="button">En venta</button>
+												<button ng-class="player.forSale.class" type="button">{{player.forSale.text}}</button>
 											</td>
 										</tr>
 									</tbody>

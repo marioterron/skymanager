@@ -7,7 +7,7 @@ body {
 	margin-top: 100px;
 	background-color: #222;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 14px;
+	font-size: 12px;
 }
 
 h1,
@@ -446,8 +446,8 @@ ul.alert-dropdown {
 	color: #fff;
 	background-color: #5cb85c;
 
-	&-injured,
-	&-sanctioned {
+	&.injured,
+	&.sanctioned {
 		background-color: #d9534f;
 	}
 }
@@ -484,11 +484,7 @@ ul.alert-dropdown {
 		}
 	}
 
-	.injured {
-		background-color: #d9534f;
-	}
-
-	.sanctioned {
+	.injured, .sanctioned {
 		background-color: #d9534f;
 	}
 

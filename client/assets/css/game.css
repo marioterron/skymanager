@@ -7,7 +7,7 @@ body {
   margin-top: 100px;
   background-color: #222;
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px; }
+  font-size: 12px; }
 
 h1,
 h2,
@@ -342,7 +342,7 @@ ul.alert-dropdown {
   line-height: 28px;
   color: #fff;
   background-color: #5cb85c; }
-  .player-status-injured, .player-status-sanctioned {
+  .player-status.injured, .player-status.sanctioned {
     background-color: #d9534f; }
 
 .fitness {
@@ -370,9 +370,7 @@ ul.alert-dropdown {
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
       border-right: none; }
-  .fitness .injured {
-    background-color: #d9534f; }
-  .fitness .sanctioned {
+  .fitness .injured, .fitness .sanctioned {
     background-color: #d9534f; }
   .fitness .not-played {
     background: #bbb; }

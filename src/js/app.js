@@ -1,7 +1,13 @@
 const angular = require('angular')
 const angularRoute = require('angular-route');
 
+const APIservice = require('./services/APIservice')
+const mainController = require('./controllers/mainController')
+
+
 angular.module('skymanagerApp', [ 'ngRoute' ])
+	.factory('APIservice', APIservice)
+	.controller('mainController', mainController)
 	.config( function( $routeProvider ) {
 		$routeProvider
 			.when('/', {
@@ -11,7 +17,8 @@ angular.module('skymanagerApp', [ 'ngRoute' ])
 				templateUrl: '../assets/templates/table.html'
 			})
 			.when('/squad', {
-				templateUrl: '../assets/templates/squad.html'
+				templateUrl: '../assets/templates/squad.html',
+				controller: 'mainController'
 			})
 			.when('/lineup', {
 				templateUrl: '../assets/templates/lineup.html'
