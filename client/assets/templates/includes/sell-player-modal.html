@@ -1,0 +1,45 @@
+<div class="modal modal-bet fade" id="sellPlayer_{{player._id}}" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<p class="lead text-center">Vender a {{player.player.name}}</p>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-md-12">
+						<ul class="select-player">
+							<li class="card-player">
+								<div class="card-player-info pull-left">
+									<span class="narrow">
+										<a title="{{player.team.name}}" class="team" href="#">
+											<img ng-src="{{player.team.logo}}">
+										</a>
+									</span>
+									<span title="{{player.position.title}}" ng-class="player.position.class">{{player.position.value}}</span>
+								</div>
+								<div class="card-player-img" ng-style="{'background-image':'url({{ player.player.photo }})'}">
+									<span class="points">{{player.totalPoints}}</span>
+								</div>
+								<div class="card-player-profile">
+									<p>{{player.player.name}}</p>
+									<p>{{player.marketValue}} €</p>
+								</div>
+								<form class="bet-price" action="#" method="post">
+									<label for="">Oferta</label>
+									<input type="number" value="{{player.marketValue}}" min="{{player.marketValue}}">
+								</form>
+							</li>
+						</ul>
+						<div class="btn-container">
+							<button ng-show="player.forSale === false" class="btn btn-primary close-bet" type="button">Vender</button>
+
+							<button ng-show="player.forSale === true" class="btn btn-danger close-bet" type="button">Retirar</button>
+							<button ng-show="player.forSale === true" class="btn btn-primary update-bet" type="button">Modificar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

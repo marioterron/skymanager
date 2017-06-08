@@ -1,4 +1,5 @@
-<ng-include src="'../assets/templates/includes/update-auction-modal.html'"></ng-include>
+<ng-include src="'../assets/templates/includes/my-profile-modal.html'"></ng-include>
+<ng-include src="'../assets/templates/includes/sell-player-modal.html'"></ng-include>
 <ng-include src="'../assets/templates/includes/view-auctions-modal.html'"></ng-include>
 
 <div id="wrapper">
@@ -20,7 +21,7 @@
 				<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><i class="icon icon-user"></i> Mario Terron <b class="caret"></b></a>
 				<ul class="dropdown-menu">
 					<li>
-						<a href="#"><i class="icon icon-user"></i> Perfil</a>
+						<a href="javascript:;" data-toggle="modal" data-target="#my-profile-modal"><i class="icon icon-user"></i> Perfil</a>
 					</li>
 					<li class="divider"></li>
 					<li>
@@ -181,7 +182,7 @@
 											<td>Hace 24 horas</td>
 											<td class="in-sale">
 												<button class="btn btn-primary btn-sell" type="button" data-toggle="modal" data-target="#view-auctions-modal">1 oferta</button>
-												<button class="btn btn-outline btn-sell" type="button" data-toggle="modal" data-target="#update-auction-modal">En venta</button>
+												<button class="btn btn-outline btn-sell" type="button" data-toggle="modal" data-target="#sell-player-modal">En venta</button>
 											</td>
 										</tr>
 										<tr>

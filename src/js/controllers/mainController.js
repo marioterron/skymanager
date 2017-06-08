@@ -18,20 +18,6 @@ function positionClasses(position) {
 	return position
 }
 
-function salesClasses(forSale) {
-	forSale = {
-		status: forSale
-	}
-	if (forSale.status === false) {
-		forSale.class = "btn btn-danger btn-sell"
-		forSale.text = "Vender"
-	} else {
-		forSale.class = "btn btn-outline btn-sell"
-		forSale.text = "En venta"
-	}
-	return forSale
-}
-
 function statusClasses(status) {
 	status = {
 		title: status
@@ -86,10 +72,6 @@ function mainController($scope, APIservice) {
 		}))
 		.then(players => players.map(player => {
 			player.fitness = fitnessClasses(player.fitness)
-			return player
-		}))
-		.then(players => players.map(player => {
-			player.forSale = salesClasses(player.forSale)
 			return player
 		}))
 		.then(players => $scope.players = players)
