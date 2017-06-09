@@ -53,7 +53,6 @@ div[class*="col-"] {
 	padding-left: 0;
 	padding-right: 0;
 }
-
 /* Top Navigation */
 .navbar-inverse {
 	border-color: #222222;
@@ -329,7 +328,6 @@ ul.alert-dropdown {
 		padding: 30px;
 	}
 }
-
 // News section
 .news {
 	margin: 30px 0;
@@ -367,7 +365,6 @@ ul.alert-dropdown {
 		line-height: 35px;
 	}
 }
-
 // Table section
 .table.points {
 	td {
@@ -387,9 +384,31 @@ ul.alert-dropdown {
 	width: 35px;
 	height: 35px;
 }
-
 // Squad section
 .squad-section {
+	.panel-footer {
+		display: flex;
+		font-size: 14px;
+
+		form {
+			width: 50%;
+
+			.form-control {
+				background-color: white;
+			}
+			input {
+				font-size: 14px;
+			}
+		}
+
+		.count-players {
+			display: inline-block;
+			width: 50%;
+			text-align: right;
+			line-height: 54px;
+		}
+	}
+
 	.table {
 		td {
 			line-height: 27.5px;
@@ -500,7 +519,8 @@ ul.alert-dropdown {
 		}
 	}
 
-	.injured, .sanctioned {
+	.injured,
+	.sanctioned {
 		background-color: #d9534f;
 	}
 
@@ -524,7 +544,6 @@ ul.alert-dropdown {
 		background: #03a9f4;
 	}
 }
-
 // Lineup section
 .lineup-section {
 	padding: 0 20px !important;
@@ -604,7 +623,6 @@ ul.alert-dropdown {
 		width: 100%;
 		height: auto;
 	}
-
 	// Player positions in ground
 	.line-defenders,
 	.line-forwards,
@@ -614,7 +632,6 @@ ul.alert-dropdown {
 		justify-content: space-around;
 		margin-top: 25px;
 	}
-
 	// Status icon in lineup
 	.status {
 		position: absolute;
@@ -638,7 +655,6 @@ ul.alert-dropdown {
 		}
 	}
 }
-
 // Player modal
 .modal {
 	.lead {
@@ -738,7 +754,6 @@ ul.alert-dropdown {
 		}
 	}
 }
-
 // Market
 .description {
 	margin-bottom: 0;
@@ -775,7 +790,8 @@ ul.alert-dropdown {
 		font-size: 14px;
 	}
 
-	input, textarea {
+	input,
+	textarea {
 		font-size: 14px;
 	}
 }

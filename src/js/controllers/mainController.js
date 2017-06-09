@@ -61,7 +61,7 @@ function fitnessClasses(aFitness) {
 
 // Controller
 function mainController($scope, APIservice) {
-	$scope.sortType     = ''; 		// set the default sort type
+	$scope.sortType     = 'player.name'; 		// set the default sort type
 	$scope.sortReverse  = false;  // set the default sort order
 	$scope.searchPlayer   = '';   // set the default search/filter
 	APIservice.getPlayers()
