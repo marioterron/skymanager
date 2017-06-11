@@ -6,8 +6,8 @@
   "scripts": {
     "prestart": "npm install",
     "postinstall": "node ./node_modules/bower/bin/bower install",
-    "build:js": "browserify src/js/app.js > client/assets/js/app.js",
-    "build:js:watch": "watchify -t babelify src/js/app.js -d -o client/assets/js/app.js -v",
+    "build:js": "browserify client/src/js/app.js > client/dist/assets/js/app.js",
+    "build:js:watch": "watchify -t babelify client/src/js/app.js -d -o client/dist/assets/js/app.js -v",
     "dev": "nodemon index",
     "dev:debug": "DEBUG=*,-nodemon*,-send* npm run dev",
     "start": "node index"
