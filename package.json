@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/MarioTerron/skymanager#readme",
   "dependencies": {
+    "angular-css": "^1.0.8",
     "body-parser": "^1.17.2",
     "bower": "^1.8.0",
     "dotenv": "^4.0.0",

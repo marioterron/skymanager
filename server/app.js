@@ -1,19 +1,19 @@
-const express = require('express')
-const path = require('path')
-const bodyParser = require('body-parser')
+const express 			= require('express');
+const path 					= require('path');
+const bodyParser 		= require('body-parser');
 
-const app = express()
+const app 					= express();
 
-const routesPlayers = require('./routes/players')
+const routesPlayers = require('./routes/players');
 
 
 /* bodyParser */
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 /* static folder */
-app.use( express.static(path.join(__dirname,'../client/dist')))
+app.use( express.static(path.join(__base,'../client/dist')));
 
-app.use('/api/players', routesPlayers)
+app.use('/api/players', routesPlayers);
 
-module.exports = app
+module.exports = app;

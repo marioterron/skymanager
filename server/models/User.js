@@ -8,16 +8,16 @@ const UserSchema = new Schema({
   mail: String,
 	totalPoints: { type: Number, default: 0 },
   squad: {
-    players: [ { type: Schema.Types.ObjectId, ref: 'Player' } ]
+    players: [ { type: Schema.ObjectId, ref: 'Player' } ]
   },
   lineUp: [{
   	matchweek: Number,
   	tactic: {
   		code: [ Number ],
-  		defenders: [ { type: Schema.Types.ObjectId, ref: 'Player' } ],
-  		forwards: [ { type: Schema.Types.ObjectId, ref: 'Player' } ],
-  		goalkeeper: [ { type: Schema.Types.ObjectId, ref: 'Player' } ],
-  		midfielders: [ { type: Schema.Types.ObjectId, ref: 'Player' } ]
+  		defenders: [ { type: Schema.ObjectId, ref: 'Player' } ],
+  		forwards: [ { type: Schema.ObjectId, ref: 'Player' } ],
+  		goalkeeper: [ { type: Schema.ObjectId, ref: 'Player' } ],
+  		midfielders: [ { type: Schema.ObjectId, ref: 'Player' } ]
   	}
   }]
 }, { collection })

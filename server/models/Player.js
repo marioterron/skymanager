@@ -20,12 +20,12 @@ const PlayerSchema = new mongoose.Schema({
   pointsAsVisitor: { type: Number, default: 0 },
   fitness: [String],
   marketValue: { type: Number, required: true },
-	owner: { type: Schema.Types.ObjectId, ref: 'User', default: "593d66e065d4fab620df195b" },
+	owner: { type: Schema.ObjectId, ref: 'User', default: "593d66e065d4fab620df195b" },
   forSale: { type: Boolean, default: false },
 	sellValue: Number,
 	bets: [
 	[{
-			user: { type: Schema.Types.ObjectId, ref: 'User' },
+			user: { type: Schema.ObjectId, ref: 'User' },
 			isWinner: { type: Boolean, default: false },
 			value: { type: Number, required: true }
 	}]

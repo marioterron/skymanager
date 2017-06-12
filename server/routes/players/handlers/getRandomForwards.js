@@ -3,11 +3,11 @@ const Player 		= require( __base + 'models/Player');
 
 const Schema 		= mongoose.Schema;
 
-const getRandomGoalkeepers = (req, res) => {
+const getRandomForwards = (req, res) => {
 
-Player.count({position:"PT", "owner": {$eq: Schema.ObjectId("593d66e065d4fab620df195b")}}).exec( (err, count) => {
+Player.count({position:"DL", "owner": {$eq: Schema.ObjectId("593d66e065d4fab620df195b")}}).exec( (err, count) => {
   const random = Math.floor(Math.random() * count)
-	const conditions = {position:"PT", "owner": {$eq: Schema.ObjectId("593d66e065d4fab620df195b")}};
+	const conditions = {position:"DL", "owner": {$eq: Schema.ObjectId("593d66e065d4fab620df195b")}};
 	const filter = { "owner": 1, "player.name": 1, "_id":1 }
   Player
 		.find(conditions, filter)
@@ -26,4 +26,4 @@ Player.count({position:"PT", "owner": {$eq: Schema.ObjectId("593d66e065d4fab620d
 	})
 }
 
-module.exports = getRandomGoalkeepers
+module.exports = getRandomForwards
