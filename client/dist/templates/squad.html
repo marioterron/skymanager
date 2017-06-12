@@ -1,0 +1,245 @@
+<ng-include src="'templates/includes/my-profile-modal.html'"></ng-include>
+
+<div id="wrapper">
+	<!-- Navigation -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#!/">SKY<span>MANAGER</span></a>
+		</div>
+		<!-- Top Menu Items -->
+		<ul class="nav navbar-right top-nav">
+			<li class="dropdown">
+				<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><i class="icon icon-user"></i> Mario Terron <b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="javascript:;" data-toggle="modal" data-target="#my-profile-modal"><i class="icon icon-user"></i> Perfil</a>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a class="close-session" href="#!/"><i class="icon icon-power-off"></i> Cerrar sesión</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav side-nav">
+				<li>
+					<a href="#!/news"><i class="icon icon-newspaper-o"></i> Inicio</a>
+				</li>
+				<li>
+					<a href="#!/table"><i class="icon icon-trophy"></i> Clasificacion</a>
+				</li>
+				<li class="active">
+					<a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="icon icon-users"></i> Equipo <i class="icon icon-caret-down"></i></a>
+					<ul id="demo" class="collapse">
+						<li>
+							<a href="#!/lineup"><i class="icon icon-user-plus"></i> Alineación</a>
+						</li>
+						<li>
+							<a href="#!/squad"><i class="icon icon-users"></i> Plantilla</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:;" data-toggle="collapse" data-target="#demo2"><i class="icon icon-exchange"></i> Mercado <i class="icon icon-caret-down"></i></a>
+					<ul id="demo2" class="collapse">
+						<li>
+							<a href="#!/market"><i class="icon icon-shopping-cart"></i> Mercado</a>
+						</li>
+						<li>
+							<a href="#!/sales"><i class="icon icon-money"></i> Mis ventas</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
+	</nav>
+
+	<div id="page-wrapper" class="squad-section">
+
+		<div class="container-fluid">
+
+			<!-- Page Heading -->
+			<div class="row">
+				<div class="panel-container col-md-10 col-md-offset-1">
+					<div class="panel panel-default">
+						<!-- Default panel contents -->
+						<div class="panel-body">
+							<div class="panel-header">
+								<h3 class="title">Plantilla</h3>
+								<i class="icon icon-users"></i>
+							</div>
+							<!-- Table -->
+							<p class="description">Aquí podras ver todos los jugadores de tu plantilla y sus estadistícas.</p>
+							<div class="table-wrapper">
+								<table class="table table-hover squad">
+									<thead>
+										<tr>
+											<th>
+												<a href="javascript:;" ng-click="sortType = 'position.value'; sortReverse = !sortReverse">
+													<span data-toggle="tooltip" title="Posición">Pos.</span>
+													<span ng-show="sortType == '' || sortType !== 'position.value'" class="fa fa-sort"></span>
+													<span ng-show="sortType == 'position.value' && !sortReverse" class="fa fa-caret-down"></span>
+													<span ng-show="sortType == 'position.value' && sortReverse" class="fa fa-caret-up"></span>
+												</a>
+											</th>
+											<th>
+												<a href="javascript:;" ng-click="sortType = 'team.name'; sortReverse = !sortReverse">
+													<span data-toggle="tooltip" title="Equipo">Eq.</span>
+													<span ng-show="sortType == '' || sortType !== 'team.name'" class="fa fa-sort"></span>
+													<span ng-show="sortType == 'team.name' && !sortReverse" class="fa fa-caret-down"></span>
+													<span ng-show="sortType == 'team.name' && sortReverse" class="fa fa-caret-up"></span>
+												</a>
+											</th>
+											<th>
+												<a href="javascript:;" ng-click="sortType = 'player.name'; sortReverse = !sortReverse">
+													<span data-toggle="tooltip" title="Jugador">Jugador</span>
+													<span ng-show="sortType == '' || sortType !== 'player.name'" class="fa fa-sort"></span>
+													<span ng-show="sortType == 'player.name' && !sortReverse" class="fa fa-caret-down"></span>
+													<span ng-show="sortType == 'player.name' && sortReverse" class="fa fa-caret-up"></span>
+												</a>
+											</th>
+											<th>
+												<a href="javascript:;" ng-click="sortType = 'totalPoints'; sortReverse = !sortReverse">
+													<span data-toggle="tooltip" title="Total puntos">Pts.</span>
+													<span ng-show="sortType == '' || sortType !== 'totalPoints'" class="fa fa-sort"></span>
+													<span ng-show="sortType == 'totalPoints' && !sortReverse" class="fa fa-caret-down"></span>
+													<span ng-show="sortType == 'totalPoints' && sortReverse" class="fa fa-caret-up"></span>
+												</a>
+											</th>
+											<th>
+												<a href="javascript:;" ng-click="sortType = 'marketValue'; sortReverse = !sortReverse">
+													<span data-toggle="tooltip" title="Valor en el mercado">VM.</span>
+													<span ng-show="sortType == '' || sortType !== 'marketValue'" class="fa fa-sort"></span>
+													<span ng-show="sortType == 'marketValue' && !sortReverse" class="fa fa-caret-down"></span>
+													<span ng-show="sortType == 'marketValue' && sortReverse" class="fa fa-caret-up"></span>
+												</a>
+											</th>
+											<th>
+												<a href="javascript:;" ng-click="sortType = 'status.title'; sortReverse = !sortReverse">
+													<span data-toggle="tooltip" title="Estado">Est.</span>
+													<span ng-show="sortType == '' || sortType !== 'status.title'" class="fa fa-sort"></span>
+													<span ng-show="sortType == 'status.title' && !sortReverse" class="fa fa-caret-down"></span>
+													<span ng-show="sortType == 'status.title' && sortReverse" class="fa fa-caret-up"></span>
+												</a>
+											</th>
+											<!-- <th>
+												<a href="javascript:;" ng-click="sortType = 'MatchesPlayed'; sortReverse = !sortReverse">
+													<span data-toggle="tooltip" title="Partidos jugados">PJ.</span>
+													<span ng-show="sortType == '' || sortType !== 'MatchesPlayed'" class="fa fa-sort"></span>
+													<span ng-show="sortType == 'MatchesPlayed' && !sortReverse" class="fa fa-caret-down"></span>
+													<span ng-show="sortType == 'MatchesPlayed' && sortReverse" class="fa fa-caret-up"></span>
+												</a>
+											</th> -->
+											<th>
+												<a href="javascript:;" ng-click="sortType = 'avgPoints'; sortReverse = !sortReverse">
+													<span data-toggle="tooltip" title="Media de puntos por partido">Med.</span>
+													<span ng-show="sortType == '' || sortType !== 'avgPoints'" class="fa fa-sort"></span>
+													<span ng-show="sortType == 'avgPoints' && !sortReverse" class="fa fa-caret-down"></span>
+													<span ng-show="sortType == 'avgPoints' && sortReverse" class="fa fa-caret-up"></span>
+												</a>
+											</th>
+											<th>
+												<a href="javascript:;" ng-click="sortType = 'pointsAsLocal'; sortReverse = !sortReverse">
+													<span data-toggle="tooltip" title="Puntos como local"><i class="icon icon-home"></i></span>
+													<span ng-show="sortType == '' || sortType !== 'pointsAsLocal'" class="fa fa-sort"></span>
+													<span ng-show="sortType == 'pointsAsLocal' && !sortReverse" class="fa fa-caret-down"></span>
+													<span ng-show="sortType == 'pointsAsLocal' && sortReverse" class="fa fa-caret-up"></span>
+												</a>
+											</th>
+											<th>
+												<a href="javascript:;" ng-click="sortType = 'pointsAsVisitor'; sortReverse = !sortReverse">
+													<span data-toggle="tooltip" title="Puntos como visitante"><i class="icon icon-plane"></i></span>
+													<span ng-show="sortType == '' || sortType !== 'pointsAsVisitor'" class="fa fa-sort"></span>
+													<span ng-show="sortType == 'pointsAsVisitor' && !sortReverse" class="fa fa-caret-down"></span>
+													<span ng-show="sortType == 'pointsAsVisitor' && sortReverse" class="fa fa-caret-up"></span>
+												</a>
+											</th>
+											<th>
+												<a href="javascript:;" ng-click="sortType = 'fitness'; sortReverse = !sortReverse">
+													<span data-toggle="tooltip" title="Puntos conseguidos las ultimas 5 jornadas">Forma</span>
+													<span ng-show="sortType == '' || sortType !== 'fitness'" class="fa fa-sort"></span>
+													<span ng-show="sortType == 'fitness' && !sortReverse" class="fa fa-caret-down"></span>
+													<span ng-show="sortType == 'fitness' && sortReverse" class="fa fa-caret-up"></span>
+												</a>
+											</th>
+											<th>
+												<a href="javascript:;" ng-click="sortType = 'forSale'; sortReverse = !sortReverse">
+													<span data-toggle="tooltip" title="Poner en venta">Mercado</span>
+													<span ng-show="sortType == '' || sortType !== 'forSale'" class="fa fa-sort"></span>
+													<span ng-show="sortType == 'forSale' && !sortReverse" class="fa fa-caret-down"></span>
+													<span ng-show="sortType == 'forSale' && sortReverse" class="fa fa-caret-up"></span>
+												</a>
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr ng-repeat="player in players | orderBy:sortType:sortReverse | filter:searchPlayer">
+											<td>
+												<span title="{{player.position.title}}" ng-class="player.position.class">{{player.position.value}}</span>
+											</td>
+											<td class="narrow">
+												<a title="{{player.team.name}}" class="team" href="#">
+													<img ng-src="{{player.team.logo}}">
+												</a>
+											</td>
+											<td>{{player.player.name}}</td>
+											<td>{{player.totalPoints}}</td>
+											<td>{{player.marketValue}} €</td>
+											<td>
+												<span ng-class="player.status.bgClass" data-toggle="tooltip" title="{{player.status.title}}">
+													<i ng-class="player.status.contentClass"></i>
+												</span>
+											</td>
+											<!-- <td>{{player.MatchesPlayed}}</td> -->
+											<td>{{player.avgPoints}}</td>
+											<td>{{player.pointsAsLocal}}</td>
+											<td>{{player.pointsAsVisitor}}</td>
+											<td>
+												<div class="fitness">
+													<span ng-class="player.fitness[0].class">{{player.fitness[0].value}}</span><span ng-class="player.fitness[1].class">{{player.fitness[1].value}}</span><span ng-class="player.fitness[2].class">{{player.fitness[2].value}}</span><span ng-class="player.fitness[3].class">{{player.fitness[3].value}}</span><span ng-class="player.fitness[4].class">{{player.fitness[4].value}}</span>
+												</div>
+											</td>
+											<td>
+												<button ng-show="player.forSale === false" class="btn btn-primary btn-sell" type="button" data-toggle="modal" data-target="#sellPlayer_{{player._id}}">Vender</button>
+												<button ng-show="player.forSale === true" class="btn btn-outline btn-sell" type="button" data-toggle="modal" data-target="#sellPlayer_{{player._id}}">En venta</button>
+
+												<ng-include src="'templates/includes/sell-player-modal.html'"></ng-include>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="panel-footer">
+							<form>
+								<div class="form-group">
+									<div class="input-group">
+										<div class="input-group-addon"><i class="fa fa-search"></i></div>
+										<input type="text" class="form-control" placeholder="Filtra por posición, nombre, etc.." ng-model="searchPlayer">
+									</div>
+								</div>
+							</form>
+							<div class="count-players">
+								<p class="sublead">{{players.length}} jugadores</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /.row -->
+		</div>
+		<!-- /.container-fluid -->
+	</div>
+	<!-- /#page-wrapper -->
+</div>
+<!-- /#wrapper -->

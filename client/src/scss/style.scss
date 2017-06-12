@@ -81,7 +81,6 @@ $form-group-margin-bottom: 30px !default;
 
 body {
 	font-family: $font-primary;
-	// font-weight: 300;
 	font-size: 16px;
 	line-height: 28px;
 	font-weight: 300;
@@ -313,7 +312,6 @@ h6 {
 		border: 2px solid lighten($brand-black, 60%);
 	}
 }
-// Form Input Field
 
 .form-control {
 	box-shadow: none;
@@ -345,14 +343,6 @@ h6 {
 		@media screen and (min-width: $screen-sm) {
 			margin-right: 1%;
 		}
-	}
-}
-
-body {
-	background: $brand-bg-color url("../images/white_wave.png") repeat;
-	// high resolution background.
-	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and ( min--moz-device-pixel-ratio: 2), only screen and ( -o-min-device-pixel-ratio: 2/1), only screen and ( min-device-pixel-ratio: 2), only screen and ( min-resolution: 192dpi), only screen and ( min-resolution: 2dppx) {
-		background: $brand-bg-color url("../images/white_wave_@2X.png") repeat;
 	}
 }
 
@@ -502,7 +492,7 @@ body {
 
 	.intro {
 		display: table;
-		width: 100%;
+		height: 649px;
 		z-index: 10;
 		position: relative;
 		@media screen and (max-width: $screen-xs) {
@@ -627,13 +617,13 @@ body {
 	}
 }
 
-.no-js-fullheight {
-	height: 620px;
-	@media screen and (max-width: $screen-sm) {
-		height: inherit;
-		padding: 3em 0;
-	}
-}
+// .no-js-fullheight {
+// 	height: 620px;
+// 	@media screen and (max-width: $screen-sm) {
+// 		height: inherit;
+// 		padding: 3em 0;
+// 	}
+// }
 
 .lead {
 	text-transform: uppercase;
@@ -1323,7 +1313,6 @@ body {
 		}
 	}
 }
-// Person
 
 .person {
 	text-align: center;
@@ -1355,9 +1344,6 @@ body {
 		text-align: left;
 	}
 }
-
-#why {}
-// Offcanvas Menu
 
 #offcanvas,
 #page,
@@ -1418,7 +1404,6 @@ body {
 		}
 	}
 }
-// Burger Menu
 
 .nav-toggle {
 	cursor: pointer;
@@ -1539,33 +1524,8 @@ body {
 		top: 20px;
 	}
 }
-// Magnific Popup
 
-.mfp-with-zoom .mfp-container,
-.mfp-with-zoom.mfp-bg {
-	opacity: 0;
-	-webkit-backface-visibility: hidden;
-	/* ideally, transition speed should match zoom duration */
-	-webkit-transition: all 0.3s ease-out;
-	-moz-transition: all 0.3s ease-out;
-	-o-transition: all 0.3s ease-out;
-	transition: all 0.3s ease-out;
-}
-
-.mfp-with-zoom.mfp-ready .mfp-container {
-	opacity: 1;
-}
-
-.mfp-with-zoom.mfp-ready.mfp-bg {
-	opacity: 0.8;
-}
-
-.mfp-with-zoom.mfp-removing .mfp-container,
-.mfp-with-zoom.mfp-removing.mfp-bg {
-	opacity: 0;
-}
 // Helper Class
-
 .col-xxs-12 {
 	@media screen and (max-width: 480px) {
 		float: none;

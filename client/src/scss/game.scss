@@ -3,8 +3,7 @@
 * 	Template Styles
 *
 * ======================================================= */
-body.game {
-	margin-top: 100px;
+body {
 	background-color: #222;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
@@ -19,11 +18,7 @@ h6 {
 	color: #484c50;
 	font-weight: 600;
 }
-@media(min-width:768px) {
-	body.game {
-		margin-top: 50px;
-	}
-}
+
 
 #wrapper {
 	padding-left: 0;
@@ -33,6 +28,15 @@ h6 {
 	width: 100%;
 	padding: 0;
 	background-color: #edf0f5;
+}
+
+.container-fluid {
+	margin-top: 100px;
+	@media(min-width:768px) {
+		body {
+			margin-top: 50px;
+		}
+	}
 }
 
 .huge {

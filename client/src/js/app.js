@@ -1,32 +1,42 @@
 const angular = require('angular')
 const angularRoute = require('angular-route');
+const angularCss = require('angular-css');
 
 const APIservice = require('./services/APIservice')
 const mainController = require('./controllers/mainController')
 
-
-angular.module('skymanagerApp', [ 'ngRoute' ])
+angular.module('skymanagerApp', [ 'ngRoute', 'angularCSS' ])
 	.factory('APIservice', APIservice)
 	.controller('mainController', mainController)
 	.config( function( $routeProvider ) {
 		$routeProvider
 			.when('/', {
-				templateUrl: '../assets/templates/news.html'
+				templateUrl: '../templates/landing.html',
+				css: '../css/style.css',
+			})
+			.when('/news', {
+				templateUrl: '../templates/news.html',
+				css: ['../css/style.css', '../css/game.css']
 			})
 			.when('/table', {
-				templateUrl: '../assets/templates/table.html'
+				templateUrl: '../templates/table.html',
+				css: ['../css/style.css', '../css/game.css']
 			})
 			.when('/squad', {
-				templateUrl: '../assets/templates/squad.html',
-				controller: 'mainController'
+				templateUrl: '../templates/squad.html',
+				controller: 'mainController',
+				css: ['../css/style.css', '../css/game.css']
 			})
 			.when('/lineup', {
-				templateUrl: '../assets/templates/lineup.html'
+				templateUrl: '../templates/lineup.html',
+				css: ['../css/style.css', '../css/game.css']
 			})
 			.when('/market', {
-				templateUrl: '../assets/templates/market.html'
+				templateUrl: '../templates/market.html',
+				css: ['../css/style.css', '../css/game.css']
 			})
 			.when('/sales', {
-				templateUrl: '../assets/templates/sales.html'
+				templateUrl: '../templates/sales.html',
+				css: ['../css/style.css', '../css/game.css']
 			})
 	})

@@ -190,12 +190,6 @@ h6 {
       .form-name:first-of-type {
         margin-right: 1%; } }
 
-body {
-  background: #efefef url("../images/white_wave.png") repeat; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-    body {
-      background: #efefef url("../images/white_wave_@2X.png") repeat; } }
-
 .boxed #page {
   max-width: 1340px;
   max-width: 1140px;
@@ -400,13 +394,6 @@ body {
           position: relative;
           color: #fff;
           vertical-align: middle; }
-
-.no-js-fullheight {
-  height: 620px; }
-  @media screen and (max-width: 768px) {
-    .no-js-fullheight {
-      height: inherit;
-      padding: 3em 0; } }
 
 .lead {
   text-transform: uppercase;
@@ -1125,26 +1112,6 @@ body {
     .nav-toggle {
       display: block;
       top: 20px; } }
-
-.mfp-with-zoom .mfp-container,
-.mfp-with-zoom.mfp-bg {
-  opacity: 0;
-  -webkit-backface-visibility: hidden;
-  /* ideally, transition speed should match zoom duration */
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out; }
-
-.mfp-with-zoom.mfp-ready .mfp-container {
-  opacity: 1; }
-
-.mfp-with-zoom.mfp-ready.mfp-bg {
-  opacity: 0.8; }
-
-.mfp-with-zoom.mfp-removing .mfp-container,
-.mfp-with-zoom.mfp-removing.mfp-bg {
-  opacity: 0; }
 
 @media screen and (max-width: 480px) {
   .col-xxs-12 {
