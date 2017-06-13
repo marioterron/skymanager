@@ -1,6 +1,6 @@
 config.codekit3
 node_modules
-client/bower_components
+client/dist/bower_components
 server/data
 .env
 .notes
