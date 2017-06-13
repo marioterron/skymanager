@@ -1,4 +1,4 @@
-function positionClasses(position) {
+const positionClasses = (position) => {
 	position = {
 		value: position
 	}
@@ -18,7 +18,7 @@ function positionClasses(position) {
 	return position
 }
 
-function statusClasses(status) {
+const statusClasses = (status) => {
 	status = {
 		title: status
 	}
@@ -35,7 +35,7 @@ function statusClasses(status) {
 	return status
 }
 
-function fitnessClasses(aFitness) {
+const fitnessClasses = (aFitness) => {
 	return aFitness.map(singleFitness => {
 		singleFitness = {
 			value: singleFitness
@@ -61,7 +61,7 @@ function fitnessClasses(aFitness) {
 
 // Controller
 function mainController($scope, APIservice) {
-	$scope.sortType     = 'player.name'; 		// set the default sort type
+	$scope.sortType     = ''; 		// set the default sort type
 	$scope.sortReverse  = false;  // set the default sort order
 	$scope.searchPlayer   = '';   // set the default search/filter
 	APIservice.getPlayers()

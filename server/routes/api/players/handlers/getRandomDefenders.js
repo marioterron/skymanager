@@ -1,9 +1,9 @@
-const mongoose 	= require('mongoose');
-const Player 		= require( __base + 'models/Player');
+const mongoose 								= require('mongoose');
+const Player 									= require( __base + 'models/Player');
 
-const Schema 		= mongoose.Schema;
+const Schema 									= mongoose.Schema;
 
-const getRandomDefenders = (req, res) => {
+module.exports  = (req, res) => {
 
 Player.count({position:"DF", "owner": {$eq: Schema.ObjectId("593d66e065d4fab620df195b")}}).exec( (err, count) => {
   const random = Math.floor(Math.random() * count)
@@ -25,5 +25,3 @@ Player.count({position:"DF", "owner": {$eq: Schema.ObjectId("593d66e065d4fab620d
 		.then( () => res.json({"msg": "Operation success!"}))
 	})
 }
-
-module.exports = getRandomDefenders

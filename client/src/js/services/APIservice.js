@@ -1,4 +1,4 @@
-function dataService ($http) {
+function APIservice ($http) {
 
 	function getPlayers() {
 		return $http.get('/api/players')
@@ -8,4 +8,4 @@ function dataService ($http) {
 	return { getPlayers }
 }
 
-module.exports = dataService
+module.exports = APIservice

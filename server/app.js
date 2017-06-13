@@ -1,23 +1,12 @@
-const express 			= require('express');
-const path 					= require('path');
-const bodyParser 		= require('body-parser');
+const express 								= require('express');
+const path 										= require('path');
 
-const app 					= express();
+const routerConfig 						= require('./config/express')
+const router 									= require('./routes');
 
-const routesPlayers = require('./routes/players');
-const routesSquad = require('./routes/squad');
+const app 										= express();
 
-
-
-/* bodyParser */
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-
-/* static folder */
-app.use( express.static(path.join(__base,'../client/dist')));
-
-app.use('/api/players', routesPlayers);
-app.use('/api/squad', routesSquad);
-
+app.use(routerConfig)
+app.use(router);
 
 module.exports = app;

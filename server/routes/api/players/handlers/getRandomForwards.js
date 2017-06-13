@@ -1,14 +1,14 @@
-const mongoose 	= require('mongoose');
-const Player 		= require( __base + 'models/Player');
+const mongoose 								= require('mongoose');
+const Player 									= require( __base + 'models/Player');
 
-const Schema 		= mongoose.Schema;
+const Schema 									= mongoose.Schema;
 
-const getRandomGoalkeepers = (req, res) => {
+module.exports = (req, res) => {
 
-Player.count({position:"PT", "owner": {$eq: Schema.ObjectId("593d66e065d4fab620df195b")}}).exec( (err, count) => {
+Player.count({position:"DL", "owner": {$eq: Schema.ObjectId("593d66e065d4fab620df195b")}}).exec( (err, count) => {
   const random = Math.floor(Math.random() * count)
-	const conditions = {position:"PT", "owner": {$eq: Schema.ObjectId("593d66e065d4fab620df195b")}};
-	const numberOfPlayers = 1
+	const conditions = {position:"DL", "owner": {$eq: Schema.ObjectId("593d66e065d4fab620df195b")}};
+	const numberOfPlayers = 3
   Player
 		.find(conditions)
 		.skip(random)
@@ -25,5 +25,3 @@ Player.count({position:"PT", "owner": {$eq: Schema.ObjectId("593d66e065d4fab620d
 		.then( () => res.json({"msg": "Operation success!"}))
 	})
 }
-
-module.exports = getRandomGoalkeepers
