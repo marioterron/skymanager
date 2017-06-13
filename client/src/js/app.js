@@ -3,7 +3,7 @@ const angularRoute = require('angular-route');
 const angularJwt = require('angular-jwt');
 const angularCss = require('angular-css');
 
-const APIservice = require('./services/APIservice')
+const apiService = require('./services/apiService')
 const authService = require('./services/authService')
 const authInterceptor = require('./services/authInterceptor')
 const storageService = require('./services/storageService')
@@ -18,7 +18,7 @@ angular
 	.factory('authService', authService)
 	.factory('storageService', storageService)
 	.factory('authInterceptor', authInterceptor)
-	.factory('APIservice', APIservice)
+	.factory('apiService', apiService)
 
 	.controller('loginController', loginController)
 	.controller('registerController', registerController)

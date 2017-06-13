@@ -1,10 +1,10 @@
-function loginController($scope, $location, AuthService, DataService) {
+function loginController($scope, $location, authService, apiService) {
 
 	  $scope.login = function (event) {
 	    event.preventDefault()
 	    const { username, password } = $scope
 
-	    AuthService.login(username, password)
+	    authService.login(username, password)
 					.then(msg => {
 						console.log(msg)
 						$location.path('/profile')
@@ -12,10 +12,10 @@ function loginController($scope, $location, AuthService, DataService) {
 					.catch(console.log)
 	  }
 
-	  $scope.getData = function () {
-	    DataService.getSecretData()
-					.then(data => $scope.message = data.msg)
-		 }
+	  // $scope.getData = function () {
+	  //   DataService.getSecretData()
+		// 			.then(data => $scope.message = data.msg)
+		//  }
 }
 
 module.exports = loginController
