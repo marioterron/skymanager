@@ -16,10 +16,10 @@
 		<!-- Top Menu Items -->
 		<ul class="nav navbar-right top-nav">
 			<li class="dropdown">
-				<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><i class="icon icon-user"></i> Mario Terron <b class="caret"></b></a>
+				<a  class="dropdown-toggle" data-toggle="dropdown"><i class="icon icon-user"></i> Mario Terron <b class="caret"></b></a>
 				<ul class="dropdown-menu">
 					<li>
-						<a href="javascript:;" data-toggle="modal" data-target="#my-profile-modal"><i class="icon icon-user"></i> Perfil</a>
+						<a  data-toggle="modal" data-target="#my-profile-modal"><i class="icon icon-user"></i> Perfil</a>
 					</li>
 					<li class="divider"></li>
 					<li>
@@ -38,7 +38,7 @@
 					<a href="#!/game/table"><i class="icon icon-trophy"></i> Clasificacion</a>
 				</li>
 				<li class="active">
-					<a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="icon icon-users"></i> Equipo <i class="icon icon-caret-down"></i></a>
+					<a  data-toggle="collapse" data-target="#demo"><i class="icon icon-users"></i> Equipo <i class="icon icon-caret-down"></i></a>
 					<ul id="demo" class="collapse">
 						<li>
 							<a href="#!/game/lineup"><i class="icon icon-user-plus"></i> Alineación</a>
@@ -49,7 +49,7 @@
 					</ul>
 				</li>
 				<li>
-					<a href="javascript:;" data-toggle="collapse" data-target="#demo2"><i class="icon icon-exchange"></i> Mercado <i class="icon icon-caret-down"></i></a>
+					<a  data-toggle="collapse" data-target="#demo2"><i class="icon icon-exchange"></i> Mercado <i class="icon icon-caret-down"></i></a>
 					<ul id="demo2" class="collapse">
 						<li>
 							<a href="#!/game/market"><i class="icon icon-shopping-cart"></i> Mercado</a>
@@ -85,7 +85,7 @@
 									<thead>
 										<tr>
 											<th>
-												<a href="javascript:;" ng-click="sortType = 'position.value'; sortReverse = !sortReverse">
+												<a  ng-click="sortType = 'position.value'; sortReverse = !sortReverse">
 													<span data-toggle="tooltip" title="Posición">Pos.</span>
 													<span ng-show="sortType == '' || sortType !== 'position.value'" class="fa fa-sort"></span>
 													<span ng-show="sortType == 'position.value' && !sortReverse" class="fa fa-caret-down"></span>
@@ -93,7 +93,7 @@
 												</a>
 											</th>
 											<th>
-												<a href="javascript:;" ng-click="sortType = 'team.name'; sortReverse = !sortReverse">
+												<a  ng-click="sortType = 'team.name'; sortReverse = !sortReverse">
 													<span data-toggle="tooltip" title="Equipo">Eq.</span>
 													<span ng-show="sortType == '' || sortType !== 'team.name'" class="fa fa-sort"></span>
 													<span ng-show="sortType == 'team.name' && !sortReverse" class="fa fa-caret-down"></span>
@@ -101,7 +101,7 @@
 												</a>
 											</th>
 											<th>
-												<a href="javascript:;" ng-click="sortType = 'player.name'; sortReverse = !sortReverse">
+												<a  ng-click="sortType = 'player.name'; sortReverse = !sortReverse">
 													<span data-toggle="tooltip" title="Jugador">Jugador</span>
 													<span ng-show="sortType == '' || sortType !== 'player.name'" class="fa fa-sort"></span>
 													<span ng-show="sortType == 'player.name' && !sortReverse" class="fa fa-caret-down"></span>
@@ -109,7 +109,7 @@
 												</a>
 											</th>
 											<th>
-												<a href="javascript:;" ng-click="sortType = 'totalPoints'; sortReverse = !sortReverse">
+												<a  ng-click="sortType = 'totalPoints'; sortReverse = !sortReverse">
 													<span data-toggle="tooltip" title="Total puntos">Pts.</span>
 													<span ng-show="sortType == '' || sortType !== 'totalPoints'" class="fa fa-sort"></span>
 													<span ng-show="sortType == 'totalPoints' && !sortReverse" class="fa fa-caret-down"></span>
@@ -117,7 +117,7 @@
 												</a>
 											</th>
 											<th>
-												<a href="javascript:;" ng-click="sortType = 'marketValue'; sortReverse = !sortReverse">
+												<a  ng-click="sortType = 'marketValue'; sortReverse = !sortReverse">
 													<span data-toggle="tooltip" title="Valor en el mercado">VM.</span>
 													<span ng-show="sortType == '' || sortType !== 'marketValue'" class="fa fa-sort"></span>
 													<span ng-show="sortType == 'marketValue' && !sortReverse" class="fa fa-caret-down"></span>
@@ -125,7 +125,7 @@
 												</a>
 											</th>
 											<th>
-												<a href="javascript:;" ng-click="sortType = 'status.title'; sortReverse = !sortReverse">
+												<a  ng-click="sortType = 'status.title'; sortReverse = !sortReverse">
 													<span data-toggle="tooltip" title="Estado">Est.</span>
 													<span ng-show="sortType == '' || sortType !== 'status.title'" class="fa fa-sort"></span>
 													<span ng-show="sortType == 'status.title' && !sortReverse" class="fa fa-caret-down"></span>
@@ -133,7 +133,7 @@
 												</a>
 											</th>
 											<!-- <th>
-												<a href="javascript:;" ng-click="sortType = 'MatchesPlayed'; sortReverse = !sortReverse">
+												<a  ng-click="sortType = 'MatchesPlayed'; sortReverse = !sortReverse">
 													<span data-toggle="tooltip" title="Partidos jugados">PJ.</span>
 													<span ng-show="sortType == '' || sortType !== 'MatchesPlayed'" class="fa fa-sort"></span>
 													<span ng-show="sortType == 'MatchesPlayed' && !sortReverse" class="fa fa-caret-down"></span>
@@ -141,7 +141,7 @@
 												</a>
 											</th> -->
 											<th>
-												<a href="javascript:;" ng-click="sortType = 'avgPoints'; sortReverse = !sortReverse">
+												<a  ng-click="sortType = 'avgPoints'; sortReverse = !sortReverse">
 													<span data-toggle="tooltip" title="Media de puntos por partido">Med.</span>
 													<span ng-show="sortType == '' || sortType !== 'avgPoints'" class="fa fa-sort"></span>
 													<span ng-show="sortType == 'avgPoints' && !sortReverse" class="fa fa-caret-down"></span>
@@ -149,7 +149,7 @@
 												</a>
 											</th>
 											<th>
-												<a href="javascript:;" ng-click="sortType = 'pointsAsLocal'; sortReverse = !sortReverse">
+												<a  ng-click="sortType = 'pointsAsLocal'; sortReverse = !sortReverse">
 													<span data-toggle="tooltip" title="Puntos como local"><i class="icon icon-home"></i></span>
 													<span ng-show="sortType == '' || sortType !== 'pointsAsLocal'" class="fa fa-sort"></span>
 													<span ng-show="sortType == 'pointsAsLocal' && !sortReverse" class="fa fa-caret-down"></span>
@@ -157,7 +157,7 @@
 												</a>
 											</th>
 											<th>
-												<a href="javascript:;" ng-click="sortType = 'pointsAsVisitor'; sortReverse = !sortReverse">
+												<a  ng-click="sortType = 'pointsAsVisitor'; sortReverse = !sortReverse">
 													<span data-toggle="tooltip" title="Puntos como visitante"><i class="icon icon-plane"></i></span>
 													<span ng-show="sortType == '' || sortType !== 'pointsAsVisitor'" class="fa fa-sort"></span>
 													<span ng-show="sortType == 'pointsAsVisitor' && !sortReverse" class="fa fa-caret-down"></span>
@@ -165,7 +165,7 @@
 												</a>
 											</th>
 											<th>
-												<a href="javascript:;" ng-click="sortType = 'fitness'; sortReverse = !sortReverse">
+												<a  ng-click="sortType = 'fitness'; sortReverse = !sortReverse">
 													<span data-toggle="tooltip" title="Puntos conseguidos las ultimas 5 jornadas">Forma</span>
 													<span ng-show="sortType == '' || sortType !== 'fitness'" class="fa fa-sort"></span>
 													<span ng-show="sortType == 'fitness' && !sortReverse" class="fa fa-caret-down"></span>
@@ -173,7 +173,7 @@
 												</a>
 											</th>
 											<th>
-												<a href="javascript:;" ng-click="sortType = 'forSale'; sortReverse = !sortReverse">
+												<a  ng-click="sortType = 'forSale'; sortReverse = !sortReverse">
 													<span data-toggle="tooltip" title="Poner en venta">Mercado</span>
 													<span ng-show="sortType == '' || sortType !== 'forSale'" class="fa fa-sort"></span>
 													<span ng-show="sortType == 'forSale' && !sortReverse" class="fa fa-caret-down"></span>
@@ -188,7 +188,7 @@
 												<span title="{{player.position.title}}" ng-class="player.position.class">{{player.position.value}}</span>
 											</td>
 											<td class="narrow">
-												<a title="{{player.team.name}}" class="team" href="#">
+												<a title="{{player.team.name}}" class="team" >
 													<img ng-src="{{player.team.logo}}">
 												</a>
 											</td>

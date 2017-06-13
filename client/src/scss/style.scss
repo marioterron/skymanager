@@ -95,6 +95,7 @@ body {
 
 a {
 	color: $brand-primary;
+	cursor: pointer;
 	@include transition(.5s);
 
 	&:active,

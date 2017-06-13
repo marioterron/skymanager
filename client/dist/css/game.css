@@ -41,10 +41,6 @@ h6 {
   #page-wrapper {
     padding: 10px; } }
 
-div[class*="col-"] {
-  padding-left: 0;
-  padding-right: 0; }
-
 /* Top Navigation */
 .navbar-inverse {
   border-color: #222222;

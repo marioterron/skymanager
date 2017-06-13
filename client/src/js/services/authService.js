@@ -1,6 +1,7 @@
 function authService($http, $rootScope, storageService, jwtHelper) {
 
 	function login(username, password) {
+
 		return $http.post('/auth/login', { username, password })
 								.then(response => response.data)
 								.then(data => {
@@ -11,6 +12,7 @@ function authService($http, $rootScope, storageService, jwtHelper) {
 	}
 
 	function register(username, password) {
+		console.log(username);
 		return $http.post('/auth/register', { username, password})
 								.then(response => response.data)
 	}

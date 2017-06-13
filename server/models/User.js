@@ -9,6 +9,7 @@ const UserSchema = new Schema({
   username: { type: String, required: true },
   mail: String,
 	totalPoints: { type: Number, default: 0 },
+	password: String,
   squad: {
     players: [ { type: Schema.ObjectId, ref: 'Player' } ]
   },

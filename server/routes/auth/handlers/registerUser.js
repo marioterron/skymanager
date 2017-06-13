@@ -2,7 +2,6 @@ const User = require(__base + 'models/User')
 
 module.exports = (req, res) => {
   const { username, password } = req.body
-
   const account = new User({ username })
 
   User.register(account, password, err => {

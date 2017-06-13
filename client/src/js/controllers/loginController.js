@@ -7,15 +7,16 @@ function loginController($scope, $location, authService, apiService) {
 	    authService.login(username, password)
 					.then(msg => {
 						console.log(msg)
-						$location.path('/profile')
+						$location.path('/game')
+						location.reload();
 					})
 					.catch(console.log)
 	  }
 
-	  // $scope.getData = function () {
-	  //   DataService.getSecretData()
-		// 			.then(data => $scope.message = data.msg)
-		//  }
+	  $scope.getData = function () {
+	    DataService.getSecretData()
+					.then(data => $scope.message = data.msg)
+		 }
 }
 
 module.exports = loginController
