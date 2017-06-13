@@ -1,18 +1,16 @@
 function authService($http, $rootScope, storageService, jwtHelper) {
 
 	function login(username, password) {
-
-		return $http.post('/auth/login', { username, password })
-								.then(response => response.data)
-								.then(data => {
-									storageService.setToken(data.token)
-									setCredentials(data.token)
-									return data
-								})
+	return $http.post('/auth/login', { username, password })
+							.then(response => response.data)
+							.then(data => {
+								storageService.setToken(data.token)
+								setCredentials(data.token)
+								return data
+							})
 	}
 
 	function register(username, password) {
-		console.log(username);
 		return $http.post('/auth/register', { username, password})
 								.then(response => response.data)
 	}

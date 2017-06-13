@@ -12,11 +12,6 @@ function loginController($scope, $location, authService, apiService) {
 					})
 					.catch(console.log)
 	  }
-
-	  $scope.getData = function () {
-	    DataService.getSecretData()
-					.then(data => $scope.message = data.msg)
-		 }
 }
 
 module.exports = loginController

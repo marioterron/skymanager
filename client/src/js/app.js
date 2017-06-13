@@ -1,6 +1,7 @@
 const angular = require('angular');
 const angularRoute = require('angular-route');
 const angularJwt = require('angular-jwt');
+const angularSweetalert = require('angular-sweetalert');
 const angularCss = require('angular-css');
 
 const apiService = require('./services/apiService')
@@ -9,11 +10,12 @@ const authInterceptor = require('./services/authInterceptor')
 const storageService = require('./services/storageService')
 
 const loginController = require('./controllers/loginController')
+const logoutController = require('./controllers/logoutController')
 const registerController = require('./controllers/registerController')
 const mainController = require('./controllers/mainController')
 
 angular
-	.module('skymanagerApp', [ 'ngRoute', 'angularCSS', 'angular-jwt' ])
+	.module('skymanagerApp', [ 'ngRoute', 'angularCSS', 'angular-jwt', 'oitozero.ngSweetAlert' ])
 
 	.factory('authService', authService)
 	.factory('storageService', storageService)
@@ -21,6 +23,7 @@ angular
 	.factory('apiService', apiService)
 
 	.controller('loginController', loginController)
+	.controller('logoutController', logoutController)
 	.controller('registerController', registerController)
 	.controller('mainController', mainController)
 
@@ -60,6 +63,10 @@ angular
 				templateUrl: '../templates/sales.html',
 				css: '../css/game.css',
 				secure: true
+			})
+			.when('/game/logout', {
+				template: '<h1>Cerrando sesión...</h1>',
+				controller: 'logoutController'
 			})
 			.otherwise('/')
 	})
