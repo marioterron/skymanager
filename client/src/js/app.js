@@ -84,10 +84,10 @@ angular
 
 			$rootScope.$on( "$routeChangeStart", function(event, next, current) {
 				if (next && next.secure) {
-					console.log("this route is secured!!")
+					console.log("This route is secured!!")
 					if ( !authService.isLoggedIn() ) {
 						$location.path("/login");
-						console.log("this is shiet!!")
+						console.log("You can't access!!")
 					}
 				}
 			})

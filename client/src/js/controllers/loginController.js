@@ -1,4 +1,5 @@
-function loginController($scope, $location, authService, apiService) {
+
+function loginController($scope, $location, authService) {
 
 	  $scope.login = function (event) {
 	    event.preventDefault()
@@ -8,7 +9,7 @@ function loginController($scope, $location, authService, apiService) {
 					.then(msg => {
 						console.log(msg)
 						$location.path('/game')
-						location.reload();
+						location.reload()
 					})
 					.catch(console.log)
 	  }
