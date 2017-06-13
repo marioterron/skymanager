@@ -8,11 +8,11 @@ const getRandomForwards = (req, res) => {
 Player.count({position:"DL", "owner": {$eq: Schema.ObjectId("593d66e065d4fab620df195b")}}).exec( (err, count) => {
   const random = Math.floor(Math.random() * count)
 	const conditions = {position:"DL", "owner": {$eq: Schema.ObjectId("593d66e065d4fab620df195b")}};
-	const filter = { "owner": 1, "player.name": 1, "_id":1 }
+	const numberOfPlayers = 3
   Player
-		.find(conditions, filter)
+		.find(conditions)
 		.skip(random)
-		.limit(3)
+		.limit(numberOfPlayers)
 		.then(players =>
 			players.map( player => player._id )
 		)

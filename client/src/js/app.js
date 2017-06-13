@@ -12,31 +12,30 @@ angular.module('skymanagerApp', [ 'ngRoute', 'angularCSS' ])
 		$routeProvider
 			.when('/', {
 				templateUrl: '../templates/landing.html',
-				css: '../css/style.css',
 			})
-			.when('/news', {
+			.when('/game', {
 				templateUrl: '../templates/news.html',
-				css: ['../css/style.css', '../css/game.css']
+				css: '../css/game.css'
 			})
-			.when('/table', {
+			.when('/game/table', {
 				templateUrl: '../templates/table.html',
-				css: ['../css/style.css', '../css/game.css']
+				css: '../css/game.css'
 			})
-			.when('/squad', {
+			.when('/game/squad', {
 				templateUrl: '../templates/squad.html',
 				controller: 'mainController',
-				css: ['../css/style.css', '../css/game.css']
+				css: '../css/game.css'
 			})
-			.when('/lineup', {
+			.when('/game/lineup', {
 				templateUrl: '../templates/lineup.html',
-				css: ['../css/style.css', '../css/game.css']
+				css: '../css/game.css'
 			})
-			.when('/market', {
+			.when('/game/market', {
 				templateUrl: '../templates/market.html',
-				css: ['../css/style.css', '../css/game.css']
+				css: '../css/game.css'
 			})
-			.when('/sales', {
+			.when('/game/sales', {
 				templateUrl: '../templates/sales.html',
-				css: ['../css/style.css', '../css/game.css']
+				css: '../css/game.css'
 			})
 	})

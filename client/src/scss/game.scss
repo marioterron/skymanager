@@ -19,7 +19,6 @@ h6 {
 	font-weight: 600;
 }
 
-
 #wrapper {
 	padding-left: 0;
 }
@@ -33,9 +32,7 @@ h6 {
 .container-fluid {
 	margin-top: 100px;
 	@media(min-width:768px) {
-		body {
-			margin-top: 50px;
-		}
+		margin-top: 50px;
 	}
 }
 
@@ -333,6 +330,7 @@ ul.alert-dropdown {
 	}
 }
 // News section
+
 .news {
 	margin: 30px 0;
 	padding-bottom: 15px;
@@ -370,6 +368,7 @@ ul.alert-dropdown {
 	}
 }
 // Table section
+
 .table.points {
 	td {
 		line-height: 33.5px;
@@ -389,6 +388,7 @@ ul.alert-dropdown {
 	height: 35px;
 }
 // Squad section
+
 .squad-section {
 	.panel-footer {
 		display: flex;
@@ -400,6 +400,7 @@ ul.alert-dropdown {
 			.form-control {
 				background-color: white;
 			}
+
 			input {
 				font-size: 14px;
 			}
@@ -549,6 +550,7 @@ ul.alert-dropdown {
 	}
 }
 // Lineup section
+
 .lineup-section {
 	padding: 0 20px !important;
 
@@ -557,6 +559,13 @@ ul.alert-dropdown {
 		flex-wrap: wrap;
 		@media screen and (min-width: 1175px) {
 			flex-wrap: nowrap;
+		}
+	}
+
+	.container-fluid {
+		margin-top: 100px;
+		@media(min-width:768px) {
+			margin-top: 50px;
 		}
 	}
 
@@ -660,6 +669,7 @@ ul.alert-dropdown {
 	}
 }
 // Player modal
+
 .modal {
 	.lead {
 		font-size: 30px;
@@ -759,6 +769,7 @@ ul.alert-dropdown {
 	}
 }
 // Market
+
 .description {
 	margin-bottom: 0;
 

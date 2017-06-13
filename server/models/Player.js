@@ -6,7 +6,7 @@ const collection = 'players'
 const PlayerSchema = new mongoose.Schema({
   player: {
     name: { type: String, required: true },
-    photo: { type: String, required: true },
+    photo: { type: String, required: true, default: "http://statics.laliga.es/apps/fantasy/fantasy_sin_imagen_320.png" },
   },
   team: {
     name: { type: String, required: true },
