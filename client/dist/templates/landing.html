@@ -1,94 +1,16 @@
-<!-- register-modal -->
-<div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-hidden="true">
-	<div class="modal-dialog modal-lg">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-			</div>
-			<div class="modal-body">
-				<div class="row">
-					<div class="col-md-10 col-md-offset-1">
-						<h3 class="lead">Registro</h3>
-						<form ng-submit="register($event)" role="form" class="form-horizontal">
-							<div class="form-group">
-								<label for="username" class="col-sm-3 control-label">Usuario</label>
-								<div class="col-sm-9">
-									<input ng-model="username" type="text" class="form-control" id="username" />
-								</div>
-							</div>
-							<!-- <div class="form-group">
-								<label for="mail" class="col-sm-3 control-label">Email</label>
-								<div class="col-sm-9">
-									<input type="text" class="form-control" id="mailInput" />
-								</div>
-							</div> -->
-							<div class="form-group">
-								<label for="password" class="col-sm-3 control-label">Contraseña</label>
-								<div class="col-sm-9">
-									<input ng-model="password" type="password" class="form-control" id="password" />
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-10 col-sm-offset-3">
-									<button type="submit" class="btn btn-primary btn-sm">Enviar</button>
-									<p>¿Tienes ya una cuenta? <a  data-toggle="modal" data-target="#login-modal">Inicia sesión</a>.</p>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<!-- login-modal -->
-<div ng-controller="loginController" class="modal" id="login-modal" tabindex="-1" role="dialog" aria-hidden="true">
-	<div class="modal-dialog modal-lg">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-			</div>
-			<div class="modal-body">
-				<div class="row">
-					<div class="col-md-10 col-md-offset-1">
-						<h3 class="lead">Iniciar sesión</h3>
-						<form ng-submit="login($event)" role="form" class="form-horizontal">
-							<div class="form-group">
-								<label for="username" class="col-sm-3 control-label">Usuario</label>
-								<div class="col-sm-9">
-									<input ng-model="username" type="text" class="form-control" id="username" />
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="password" class="col-sm-3 control-label">Contraseña</label>
-								<div class="col-sm-9">
-									<input ng-model="password" type="password" class="form-control" id="password" />
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-10 col-sm-offset-3">
-									<button type="submit" class="btn btn-primary btn-sm">Enviar</button></a>
-									<p>¿No eres usuario? <a  data-toggle="modal" data-target="#register-modal">¡Regístrate!</a></p>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
+<ng-include src="'templates/includes/register-modal.html'"></ng-include>
+<ng-include src="'templates/includes/login-modal.html'"></ng-include>
 
 <div id="page">
+
 	<section id="header">
 		<div class="container">
 			<nav role="navigation">
 				<h1 id="logo"><a><span>Sky</span>Manager</a></h1>
 				<ul class="pull-right right-menu">
-					<li><a  data-toggle="modal" data-target="#login-modal">Login</a></li>
-					<li><a  data-toggle="modal" data-target="#register-modal">Registro</a></li>
+					<li ng-show="loggedUser"><a href="#!/game">Login</a></li>
+					<li ng-hide="loggedUser"><a data-toggle="modal" data-target="#login-modal">Login</a></li>
+					<li><a data-toggle="modal" data-target="#register-modal">Registro</a></li>
 				</ul>
 			</nav>
 		</div>

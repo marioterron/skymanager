@@ -30,8 +30,7 @@ angular
 	.config( function( $routeProvider ) {
 		$routeProvider
 			.when('/', {
-				templateUrl: '../templates/landing.html',
-				controller: 'registerController'
+				templateUrl: '../templates/landing.html'
 			})
 			.when('/game', {
 				templateUrl: '../templates/news.html',

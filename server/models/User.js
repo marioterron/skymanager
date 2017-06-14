@@ -8,6 +8,7 @@ const collection = 'users'
 const UserSchema = new Schema({
   username: { type: String, required: true },
   mail: String,
+	profileImg: { type: String, default: 'http://statics.laliga.es/apps/fantasy/fantasy_sin_imagen_320.png'},
 	totalPoints: { type: Number, default: 0 },
 	password: String,
   squad: {
