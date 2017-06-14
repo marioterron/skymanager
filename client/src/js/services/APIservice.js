@@ -1,10 +1,9 @@
 function apiService ($http) {
-
-	function getPlayers() {
-		return $http.get('/api/players')
+	function getUserSquad(id) {
+		return $http.get(`/api/user/${id}`)
 			.then( response => response.data )
 	}
-	return { getPlayers }
+	return { getUserSquad }
 }
 
 module.exports = apiService

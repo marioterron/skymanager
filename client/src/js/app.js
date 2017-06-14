@@ -12,7 +12,7 @@ const storageService = require('./services/storageService')
 const loginController = require('./controllers/loginController')
 const logoutController = require('./controllers/logoutController')
 const registerController = require('./controllers/registerController')
-const mainController = require('./controllers/mainController')
+const squadController = require('./controllers/squadController')
 
 angular
 	.module('skymanagerApp', [ 'ngRoute', 'angularCSS', 'angular-jwt', 'oitozero.ngSweetAlert' ])
@@ -25,7 +25,7 @@ angular
 	.controller('loginController', loginController)
 	.controller('logoutController', logoutController)
 	.controller('registerController', registerController)
-	.controller('mainController', mainController)
+	.controller('squadController', squadController)
 
 	.config( function( $routeProvider ) {
 		$routeProvider
@@ -44,7 +44,7 @@ angular
 			})
 			.when('/game/squad', {
 				templateUrl: '../templates/squad.html',
-				controller: 'mainController',
+				controller: 'squadController',
 				css: '../css/game.css',
 				secure: true
 			})

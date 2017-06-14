@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const passportLocalMongoose = require('passport-local-mongoose')
 
+const getRandomPlayers = require('./handlers/getRandomPlayers')
 
 const collection = 'users'
 
@@ -10,7 +11,6 @@ const UserSchema = new Schema({
   mail: String,
 	profileImg: { type: String, default: 'http://statics.laliga.es/apps/fantasy/fantasy_sin_imagen_320.png'},
 	totalPoints: { type: Number, default: 0 },
-	password: String,
   squad: {
     players: [ { type: Schema.ObjectId, ref: 'Player' } ]
   },
@@ -27,5 +27,26 @@ const UserSchema = new Schema({
 }, { collection })
 
 UserSchema.plugin(passportLocalMongoose)
+
+UserSchema.pre('save', function(next) {
+
+	Promise.all([
+			getRandomPlayers('PT', 1),
+			getRandomPlayers('DF', 5),
+			getRandomPlayers('MC', 5),
+			getRandomPlayers('DL', 3)
+		])
+		.then( ([ goalkeepers, defenders, midfielders, forwards ]) => {
+			const randomPlayers = [...goalkeepers, ...defenders, ...midfielders, ...forwards]
+			this.squad.players = randomPlayers
+			this.save()
+		} )
+
+	// const matchweek = 1
+	// const tactic = { code: [4,3,3] }
+
+	// this.lineUp.push({ matchweek, tactic })
+	next();
+})
 
 module.exports = mongoose.model('User', UserSchema);

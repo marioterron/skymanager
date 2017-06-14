@@ -1,10 +1,9 @@
 const express 								= require('express')
 const router 									= express.Router()
 
-const getAllPlayers 					= require('./handlers/getAllPlayers')
+const getUserById 						= require('./handlers/getUserById')
 
 router
-	.get('/', getAllPlayers)
-
+	.get('/:id', getUserById)
 
 module.exports = router

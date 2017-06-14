@@ -6,8 +6,8 @@ module.exports = (req, res) => {
 
   User.register(account, password, err => {
     if (err) {
-      return res.json({success: false, msg: 'Error! Username already exists.'})
+      return res.status(500).json({success: false, msg: 'Error! Username already exists.'})
     }
-    return res.json({success: true, msg: 'Successful! Created new user.'})
+    return res.status(200).json({success: true, msg: 'Successful! Created new user.'})
   })
 }

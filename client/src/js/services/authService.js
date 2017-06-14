@@ -24,11 +24,13 @@ function authService($http, $rootScope, storageService, jwtHelper) {
 	function logout() {
 		storageService.removeToken()
 		delete $rootScope.loggedUser
+		delete $rootScope.loggedId
 	}
 
 	function setCredentials(token) {
 		var tokenPayload = jwtHelper.decodeToken(token)
 		$rootScope.loggedUser = tokenPayload.username;
+		$rootScope.loggedId = tokenPayload.id;
 	}
 
 	return {

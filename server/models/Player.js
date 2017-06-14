@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+const randomMongoose = require('mongoose-simple-random');
+
 const collection = 'players'
 
 const PlayerSchema = new mongoose.Schema({
@@ -20,7 +22,8 @@ const PlayerSchema = new mongoose.Schema({
   pointsAsVisitor: { type: Number, default: 0 },
   fitness: [String],
   marketValue: { type: Number, required: true },
-	owner: { type: Schema.ObjectId, ref: 'User', default: "593d66e065d4fab620df195b" },
+	owner: { type: Schema.ObjectId, ref: 'User' },
+	isFromAdmin: { type: Boolean, default: true },
   forSale: { type: Boolean, default: false },
 	sellValue: Number,
 	bets: [
@@ -31,5 +34,7 @@ const PlayerSchema = new mongoose.Schema({
 	}]
 ]
 }, { collection })
+
+PlayerSchema.plugin(randomMongoose)
 
 module.exports = mongoose.model('Player', PlayerSchema);

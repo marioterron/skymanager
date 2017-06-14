@@ -60,11 +60,13 @@ const fitnessClasses = (aFitness) => {
 }
 
 // Controller
-function mainController($scope, apiService) {
+function squadController($scope, $rootScope, apiService) {
 	$scope.sortType     = ''; 		// set the default sort type
 	$scope.sortReverse  = false;  // set the default sort order
 	$scope.searchPlayer   = '';   // set the default search/filter
-	apiService.getPlayers()
+	const id = $rootScope.loggedId;
+	apiService.getUserSquad(id)
+		.then(response => response.squad.players)
 		.then(players => players.map(player => {
 			player.position = positionClasses(player.position)
 			return player
@@ -80,4 +82,4 @@ function mainController($scope, apiService) {
 		.then(players => $scope.players = players)
 }
 
-module.exports = mainController
+module.exports = squadController
