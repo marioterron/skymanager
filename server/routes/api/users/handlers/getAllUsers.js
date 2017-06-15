@@ -4,5 +4,5 @@ module.exports = ( req, res ) => {
 	User
 		.find()
 		.populate({path:'squad.players'})
-		.then( user => res.json(user) )
+		.then( users => res.json(users))
 }

@@ -195,7 +195,7 @@ body.stop-scrolling {
   visibility: hidden; }
 
 .sweet-alert button {
-  background-color: #8CD4F5;
+  background-color: #8dc63f;
   color: white;
   border: none;
   box-shadow: none;
@@ -212,10 +212,10 @@ body.stop-scrolling {
   box-shadow: 0 0 2px rgba(128, 179, 235, 0.5), inset 0 0 0 1px rgba(0, 0, 0, 0.05); }
 
 .sweet-alert button:hover {
-  background-color: #7ecff4; }
+  background-color: #a4d266; }
 
 .sweet-alert button:active {
-  background-color: #5dc2f1; }
+  background-color: #72a230; }
 
 .sweet-alert button.cancel {
   background-color: #C1C1C1; }
@@ -1146,9 +1146,9 @@ h6 {
 .btn-outline {
   background: none;
   color: #fff;
-  border: 2px solid #807f7f;
+  border: 2px solid gray;
   font-size: 16px;
-  background-color: #807f7f;
+  background-color: gray;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s; }
@@ -1486,7 +1486,7 @@ h6 {
       margin: 0 0 10px;
       color: #484c50; }
     #projects .project-item .text span {
-      color: #b3b2b2;
+      color: #b3b3b3;
       font-size: 16px;
       font-weight: 400; }
     #projects .project-item .text p {
@@ -1702,7 +1702,7 @@ h6 {
 
 #about .social a {
   font-size: 35px !important;
-  color: #b3b2b2 !important; }
+  color: #b3b3b3 !important; }
   #about .social a:hover {
     color: #333333 !important; }
 

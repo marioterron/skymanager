@@ -1,8 +1,10 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
-const passportLocalMongoose = require('passport-local-mongoose')
+const mongoose 											= require('mongoose');
+const passportLocalMongoose 				= require('passport-local-mongoose')
 
-const getRandomPlayers = require('./handlers/getRandomPlayers')
+const getRandomPlayers 							= require('./handlers/getRandomPlayers')
+
+const Schema 												= mongoose.Schema;
+
 
 const collection = 'users'
 
@@ -18,9 +20,9 @@ const UserSchema = new Schema({
   	matchweek: Number,
   	tactic: {
   		code: [ Number ],
+			goalkeeper: [ { type: Schema.ObjectId, ref: 'Player' } ],
   		defenders: [ { type: Schema.ObjectId, ref: 'Player' } ],
   		forwards: [ { type: Schema.ObjectId, ref: 'Player' } ],
-  		goalkeeper: [ { type: Schema.ObjectId, ref: 'Player' } ],
   		midfielders: [ { type: Schema.ObjectId, ref: 'Player' } ]
   	}
   }]
@@ -30,6 +32,7 @@ UserSchema.plugin(passportLocalMongoose)
 
 UserSchema.pre('save', function(next) {
 
+	// Get squad
 	Promise.all([
 			getRandomPlayers('PT', 1),
 			getRandomPlayers('DF', 5),
@@ -39,14 +42,20 @@ UserSchema.pre('save', function(next) {
 		.then( ([ goalkeepers, defenders, midfielders, forwards ]) => {
 			const randomPlayers = [...goalkeepers, ...defenders, ...midfielders, ...forwards]
 			this.squad.players = randomPlayers
-			this.save()
+
+			// Get default lineup
+			const matchweek = 1
+			const code = [4,3,3]
+
+			const lineupGoalkeeper = goalkeepers.slice(0,1)
+			const lineupDefenders = defenders.slice(0,code[0])
+			const lineupMidfielders = midfielders.slice(0,code[1])
+			const lineupForwards = forwards.slice(0,code[2])
+
+			this.lineUp.push({ matchweek })
+			this.lineUp[0].tactic = { code, goalkeeper: lineupGoalkeeper, defenders: lineupDefenders, midfielders: lineupMidfielders, forwards: lineupForwards }
+      next();
 		} )
-
-	// const matchweek = 1
-	// const tactic = { code: [4,3,3] }
-
-	// this.lineUp.push({ matchweek, tactic })
-	next();
 })
 
 module.exports = mongoose.model('User', UserSchema);

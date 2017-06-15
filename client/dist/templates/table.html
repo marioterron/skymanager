@@ -84,42 +84,49 @@
 									<thead>
 										<tr>
 											<th></th>
-											<th></th>
 											<th>
-												<a>
+												<a ng-click="sortType = 'username'; sortReverse = !sortReverse">
+													<span>Usuario</span>
+													<span ng-show="sortType == '' || sortType !== 'username'" class="fa fa-sort"></span>
+													<span ng-show="sortType == 'username' && !sortReverse" class="fa fa-caret-down"></span>
+													<span ng-show="sortType == 'username' && sortReverse" class="fa fa-caret-up"></span>
+												</a>
+											</th>
+											<th>
+												<a ng-click="sortType = 'totalPoints'; sortReverse = !sortReverse">
 													<span>Puntos</span>
-													<span class="sort sort-down">
-														<i class="fa fa-sort"></i>
-													</span>
+													<span ng-show="sortType == '' || sortType !== 'totalPoints'" class="fa fa-sort"></span>
+													<span ng-show="sortType == 'totalPoints' && !sortReverse" class="fa fa-caret-down"></span>
+													<span ng-show="sortType == 'totalPoints' && sortReverse" class="fa fa-caret-up"></span>
 												</a>
 											</th>
 											<th>
-												<a>
+												<a ng-click="sortType = 'squadValue'; sortReverse = !sortReverse">
 													<span>Valor del equipo</span>
-													<span class="sort sort-down">
-														<i class="fa fa-sort"></i>
-													</span>
+													<span ng-show="sortType == '' || sortType !== 'squadValue'" class="fa fa-sort"></span>
+													<span ng-show="sortType == 'squadValue' && !sortReverse" class="fa fa-caret-down"></span>
+													<span ng-show="sortType == 'squadValue' && sortReverse" class="fa fa-caret-up"></span>
 												</a>
 											</th>
 											<th>
-												<a>
+												<a ng-click="sortType = 'squad.players.length'; sortReverse = !sortReverse">
 													<span>Jugadores</span>
-													<span class="sort sort-down">
-														<i class="fa fa-sort"></i>
-													</span>
+													<span ng-show="sortType == '' || sortType !== 'squad.players.length'" class="fa fa-sort"></span>
+													<span ng-show="sortType == 'squad.players.length' && !sortReverse" class="fa fa-caret-down"></span>
+													<span ng-show="sortType == 'squad.players.length' && sortReverse" class="fa fa-caret-up"></span>
 												</a>
 											</th>
 										</tr>
 									</thead>
 									<tbody>
-										<tr ng-repeat="user in users">
-											<td>1º</td>
+										<tr ng-repeat="user in users | orderBy:sortType:sortReverse">
+											<td>{{$index+1}}º</td>
 											<td>
 												<span class="avatar" ng-style="{'background-image':'url({{ user.profileImg }})'}"></span>
 												<span class="username">{{user.username}}</span>
 											</td>
 											<td>{{user.totalPoints}}</td>
-											<td>27.676.000 €</td>
+											<td>{{user.squadValue}} €</td>
 											<td>{{user.squad.players.length}}</td>
 										</tr>
 									</tbody>
