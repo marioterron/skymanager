@@ -73,51 +73,21 @@
 			<div class="row">
 				<div class="ground">
 					<div class="line-goalkeeper">
-						<div class="card" data-toggle="modal" data-target="#swap-player-modal">
-							<img class="card-img" src="http://files.laliga.es/jugadores/201608/96x96_25115821keylor-navas.jpg">
+						<div ng-repeat="player in tactic.goalkeeper" class="card">
+							<img class="card-img" ng-src="{{player.player.photo}}">
 							<div class="card-block">
-								<p>Keylor Navas</p>
+								<p>{{player.player.name}}</p>
 							</div>
-							<span class="status">
-								<i class="icon icon-check"></i>
-							</span>
 							<span class="status">
 								<i class="icon icon-check"></i>
 							</span>
 						</div>
 					</div>
 					<div class="line-defenders">
-						<div class="card">
-							<img class="card-img" src="http://files.laliga.es/jugadores/201608/96x96_25114256marcelo.jpg">
+						<div ng-repeat="player in tactic.defenders" class="card">
+							<img class="card-img" ng-src="{{player.player.photo}}">
 							<div class="card-block">
-								<p>Marcelo</p>
-							</div>
-							<span class="status status-injured">
-								<i class="icon icon-plus"></i>
-							</span>
-						</div>
-						<div class="card">
-							<img class="card-img" src="http://files.laliga.es/jugadores/201608/96x96_25114150sergio-ramos.jpg">
-							<div class="card-block">
-								<p>Sergio Ramos</p>
-							</div>
-							<span class="status">
-								<i class="icon icon-check"></i>
-							</span>
-						</div>
-						<div class="card">
-							<img class="card-img" src="http://files.laliga.es/jugadores/201608/96x96_25114151varane.jpg">
-							<div class="card-block">
-								<p>Varane</p>
-							</div>
-							<span class="status">
-								<i class="icon icon-check"></i>
-							</span>
-						</div>
-						<div class="card">
-							<img class="card-img" src="http://files.laliga.es/jugadores/201608/96x96_25114255carvajal.jpg">
-							<div class="card-block">
-								<p>Carvajal</p>
+								<p>{{player.player.name}}</p>
 							</div>
 							<span class="status">
 								<i class="icon icon-check"></i>
@@ -125,37 +95,10 @@
 						</div>
 					</div>
 					<div class="line-midfielders">
-						<div class="card">
-							<img class="card-img" src="http://files.laliga.es/jugadores/201608/96x96_25114519isco.jpg">
+						<div ng-repeat="player in tactic.midfielders" class="card">
+							<img class="card-img" ng-src="{{player.player.photo}}">
 							<div class="card-block">
-								<p>Isco</p>
-							</div>
-							<span class="status">
-								<i class="icon icon-check"></i>
-							</span>
-						</div>
-						<div class="card">
-							<img class="card-img" src="http://files.laliga.es/jugadores/201608/96x96_25120501kroos.jpg">
-							<div class="card-block">
-								<p>Toni Kroos</p>
-							</div>
-							<span class="status">
-								<i class="icon icon-check"></i>
-							</span>
-						</div>
-						<div class="card">
-							<img class="card-img" src="http://files.laliga.es/jugadores/201608/96x96_25114359modric.jpg">
-							<div class="card-block">
-								<p>Luka Modric</p>
-							</div>
-							<span class="status">
-								<i class="icon icon-check"></i>
-							</span>
-						</div>
-						<div class="card">
-							<img class="card-img" src="http://files.laliga.es/jugadores/201608/96x96_25120158asensio.jpg">
-							<div class="card-block">
-								<p>Marco Asensio</p>
+								<p>{{player.player.name}}</p>
 							</div>
 							<span class="status">
 								<i class="icon icon-check"></i>
@@ -163,19 +106,10 @@
 						</div>
 					</div>
 					<div class="line-forwards">
-						<div class="card">
-							<img class="card-img" src="http://files.laliga.es/jugadores/201608/96x96_25114519cristiano-ronaldo.jpg">
+						<div ng-repeat="player in tactic.forwards" class="card">
+							<img class="card-img" ng-src="{{player.player.photo}}">
 							<div class="card-block">
-								<p>Cristiano Ronaldo</p>
-							</div>
-							<span class="status">
-								<i class="icon icon-check"></i>
-							</span>
-						</div>
-						<div class="card">
-							<img class="card-img" src="http://files.laliga.es/jugadores/201608/96x96_25115902benzema.jpg">
-							<div class="card-block">
-								<p>Benzema</p>
+								<p>{{player.player.name}}</p>
 							</div>
 							<span class="status">
 								<i class="icon icon-check"></i>
@@ -194,12 +128,12 @@
 							<p>Alineación que utilizarás para la próxima jornada. <strong>Recuerda</strong> que solo los jugadores alineados recibirán puntos.</p>
 							<div class="btn-container">
 								<button class="btn btn-primary">3-4-3</button>
-								<button class="btn btn-primary">3-5-2</button>
+								<!-- <button class="btn btn-primary">3-5-2</button> -->
 								<button class="btn btn-primary">4-3-3</button>
-								<button class="btn btn-primary">4-4-2</button>
+								<!-- <button class="btn btn-primary">4-4-2</button>
 								<button class="btn btn-primary">4-5-1</button>
 								<button class="btn btn-primary">5-3-2</button>
-								<button class="btn btn-primary">5-4-1</button>
+								<button class="btn btn-primary">5-4-1</button> -->
 							</div>
 							<p>Alineación guardada el: 2 Jun de 2017, 14:00:00</p>
 							<p>Valor alineado: 115.449.000 €</p>

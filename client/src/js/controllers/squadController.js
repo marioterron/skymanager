@@ -65,7 +65,7 @@ function squadController($scope, $rootScope, apiService) {
 	$scope.sortReverse  = false;  // set the default sort order
 	$scope.searchPlayer   = '';   // set the default search/filter
 	const id = $rootScope.loggedId;
-	apiService.getUserSquad(id)
+	apiService.getUserData(id)
 		.then(response => response.squad.players)
 		.then(players => players.map(player => {
 			player.position = positionClasses(player.position)

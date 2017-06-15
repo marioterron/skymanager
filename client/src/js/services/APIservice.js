@@ -5,12 +5,12 @@ function apiService ($http) {
 			.then( response => response.data )
 	}
 
-	function getUserSquad(id) {
+	function getUserData(id) {
 		return $http.get(`/api/user/${id}`)
 			.then( response => response.data )
 	}
 
-	return { getUsersData, getUserSquad }
+	return { getUsersData, getUserData }
 }
 
 module.exports = apiService

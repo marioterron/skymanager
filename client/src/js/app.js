@@ -13,6 +13,7 @@ const loginController = require('./controllers/loginController')
 const logoutController = require('./controllers/logoutController')
 const registerController = require('./controllers/registerController')
 const squadController = require('./controllers/squadController')
+const lineupController = require('./controllers/lineupController')
 const tableController = require('./controllers/tableController')
 
 angular
@@ -27,6 +28,7 @@ angular
 	.controller('logoutController', logoutController)
 	.controller('registerController', registerController)
 	.controller('squadController', squadController)
+	.controller('lineupController', lineupController)
 	.controller('tableController', tableController)
 
 	.config( function( $routeProvider ) {
@@ -53,6 +55,7 @@ angular
 			})
 			.when('/game/lineup', {
 				templateUrl: '../templates/lineup.html',
+				controller: 'lineupController',
 				css: '../css/game.css',
 				secure: true
 			})
