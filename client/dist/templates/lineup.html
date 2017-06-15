@@ -78,8 +78,14 @@
 							<div class="card-block">
 								<p>{{player.player.name}}</p>
 							</div>
-							<span class="status">
+							<span ng-show="player.status === 'Alineable'" class="status">
 								<i class="icon icon-check"></i>
+							</span>
+							<span ng-show="player.status === 'Lesionado'" class="status status-injured">
+								<i class="icon icon-plus"></i>
+							</span>
+							<span ng-show="player.status === 'Sancionado'" class="status status-sanctioned">
+								<i class="icon icon-close"></i>
 							</span>
 						</div>
 					</div>
@@ -89,8 +95,14 @@
 							<div class="card-block">
 								<p>{{player.player.name}}</p>
 							</div>
-							<span class="status">
+							<span ng-show="player.status === 'Alineable'" class="status">
 								<i class="icon icon-check"></i>
+							</span>
+							<span ng-show="player.status === 'Lesionado'" class="status status-injured">
+								<i class="icon icon-plus"></i>
+							</span>
+							<span ng-show="player.status === 'Sancionado'" class="status status-sanctioned">
+								<i class="icon icon-close"></i>
 							</span>
 						</div>
 					</div>
@@ -100,8 +112,14 @@
 							<div class="card-block">
 								<p>{{player.player.name}}</p>
 							</div>
-							<span class="status">
+							<span ng-show="player.status === 'Alineable'" class="status">
 								<i class="icon icon-check"></i>
+							</span>
+							<span ng-show="player.status === 'Lesionado'" class="status status-injured">
+								<i class="icon icon-plus"></i>
+							</span>
+							<span ng-show="player.status === 'Sancionado'" class="status status-sanctioned">
+								<i class="icon icon-close"></i>
 							</span>
 						</div>
 					</div>
@@ -111,8 +129,14 @@
 							<div class="card-block">
 								<p>{{player.player.name}}</p>
 							</div>
-							<span class="status">
+							<span ng-show="player.status === 'Alineable'" class="status">
 								<i class="icon icon-check"></i>
+							</span>
+							<span ng-show="player.status === 'Lesionado'" class="status status-injured">
+								<i class="icon icon-plus"></i>
+							</span>
+							<span ng-show="player.status === 'Sancionado'" class="status status-sanctioned">
+								<i class="icon icon-close"></i>
 							</span>
 						</div>
 					</div>
@@ -128,12 +152,12 @@
 							<p>Alineación que utilizarás para la próxima jornada. <strong>Recuerda</strong> que solo los jugadores alineados recibirán puntos.</p>
 							<div class="btn-container">
 								<button class="btn btn-primary">3-4-3</button>
-								<!-- <button class="btn btn-primary">3-5-2</button> -->
+								<button class="btn btn-primary">3-5-2</button>
 								<button class="btn btn-primary">4-3-3</button>
-								<!-- <button class="btn btn-primary">4-4-2</button>
+								<button class="btn btn-primary">4-4-2</button>
 								<button class="btn btn-primary">4-5-1</button>
 								<button class="btn btn-primary">5-3-2</button>
-								<button class="btn btn-primary">5-4-1</button> -->
+								<button class="btn btn-primary">5-4-1</button>
 							</div>
 							<p>Alineación guardada el: 2 Jun de 2017, 14:00:00</p>
 							<p>Valor alineado: 115.449.000 €</p>
