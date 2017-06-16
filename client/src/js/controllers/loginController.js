@@ -1,5 +1,5 @@
 
-function loginController($scope, $location, authService) {
+function loginController($scope, $location, authService, SweetAlert) {
 
 	  $scope.login = function (event) {
 	    event.preventDefault()
@@ -11,7 +11,11 @@ function loginController($scope, $location, authService) {
 						$location.path('/game')
 						location.reload()
 					})
-					.catch(console.log)
+					.catch(msg => {
+						console.log(msg)
+						$('#login-modal').modal('hide');
+						return SweetAlert.swal("Error!", "El usuario o contraseña es incorrecto", "error")
+					})
 	  }
 }
 

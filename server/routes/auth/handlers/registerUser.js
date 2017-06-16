@@ -8,6 +8,6 @@ module.exports = (req, res) => {
     if (err) {
       return res.status(500).json({success: false, msg: 'Error! Username already exists.'})
     }
-    res.status(200).json({success: true, msg: 'Successful! Created new user.'})
+    return res.status(200).json({success: true, msg: 'Successful! Created new user.'})
   })
 }

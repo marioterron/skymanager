@@ -278,9 +278,9 @@ h6 {
 }
 
 .btn-danger {
-	background: $brand-danger;
+	background: $brand-danger !important;
 	color: $brand-white;
-	border: 2px solid $brand-danger;
+	border: 2px solid $brand-danger !important;
 
 	&:active,
 	&:focus,

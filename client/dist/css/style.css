@@ -1132,9 +1132,9 @@ h6 {
       color: #fff; }
 
 .btn-danger {
-  background: #d9534f;
+  background: #d9534f !important;
   color: #fff;
-  border: 2px solid #d9534f; }
+  border: 2px solid #d9534f !important; }
   .btn-danger:active, .btn-danger:focus, .btn-danger:hover {
     background: #d43f3a !important;
     border-color: #d43f3a !important; }

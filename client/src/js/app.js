@@ -70,7 +70,7 @@ angular
 				secure: true
 			})
 			.when('/game/logout', {
-				template: '<h1>Cerrando sesión...</h1>',
+				template: '<p>Cerrando sesión...</p>',
 				controller: 'logoutController'
 			})
 			.otherwise('/')
