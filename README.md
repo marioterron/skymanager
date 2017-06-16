@@ -8,7 +8,7 @@
 
 # [SKY MANAGER](https://marioterron-skymanager.herokuapp.com/)
 
-This repo contains Full Stack project **SKY MANAGER** in which users can manage a soccer team with real players in a virtual league.
+This repo contains full stack project **SKY MANAGER** in which users can manage a soccer team with real players in a virtual league.
 
 **SKY MANAGER** is made with **Node.js** and **Express.js** for the part of the server, and the client part is made with **AngularJS**.
 
