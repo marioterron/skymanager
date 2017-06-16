@@ -152,6 +152,11 @@ h6 {
 	@include border-radius(4px);
 	@include transition(.5s);
 
+	&.disabled {
+		background-color: $brand-primary;
+		border-color: $brand-primary;
+	}
+
 	&.btn-md {
 		padding: 10px 20px !important;
 	}
@@ -301,9 +306,9 @@ h6 {
 .btn-outline {
 	background: none;
 	color: $brand-white;
-	border: 2px solid lighten($brand-black, 50%);
+	border: 2px solid lighten($brand-black, 50%) !important;
 	font-size: 16px;
-	background-color: lighten($brand-black, 50%);
+	background-color: lighten($brand-black, 50%) !important;
 	@include transition(.3s);
 
 	&:active,
