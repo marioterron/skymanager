@@ -7,7 +7,7 @@ function getRandomPlayers( position, limit ) {
 
   return new Promise( function(resolve, reject) {
 	  Player.findRandom(conditions, {}, { limit } , function(err, players) {
-	  	if (err) throw err;
+	  	if (err) reject(err);
 			const idsPlayers = players.map( player => player._id )
 			resolve(idsPlayers)
 		})

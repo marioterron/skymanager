@@ -56,6 +56,7 @@ UserSchema.pre('save', function(next) {
 			this.lineUp[0].tactic = { code, goalkeeper: lineupGoalkeeper, defenders: lineupDefenders, midfielders: lineupMidfielders, forwards: lineupForwards }
       next();
 		} )
+		.catch( err => console.log(err) )
 })
 
 module.exports = mongoose.model('User', UserSchema);
