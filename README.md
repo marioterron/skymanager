@@ -51,8 +51,8 @@ All dependencies will be installed automatically
 
 The server part has multiple **API endpoints** using several routes:
 
-`/api` -> Serves the internal data of the users and players.
-`/auth` -> Serves the authentication options, register and login.
+- `/api` -> Serves the internal data of the users and players.
+- `/auth` -> Serves the authentication options, register and login.
 
 ## Built with:
 
