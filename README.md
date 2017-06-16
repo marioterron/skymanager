@@ -2,7 +2,7 @@
 
 [![HTML5, CSS3 and JS](https://github.com/MarioTerron/logo-images/blob/master/logos/html5-css3-js.png)](https://www.w3.org/)  [![SASS](https://github.com/MarioTerron/logo-images/blob/master/logos/sass.png)](http://sass-lang.com/)  [![Bootstrap](https://github.com/MarioTerron/logo-images/blob/master/logos/bootstrap.png)](http://getbootstrap.com/)  [![ES6](https://github.com/MarioTerron/logo-images/blob/master/logos/es6.png)](http://www.ecma-international.org/ecma-262/6.0/)  [![jQuery](https://github.com/MarioTerron/logo-images/blob/master/logos/jquery.png)](http://jquery.com/)
 
-[![Gulp](https://github.com/MarioTerron/logo-images/blob/master/logos/gulpjs.png)](http://gulpjs.com/)  [![Bower](https://github.com/MarioTerron/logo-images/blob/master/logos/bower.png)](https://bower.io//)  [![Browserify](https://github.com/MarioTerron/logo-images/blob/master/logos/browserify.png)](http://www.browserify.org/)
+[![Gulp](https://github.com/MarioTerron/logo-images/blob/master/logos/gulpjs.png)](http://gulpjs.com/)  [![npm](https://github.com/MarioTerron/logo-images/blob/master/logos/npm.png)](https://www.npmjs.com/)  [![Bower](https://github.com/MarioTerron/logo-images/blob/master/logos/bower.png)](https://bower.io//)  [![Browserify](https://github.com/MarioTerron/logo-images/blob/master/logos/browserify.png)](http://www.browserify.org/)
 
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
